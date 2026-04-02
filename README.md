@@ -53,30 +53,11 @@ DOMINUS NODE — Autonomous AI Proxy Infrastructure
 
 **Dominus Node** is an enterprise proxy IP service purpose-built for **AI agents**. Unlike traditional proxy providers, Dominus is designed from the ground up for autonomous agent workflows — providing a plugin and tool ecosystem that AI agents can discover, install, configure, and operate **without human intervention**.
 
-```
-┌────────────────────────────────────────────────────────────────────────────┐
-│                         DOMINUS NODE ARCHITECTURE                          │
-├────────────────────────────────────────────────────────────────────────────┤
-│                                                                            │
-│   ┌──────────────┐     ┌──────────────────────┐     ┌──────────────────┐   │
-│   │   AI AGENT   │────>│   DOMINUS PLUGIN SDK │────>│   PROXY MESH     │   │
-│   │  (Any LLM /  │     │                      │     │                  │   │
-│   │   Framework) │     │  - Auto-Install      │     │  - Residential   │   │
-│   └──────────────┘     │  - Auth Management   │     │  - Datacenter    │   │
-│                        │  - Session Control   │     │  - Mobile        │   │
-│   ┌──────────────┐     │  - IP Rotation       │     │  - ISP           │   │
-│   │   TOOL LAYER │────>│  - Geo-Targeting     │     └──────────────────┘   │
-│   │              │     │  - Usage Analytics   │                            │
-│   │  - MCP Tools │     └──────────────────────┘     ┌──────────────────┐   │
-│   │  - API Keys  │                                  │   ACCOUNT MGMT   │   │
-│   │  - Webhooks  │─────────────────────────────────>│                  │   │
-│   └──────────────┘                                  │  - Auto-Provisn  │   │
-│                                                     │  - Billing API   │   │
-│                                                     │  - Usage Limits  │   │
-│                                                     └──────────────────┘   │
-│                                                                            │
-└────────────────────────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <a href="./assets/readme/dominus-node-architecture.png">
+    <img src="./assets/readme/dominus-node-architecture.png" alt="Dominus Node architecture diagram"/>
+  </a>
+</p>
 
 ### 28 Integrations — Agent-Native Plugin Ecosystem
 
@@ -189,43 +170,11 @@ SOLIDUS NETWORK — High-Performance Multi-Chain Perps Exchange
 
 DAGKNIGHT consensus runs **at the zone level** where transaction throughput matters. Region and Prime chains use **entropic block ordering**
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                       SOLIDUS NETWORK TOPOLOGY                              │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│                        ┌─────────────────────┐                              │
-│                        │    PRIME CHAIN      │  Entropic block ordering     │
-│                        │   Coordination &    │  Cross-region state sync     │
-│                        │   Global Finality   │  No DAG needed               │
-│                        └─────────┬───────────┘                              │
-│                                  │                                          │
-│            ┌─────────────────────┼────────────────────┐                     │
-│            │                     │                    │                     │
-│     ┌──────▼──────┐       ┌──────▼─────┐       ┌──────▼─────┐               │
-│     │  REGION 1   │       │  REGION 2  │       │  REGION N  │               │
-│     │  Entropic   │       │  Entropic  │       │  Entropic  │               │
-│     └──────┬──────┘       └─────┬──────┘       └────┬───────┘               │
-│            │                    │                   │                       │
-│    ┌───┬───┼───┐       ┌───┬────┼───┐       ┌───┬───┼───┐                   │
-│    │   │   │   │       │   │    │   │       │   │   │   │                   │
-│   ┌▼─┐┌▼─┐┌▼─┐┌▼─┐    ┌▼─┐┌▼─┐┌─▼┐┌─▼┐    ┌─▼┐┌─▼┐┌─▼┐┌─▼┐                  │
-│   │Z1││Z2││Z3││Z4│    │Z1││Z2││Z3││Z4│    │Z1││Z2││Z3││Z4│                  │
-│   └──┘└──┘└──┘└──┘    └──┘└──┘└──┘└──┘    └──┘└──┘└──┘└──┘                  │
-│                                                                             │
-│    Z1     Z2       Z3        Z4    ◄── Each zone runs DAGKNIGHT consensus   │
-│    │       │       │         │     ◄── Ultra-fast parallel block production │
-│  SHA256 PROGPOW RANDOMX-S PANTHERA                                          │
-│                                                                             │
-│   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │                      INTEGRATED PERPS CORE                          │   │
-│   │                                                                     │   │
-│   │   On-chain order book  •  Sub-second matching  •  Cross-margin      │   │
-│   │   Liquidation engine   •  Funding rate oracle  •  Multi-collateral  │   │
-│   └─────────────────────────────────────────────────────────────────────┘   │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <a href="./assets/readme/solidus-network-topology.png">
+    <img src="./assets/readme/solidus-network-topology.png" alt="Solidus Network topology diagram"/>
+  </a>
+</p>
 
 ### Multi-Algorithm Zone Architecture — No Cross-Class Competition
 
@@ -310,22 +259,11 @@ INNOVA (INN) — Privacy-First Blockchain Protocol
 
 ### Five-Layer Privacy Stack
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│  LAYER 5 │ Dandelion++           Network-layer IP obfuscation       │
-│          │                       (30s stem, 10% fluff, 10 hops)     │
-├──────────┼──────────────────────────────────────────────────────────┤
-│  LAYER 4 │ Silent Shielding      Silent Payments + value shielding¹ │
-├──────────┼──────────────────────────────────────────────────────────┤
-│  LAYER 3 │ FCMP++                Full-Chain Membership Proofs       │
-│          │                       via curve trees — whole-pool anon  │
-├──────────┼──────────────────────────────────────────────────────────┤
-│  LAYER 2 │ Lelantus              One-out-of-many proofs (set=64)    │
-│          │                       for sender ambiguity               │
-├──────────┼──────────────────────────────────────────────────────────┤
-│  LAYER 1 │ Pedersen + Bulletproofs  Confidential transaction values │
-└─────────────────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <a href="./assets/readme/innova-privacy-stack.png">
+    <img src="./assets/readme/innova-privacy-stack.png" alt="Innova five-layer privacy stack diagram"/>
+  </a>
+</p>
 
 <sub>¹ Layer 4 Silent Shielding: RPC commands registered (`sp_send`, `sp_getnewaddress`);</sub>
 
@@ -369,40 +307,18 @@ INNOVA (INN) — Privacy-First Blockchain Protocol
 <br/>
 
 **Live now:**
-```
-┌──────────────────────────────────────────────────────────────────────────┐
-│                       NYX — CURRENT (LIVE)                               │
-├──────────────────────────────────────────────────────────────────────────┤
-│  Encryption:    AES-256-CBC + HMAC-SHA256 via SMSG protocol              │
-│  Key Exchange:  ECDH secp256k1                                           │
-│  Relay:         Dandelion++ (30s stem ± 15s jitter, 10% fluff, 10 hops)  │
-│  Verification:  FCMP++ membership proofs (dual curve tree, ≤4096 bytes)  │
-└──────────────────────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <a href="./assets/readme/nyx-current-live.png">
+    <img src="./assets/readme/nyx-current-live.png" alt="Nyx current live encryption stack diagram"/>
+  </a>
+</p>
 
 **Proposed upgrade (IIP):**
-```
-┌──────────────────────────────────────────────────────────────────────────┐
-│                  NYX — PLANNED TRIPLE ENCRYPTION                         │
-├──────────────────────────────────────────────────────────────────────────┤
-│                                                                          │
-│   Layer 1: ML-KEM-1024 (FIPS 203)                                        │
-│            Post-quantum key encapsulation → 256-bit shared secret        │
-│                         │                                                │
-│                         ▼                                                │
-│   Layer 2: XChaCha20-Poly1305                                            │
-│            24-byte nonce, 128-bit auth tags                              │
-│                         │                                                │
-│                         ▼                                                │
-│   Layer 3: AES-256-GCM                                                   │
-│            ECDH secp256k1 derived, 12-byte nonce                         │
-│                                                                          │
-├──────────────────────────────────────────────────────────────────────────┤
-│  Group chats: tree-based key agreement (up to 16 participants)           │
-│  File transfers: up to 10 TB via encrypted Hyperfile/IPFS chunks         │
-│  Auto key rotation per session                                           │
-└──────────────────────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <a href="./assets/readme/nyx-planned-triple-encryption.png">
+    <img src="./assets/readme/nyx-planned-triple-encryption.png" alt="Nyx planned triple encryption diagram"/>
+  </a>
+</p>
 
 </details>
 
@@ -411,13 +327,11 @@ INNOVA (INN) — Privacy-First Blockchain Protocol
 
 <br/>
 
-```
-IIP-0001  Cold Staking                    IIP-0006  FCMP++ Integration
-IIP-0002  Shielded Transactions           IIP-0007  Dandelion++ Relay
-IIP-0003  Lelantus Protocol               IIP-0008  Silent Shielding
-IIP-0004  Dynamic Selective Privacy       IIP-0009  NullStake V1
-IIP-0005  Bulletproof Range Proofs        IIP-0010  NullStake V2 (Poseidon2)
-```
+<p align="center">
+  <a href="./assets/readme/innova-iips.png">
+    <img src="./assets/readme/innova-iips.png" alt="Innova Improvement Proposals list"/>
+  </a>
+</p>
 
 </details>
 
@@ -449,15 +363,11 @@ IIP-0005  Bulletproof Range Proofs        IIP-0010  NullStake V2 (Poseidon2)
 
 IDAG is Innova's next-generation consensus — a four-phase migration from linear blockchain to a high-throughput block DAG. First to implement **epoch-anchored FCMP++ membership proofs** in a DAG and **adaptive DAGKNIGHT k inference**.
 
-```
-        ┌──────────────┐       ┌──────────────┐       ┌──────────────┐
-        │   GHOSTDAG   │       │  DAGKNIGHT   │       │   PoS        │
-        │   Ordering   │──────>│  Adaptive    │──────>│  Finality    │
-        │              │       │  k = 3..32   │       │  ⅔ stake     │
-        └──────────────┘       └──────────────┘       └──────────────┘
-
-        ~1s blocks  •  300KB–8MB adaptive  •  POEM entropy weighting  •  High-throughput capacity
-```
+<p align="center">
+  <a href="./assets/readme/idag-consensus-flow.png">
+    <img src="./assets/readme/idag-consensus-flow.png" alt="IDAG consensus flow diagram"/>
+  </a>
+</p>
 
 | Parameter | Value |
 |:---|:---|
@@ -654,14 +564,9 @@ Pinned Repositories
 
 <br/>
 
-```
- ██████╗ ██╗  ██╗ ██████╗██╗██████╗  ██████╗██╗   ██╗██╗████████╗██████╗ ██████╗ ███████╗ █████╗ ██╗  ██╗███████╗██████╗
-██╔═████╗╚██╗██╔╝██╔════╝██║██╔══██╗██╔════╝██║   ██║██║╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██╔══██╗██║ ██╔╝██╔════╝██╔══██╗
-██║██╔██║ ╚███╔╝ ██║     ██║██████╔╝██║     ██║   ██║██║   ██║   ██████╔╝██████╔╝█████╗  ███████║█████╔╝ █████╗  ██████╔╝
-████╔╝██║ ██╔██╗ ██║     ██║██╔══██╗██║     ██║   ██║██║   ██║   ██╔══██╗██╔══██╗██╔══╝  ██╔══██║██╔═██╗ ██╔══╝  ██╔══██╗
-╚██████╔╝██╔╝ ██╗╚██████╗██║██║  ██║╚██████╗╚██████╔╝██║   ██║   ██████╔╝██║  ██║███████╗██║  ██║██║  ██╗███████╗██║  ██║
- ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-```
+<a href="./assets/readme/circuitbreaker-banner.png">
+  <img src="./assets/readme/circuitbreaker-banner.png" alt="0xcircuitbreaker ASCII banner"/>
+</a>
 
 <sub>Building autonomous AI infrastructure, high-performance DeFi, and privacy-first blockchain protocols.</sub>
 

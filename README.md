@@ -25,6 +25,8 @@ and privacy-first blockchain protocols from the ground up.
 <a href="#-dominus-node--autonomous-ai-proxy-infrastructure"><img src="https://img.shields.io/badge/01-DOMINUS%20NODE-0d1117?style=for-the-badge&labelColor=58a6ff" alt="01"/></a>
 <a href="#-solidus-network--high-performance-multi-chain-perps-exchange"><img src="https://img.shields.io/badge/02-SOLIDUS%20NETWORK-0d1117?style=for-the-badge&labelColor=58a6ff" alt="02"/></a>
 <a href="#-innova-inn--privacy-first-blockchain-protocol"><img src="https://img.shields.io/badge/03-INNOVA%20%2F%20IDAG-0d1117?style=for-the-badge&labelColor=58a6ff" alt="03"/></a>
+<a href="#-project-lavalamp--hardware-level-side-channel-mitigation"><img src="https://img.shields.io/badge/04-PROJECT%20LAVALAMP-0d1117?style=for-the-badge&labelColor=ff6b2b" alt="04"/></a>
+<a href="#-opentine--git-for-agent-runs"><img src="https://img.shields.io/badge/05-OPENTINE-0d1117?style=for-the-badge&labelColor=ff6900" alt="05"/></a>
 
 </div>
 
@@ -412,6 +414,184 @@ IDAG is Innova's next-generation consensus — a four-phase migration from linea
 
 <br/>
 
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- PROJECT LAVALAMP                                                   -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div align="center">
+<h2>
+<img src="https://img.shields.io/badge/●-ff6b2b?style=flat-square&labelColor=ff6b2b" height="12"/>
+PROJECT LAVALAMP — Hardware-Level Side-Channel Mitigation
+</h2>
+
+<img src="https://img.shields.io/badge/STATUS-Hardware%20Validated-ff6b2b?style=for-the-badge&labelColor=0d1117" alt="Status"/>&nbsp;
+<img src="https://img.shields.io/badge/LEAK%20REDUCTION-93%E2%80%9399%25-ff6b2b?style=for-the-badge&labelColor=0d1117" alt="Leak"/>&nbsp;
+<img src="https://img.shields.io/badge/ENTROPY-98.4%25-ff6b2b?style=for-the-badge&labelColor=0d1117" alt="Entropy"/>
+
+</div>
+
+<br/>
+
+**Project Lavalamp** is a hardware-software security product that masks the **AMD Zen 5 SMT port contention timing side-channel** — a **27.6% signal leakage** vulnerability that AMD, Google, Microsoft, and NVIDIA all declined to fix. At its core is a proprietary entropy engine that generates high-quality dither patterns to bury timing signals below the detection floor. Validated on live FPGA hardware — **8/8 NIST-class statistical quality tests pass, 98.4% Shannon entropy efficiency**, with integrity sealing across every released bitstream.
+
+### Recent Milestones
+
+- **Hardware validation complete** on the Artix-7 reference platform — full end-to-end signal-masking loop running on live silicon.
+- **Shield (software) tier** daemon feature-complete on x86 and ARM Neoverse with 93% leak reduction at ~6% CPU overhead.
+- **Lite (USB-FPGA) tier** shipping across 7 Artix-7 boards with 99%+ leak reduction at <1% host overhead.
+- **Pro (PCIe) tier** in active development — kernel driver and TLP-inference pipeline under bring-up.
+- **Phase 2 porting effort underway** — extending the FPGA build system to 17 boards across 6 vendors.
+
+<p align="center">
+  <a href="./assets/readme/lavalamp-architecture.svg">
+    <img src="./assets/readme/lavalamp-architecture.svg" alt="Project Lavalamp architecture and deployment tiers"/>
+  </a>
+</p>
+
+### Three Deployment Tiers
+
+| Tier | Form Factor | Leak Reduction | CPU Overhead | Price |
+|:---|:---|:---|:---|:---|
+| **Shield** | CPU-only software daemon (x86 / ARM Neoverse) | 93% | 6% | $99–299 / yr |
+| **Lite** | USB FPGA bitstream + host daemon — 7+ Artix-7 boards | 99%+ | <1% | $499–999 / yr |
+| **Pro** *(in dev)* | PCIe FPGA card + kernel driver + TLP inference | 99%+ | ~0% | $2,000–5,000 / yr |
+
+### Universal FPGA Build System
+
+One command per supported board — `vivado -mode batch -source build_board.tcl -tclargs <board>`. Currently shipping on the Artix-7 family; Phase 2 validates across **17 FPGA boards spanning 6 vendors** (AMD/Xilinx, Intel/Altera, Lattice, Gowin, Microchip).
+
+| Vendor | Families | Status |
+|:---|:---|:---|
+| **AMD / Xilinx** | Artix-7, Kintex-7, Virtex UltraScale+ | 7 boards shipping · Kintex/UltraScale validation in progress |
+| **Intel / Altera** | Cyclone V SoC | Planned (Phase 2) |
+| **Lattice** | ECP5 | Planned (Phase 2) |
+| **Gowin** | GW2A | Planned (Phase 2) |
+| **Microchip** | PolarFire SoC | Planned (Phase 2) |
+
+### Vendor Refusal — Why This Product Exists
+
+| Vendor | Tracking ID | Response |
+|:---|:---|:---|
+| AMD | `AMD-NSACNT3N` | *"Expected Behavior"* |
+| Google / Chromium | Issue `475937586` | *"Won't Fix"* |
+| Microsoft MSRC | `VULN-171518` | *"Does not meet criteria"* |
+| NVIDIA PSIRT | Tracking `5775002` | *"Expected behavior"* |
+
+Disabling SMT mitigates the leak but costs **~50% of compute capacity**. Lavalamp recovers 97% of that capacity while reducing leakage by **93–99%** depending on tier. No other product targets this specific vulnerability at the hardware level.
+
+### Tech Stack
+
+<div align="center">
+
+![Verilog](https://img.shields.io/badge/Verilog-B31E1F?style=flat-square)
+![SystemVerilog](https://img.shields.io/badge/SystemVerilog-B31E1F?style=flat-square)
+![Vivado](https://img.shields.io/badge/Vivado-EE2E24?style=flat-square)
+![Xilinx](https://img.shields.io/badge/Xilinx%20Artix--7-EE2E24?style=flat-square)
+![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![Linux Kernel](https://img.shields.io/badge/Linux%20Kernel-FCC624?style=flat-square&logo=linux&logoColor=black)
+![PCIe](https://img.shields.io/badge/PCIe%20DMA-0d1117?style=flat-square)
+![AES-GCM](https://img.shields.io/badge/AES--GCM-0d1117?style=flat-square)
+![Entropy Engine](https://img.shields.io/badge/Proprietary%20Entropy%20Engine-ff6b2b?style=flat-square&labelColor=0d1117)
+
+</div>
+
+<br/>
+
+---
+
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- OPENTINE                                                           -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div align="center">
+<h2>
+<img src="https://img.shields.io/badge/●-ff6900?style=flat-square&labelColor=ff6900" height="12"/>
+OPENTINE — Git for Agent Runs
+</h2>
+
+<a href="https://opentine.com"><img src="https://img.shields.io/badge/LIVE-opentine.com-ff6900?style=for-the-badge&labelColor=0d1117" alt="Live"/></a>&nbsp;
+<a href="https://github.com/0xcircuitbreaker/opentine"><img src="https://img.shields.io/badge/GitHub-opentine-ff6900?style=for-the-badge&logo=github&labelColor=0d1117" alt="Repo"/></a>&nbsp;
+<a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/v/opentine?style=for-the-badge&color=ff6900&labelColor=0d1117" alt="PyPI"/></a>
+
+</div>
+
+<br/>
+
+**opentine** is git for agent runs. Every AI agent execution becomes a **content-addressed run tree** — forkable, replayable, diffable, and serializable to disk. Pause on your laptop, resume on a server. Branch from step 7 with a different prompt. Diff two runs side by side. The core is **~250 lines of Python**, model-agnostic, and has zero framework lock-in.
+
+A **tine** is the prong of a fork. opentine literally forks your agent runs.
+
+### Recent Milestones
+
+- **Public release on PyPI** — `pip install opentine`, Apache 2.0, zero framework lock-in.
+- **Multi-provider adapters shipped** — native support for Anthropic, OpenAI, Google, and Ollama, plus OpenAI-compatible wrappers for Kimi, DeepSeek, Qwen, GLM, Groq, Together, and Mistral.
+- **Full CLI surface live** — `run`, `ls`, `show`, `replay`, `fork`, `diff`, `resume`.
+- **Serialization format stable** — `.tine` run trees are portable across machines; pause on laptop, resume on a server.
+- **Next up** — remote run sync, hosted replay viewer, and tighter integrations with agent frameworks that already appear on the comparison table below.
+
+<p align="center">
+  <a href="./assets/readme/opentine-run-tree.svg">
+    <img src="./assets/readme/opentine-run-tree.svg" alt="opentine run tree and fork diagram"/>
+  </a>
+</p>
+
+### Why opentine
+
+| | Install size | Forkable runs | Any model | Core LOC |
+|:---|:---|:---|:---|:---|
+| LangChain | 166 MB | No | Partial | ~200k |
+| LangGraph | 51 MB | Checkpoints only | Partial | ~50k |
+| CrewAI | 173 MB | No | Partial | ~30k |
+| smolagents | 198 MB | No | Partial | ~15k |
+| **opentine** | **<5 MB** | **Yes** | **Yes** | **~250** |
+
+### CLI
+
+```
+tine run <script.py>          Execute agent, stream steps, save run tree
+tine ls                       List recent runs (status, cost, model)
+tine show <run_id>            Pretty-print the tree (like git log --graph)
+tine replay <id> [--from N]   Replay from a step
+tine fork <id> --from-step N  Branch a new run
+tine diff <run_a> <run_b>     Side-by-side comparison
+tine resume <run_id>          Resume a paused run
+```
+
+### Model Support
+
+Treats every provider equally. Swap with one line — native adapters for **Anthropic, OpenAI, Google, Ollama**, plus OpenAI-compatible wrappers for **Kimi, DeepSeek, Qwen, GLM, Groq, Together, Mistral**.
+
+```python
+from opentine import Agent
+from opentine.models.anthropic import Anthropic
+
+agent = Agent(model=Anthropic("claude-sonnet-4-20250514"))
+run = agent.run_sync("What is opentine?")
+run.save("result.tine")
+```
+
+### Tech Stack
+
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![uv](https://img.shields.io/badge/uv-DE5FE9?style=flat-square)
+![Anthropic](https://img.shields.io/badge/Anthropic-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+![Content--Addressed](https://img.shields.io/badge/Content--Addressed%20DAG-0d1117?style=flat-square)
+![Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-ff6900?style=flat-square)
+
+</div>
+
+<br/>
+
+---
+
+<br/>
+
 
 <!-- ═══════════════════════════════════════════════════════════════════ -->
 <!-- FULL TECH STACK                                                    -->
@@ -520,6 +700,9 @@ Pinned Repositories
 
 <a href="https://github.com/innova-foundation/innova">
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=innova-foundation&repo=innova&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" alt="innova"/>
+</a>
+<a href="https://github.com/0xcircuitbreaker/opentine">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=0xcircuitbreaker&repo=opentine&hide_border=true&bg_color=0d1117&title_color=ff6900&icon_color=ff6900&text_color=c9d1d9" alt="opentine"/>
 </a>
 <a href="https://github.com/Dominus-Node/mcp-server">
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dominus-Node&repo=mcp-server&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" alt="mcp-server"/>

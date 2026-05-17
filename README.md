@@ -474,7 +474,16 @@ tine resume <run_id>          Resume a paused run
 
 ### Built-in tools
 
-Tools are plain Python callables — opentine introspects type hints.
+Tools are plain Python callables — opentine introspects type hints. Common symbols from **`opentine.tools`**:
+
+| Module | Callables |
+|:---|:---|
+| **`web`** | `web.fetch` |
+| **`search`** | `search.search` |
+| **`fs`** | `fs.read`, `fs.write` |
+| **`shell`** | `shell.run` |
+
+Optional extras (e.g. **`python`**) live in the same package when you want sandboxed scripting steps — see upstream docs.
 
 ```python
 from opentine import Agent
@@ -489,28 +498,28 @@ agent = Agent(
 
 ### Model support
 
-```python
-from opentine import Agent
-from opentine.models.anthropic import Anthropic
-from opentine.models.openai import OpenAI
-from opentine.models.google import Google
-from opentine.models.ollama import Ollama
+**Native backends** (`opentine.models`)
 
-agent = Agent(model=Anthropic("claude-sonnet-4-20250514"))
-agent = Agent(model=OpenAI("gpt-4o"))
-agent = Agent(model=Google("gemini-2.0-flash"))
-agent = Agent(model=Ollama("llama3.1"))
+| Backend | Wrapper | Example model ID |
+|:---|:---|:---|
+| Anthropic | `Anthropic` | `claude-sonnet-4-20250514` |
+| OpenAI | `OpenAI` | `gpt-4o` |
+| Google | `Google` | `gemini-2.0-flash` |
+| Local / Ollama | `Ollama` | `llama3.1` |
 
-from opentine.models.compat import Kimi, DeepSeek, Qwen, GLM, Groq, Together, Mistral
+**OpenAI-compatible** (`opentine.models.compat` — one shared SDK surface)
 
-agent = Agent(model=Kimi("moonshot-v1-8k"))
-agent = Agent(model=DeepSeek("deepseek-chat"))
-agent = Agent(model=Qwen("qwen-plus"))
-agent = Agent(model=GLM("glm-4-flash"))
-agent = Agent(model=Groq("llama-3.1-70b-versatile"))
-agent = Agent(model=Together("meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"))
-agent = Agent(model=Mistral("mistral-large-latest"))
-```
+| Provider | Wrapper | Example model ID |
+|:---|:---|:---|
+| Kimi (Moonshot) | `Kimi` | `moonshot-v1-8k` |
+| DeepSeek | `DeepSeek` | `deepseek-chat` |
+| Qwen | `Qwen` | `qwen-plus` |
+| Zhipu (GLM) | `GLM` | `glm-4-flash` |
+| Groq | `Groq` | `llama-3.1-70b-versatile` |
+| Together | `Together` | `meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo` |
+| Mistral | `Mistral` | `mistral-large-latest` |
+
+Wire-up is always **`Agent(model=…(...))`** after the matching `from opentine.models…` import (see **Quickstart** for a full runnable Anthropic snippet).
 
 ### Tech Stack
 
@@ -532,71 +541,6 @@ agent = Agent(model=Mistral("mistral-large-latest"))
 
 <br/>
 
-
-<!-- ═══════════════════════════════════════════════════════════════════ -->
-<!-- ARP (hidden from README preview — preserved for authors / git history) -->
-<!-- ═══════════════════════════════════════════════════════════════════ -->
-
-<div hidden>
-
-<div align="center">
-<h2>
-<img src="https://img.shields.io/badge/●-ff6900?style=flat-square&labelColor=ff6900" height="12"/>
-ARP — Agent Run Protocol
-</h2>
-
-<a href="https://github.com/arp-protocol/arp"><img src="https://img.shields.io/badge/GitHub-arp--protocol%2Farp-ff6900?style=for-the-badge&logo=github&labelColor=0d1117" alt="Repo"/></a>&nbsp;
-<img src="https://img.shields.io/badge/STATUS-Draft%20Spec%20v0.1-ff6900?style=for-the-badge&labelColor=0d1117" alt="Status"/>&nbsp;
-<img src="https://img.shields.io/badge/License-MIT-ff6900?style=for-the-badge&labelColor=0d1117" alt="License"/>
-
-</div>
-
-<br/>
-
-**ARP (Agent Run Protocol)** is a framework-agnostic **open standard** for agent execution versioning. Every agent framework today stores runs in a proprietary format — LangGraph checkpointer tables, CrewAI task arrays, AutoGen conversation dicts, PydanticAI JSONL — all mutually unintelligible. ARP defines a **canonical wire format, a semantic step model, and a set of operations** (fork, branch, merge, diff, replay, compact) that any conformant implementation must support. ARP is to agent executions what git is to source code: a **content-addressable Merkle DAG** with named references, branching, and merging.
-
-### Design Principles
-
-| Principle | Meaning |
-|:---|:---|
-| **Framework-agnostic** | Any framework can emit ARP records without changing its internals |
-| **Content-addressable** | Node identity derives from content — deduplication, integrity, efficient sync |
-| **Append-only** | Historical nodes are immutable once written |
-| **Minimal adapter burden** | Framework adapters implementable in ~200 lines or fewer |
-| **Git-shaped** | Reuses git's conceptual vocabulary — developers already know the model |
-
-### Reference Adapters (shipped in `arp-protocol`)
-
-| Framework | Adapter |
-|:---|:---|
-| LangGraph | `arp.adapters.langgraph` |
-| CrewAI | `arp.adapters.crewai` |
-| AutoGen | `arp.adapters.autogen` |
-| OpenAI Agents | `arp.adapters.openai_agents` |
-
-### Why ARP Alongside opentine
-
-**opentine** is a minimalist agent SDK with a forkable run tree. **ARP** is the wire-format and semantic spec that any framework — opentine included — can emit and consume, so runs produced in one ecosystem can be forked, replayed, and diffed from another. opentine is an implementation; ARP is the protocol.
-
-### Tech Stack
-
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=flat-square&logo=pydantic&logoColor=white)
-![Merkle DAG](https://img.shields.io/badge/Content--Addressable%20Merkle%20DAG-0d1117?style=flat-square)
-![Open Spec](https://img.shields.io/badge/Open%20Spec-ff6900?style=flat-square)
-![MIT](https://img.shields.io/badge/License-MIT-ff6900?style=flat-square)
-
-</div>
-
-<br/>
-
----
-
-<br/>
-
-</div>
 
 <!-- ═══════════════════════════════════════════════════════════════════ -->
 <!-- FULL TECH STACK                                                    -->
@@ -674,8 +618,8 @@ Full Tech Stack
 GitHub Analytics
 </h2>
 
-<img src="https://github-readme-stats.vercel.app/api?username=0xcircuitbreaker&show_icons=true&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9&ring_color=58a6ff&include_all_commits=true&count_private=true" width="49%" alt="Stats"/>
-<img src="https://github-readme-streak-stats.herokuapp.com?user=0xcircuitbreaker&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff&sideLabels=c9d1d9&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=8b949e" width="49%" alt="Streak"/>
+<img src="https://github-readme-stats.vercel.app/api?username=0xcircuitbreaker&show_icons=true&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9&ring_color=58a6ff&include_all_commits=true" width="49%" alt="Stats"/>
+<img src="https://streak-stats.demolab.com/?user=0xcircuitbreaker&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff&sideLabels=c9d1d9&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=8b949e" width="49%" alt="Streak"/>
 
 <br/>
 

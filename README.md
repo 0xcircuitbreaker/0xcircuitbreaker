@@ -3,30 +3,23 @@
 
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:1a1b27&height=160&section=header" width="100%"/>
-<a href="https://github.com/0xcircuitbreaker"><img src="https://readme-typing-svg.demolab.com?font=VT323&weight=400&size=50&duration=4000&pause=2000&color=58A6FF&center=true&vCenter=true&repeat=true&width=650&height=65&lines=0xcircuitbreaker" alt="0xcircuitbreaker"/></a>
-<a href="https://github.com/0xcircuitbreaker"><img src="https://readme-typing-svg.demolab.com?font=VT323&weight=400&size=28&duration=2500&pause=800&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&width=820&height=80&lines=Founder+%7C+Lead+Engineer+%7C+CEO;Dominus+Node+%E2%80%A2+Solidus+Network+%E2%80%A2+Innova+Foundation" alt="Typing SVG"/></a>
+<a href="https://github.com/0xcircuitbreaker"><img src="https://readme-typing-svg.demolab.com?font=VT323&weight=400&size=50&duration=4000&pause=2000&color=58A6FF&center=true&vCenter=true&repeat=true&width=650&height=65&lines=0xcircuitbreaker" alt="0xcircuitbreaker"/></a><br/>
+<a href="https://github.com/0xcircuitbreaker"><img src="https://readme-typing-svg.demolab.com?font=VT323&weight=400&size=28&duration=2500&pause=800&color=58A6FF&center=true&vCenter=true&repeat=true&width=820&height=65&lines=Founder+%7C+Lead+Engineer" alt="Typing SVG"/></a>
 
 <br/>
 
-<a href="https://dominusnode.com"><img src="https://img.shields.io/badge/dominusnode.com-58a6ff?style=for-the-badge&logo=googlechrome&logoColor=0d1117" alt="Dominus Site"/></a>&nbsp;
-<a href="https://github.com/Dominus-Node"><img src="https://img.shields.io/badge/Dominus--Node-58a6ff?style=for-the-badge&logo=github&logoColor=0d1117" alt="Dominus Org"/></a>&nbsp;
-<a href="https://innova-foundation.com"><img src="https://img.shields.io/badge/innova--foundation.com-58a6ff?style=for-the-badge&logo=googlechrome&logoColor=0d1117" alt="Innova Site"/></a>&nbsp;
-<a href="https://github.com/innova-foundation"><img src="https://img.shields.io/badge/innova--foundation-58a6ff?style=for-the-badge&logo=github&logoColor=0d1117" alt="Innova Org"/></a>
+<a href="https://daedalusdevelopmentgroup.com"><img src="https://img.shields.io/badge/daedalusdevelopmentgroup.com-58a6ff?style=for-the-badge&logo=googlechrome&logoColor=0d1117" alt="Portfolio"/></a>
 
 <br/><br/>
 
-```
-Building autonomous AI infrastructure, high-performance DeFi,
-and privacy-first blockchain protocols from the ground up.
-```
+<p align="center"><sub><code>Building autonomous AI infrastructure, high-performance DeFi,<br/>and privacy-first blockchain protocols from the ground up.</code></sub></p>
 
 <br/>
 
-<a href="#-dominus-node--autonomous-ai-proxy-infrastructure"><img src="https://img.shields.io/badge/01-DOMINUS%20NODE-0d1117?style=for-the-badge&labelColor=58a6ff" alt="01"/></a>
-<a href="#-solidus-network--high-performance-multi-chain-perps-exchange"><img src="https://img.shields.io/badge/02-SOLIDUS%20NETWORK-0d1117?style=for-the-badge&labelColor=58a6ff" alt="02"/></a>
-<a href="#-innova-inn--privacy-first-blockchain-protocol"><img src="https://img.shields.io/badge/03-INNOVA%20%2F%20IDAG-0d1117?style=for-the-badge&labelColor=58a6ff" alt="03"/></a>
-<a href="#-project-lavalamp--hardware-level-side-channel-mitigation"><img src="https://img.shields.io/badge/04-PROJECT%20LAVALAMP-0d1117?style=for-the-badge&labelColor=ff6b2b" alt="04"/></a>
-<a href="#-opentine--git-for-agent-runs"><img src="https://img.shields.io/badge/05-OPENTINE-0d1117?style=for-the-badge&labelColor=ff6900" alt="05"/></a>
+<a href="#-solidus-network--high-performance-multi-chain-perps-exchange"><img src="https://img.shields.io/badge/01-SOLIDUS%20NETWORK-0d1117?style=for-the-badge&labelColor=58a6ff" alt="01"/></a>
+<a href="#-innova-inn--privacy-first-blockchain-protocol"><img src="https://img.shields.io/badge/02-INNOVA%20%2F%20IDAG-0d1117?style=for-the-badge&labelColor=58a6ff" alt="02"/></a>
+<a href="#-project-lavalamp--hardware-level-side-channel-mitigation"><img src="https://img.shields.io/badge/03-PROJECT%20LAVALAMP-0d1117?style=for-the-badge&labelColor=ff6b2b" alt="03"/></a>
+<a href="#-opentine--git-for-agent-runs"><img src="https://img.shields.io/badge/04-OPENTINE-0d1117?style=for-the-badge&labelColor=ff6900" alt="04"/></a>
 
 </div>
 
@@ -35,120 +28,8 @@ and privacy-first blockchain protocols from the ground up.
 ---
 
 <br/>
-
-<!-- ═══════════════════════════════════════════════════════════════════ -->
-<!-- DOMINUS NODE                                                       -->
-<!-- ═══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
-<h2>
-<img src="https://img.shields.io/badge/●-58a6ff?style=flat-square&labelColor=58a6ff" height="12"/>
-DOMINUS NODE — Autonomous AI Proxy Infrastructure
-</h2>
-
-<a href="https://dominusnode.com"><img src="https://img.shields.io/badge/LIVE-dominusnode.com-58a6ff?style=for-the-badge&labelColor=0d1117" alt="Live"/></a>&nbsp;
-<a href="https://github.com/Dominus-Node"><img src="https://img.shields.io/badge/GitHub-Dominus--Node-58a6ff?style=for-the-badge&logo=github&labelColor=0d1117" alt="Org"/></a>
-
-</div>
-
-<br/>
-
-**Dominus Node** is an enterprise proxy IP service purpose-built for **AI agents**. Unlike traditional proxy providers, Dominus is designed from the ground up for autonomous agent workflows — providing a plugin and tool ecosystem that AI agents can discover, install, configure, and operate **without human intervention**.
-
-<p align="center">
-  <a href="./assets/readme/dominus-node-architecture.png">
-    <img src="./assets/readme/dominus-node-architecture.png" alt="Dominus Node architecture diagram"/>
-  </a>
-</p>
-
-### 28 Integrations — Agent-Native Plugin Ecosystem
-
-Every integration is designed for **autonomous installation and self-management** — agents discover the plugin they need, install it, authenticate, and begin routing traffic through the proxy mesh with zero human setup.
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-**AI Agent Frameworks**
-
-| Plugin | Framework |
-|:---|:---|
-| [`dominusnode-langchain`](https://github.com/Dominus-Node/dominusnode-langchain) | LangChain |
-| [`dominusnode-crewai`](https://github.com/Dominus-Node/dominusnode-crewai) | CrewAI |
-| [`dominusnode-llamaindex`](https://github.com/Dominus-Node/dominusnode-llamaindex) | LlamaIndex |
-| [`dominusnode-autogpt`](https://github.com/Dominus-Node/dominusnode-autogpt) | AutoGPT |
-| [`dominusnode-metagpt`](https://github.com/Dominus-Node/dominusnode-metagpt) | MetaGPT |
-| [`dominusnode-superagi`](https://github.com/Dominus-Node/dominusnode-superagi) | SuperAGI |
-| [`dominusnode-pydantic-ai`](https://github.com/Dominus-Node/dominusnode-pydantic-ai) | Pydantic AI |
-| [`dominusnode-camel-ai`](https://github.com/Dominus-Node/dominusnode-camel-ai) | CAMEL-AI |
-| [`dominusnode-agno`](https://github.com/Dominus-Node/dominusnode-agno) | Agno |
-| [`dominusnode-agent--zero`](https://github.com/Dominus-Node/dominusnode-agent--zero) | Agent Zero |
-| [`dominusnode-semantic-kernel`](https://github.com/Dominus-Node/dominusnode-semantic-kernel) | Semantic Kernel |
-| [`dominusnode-haystack`](https://github.com/Dominus-Node/dominusnode-haystack) | Haystack |
-| [`dominusnode-composio`](https://github.com/Dominus-Node/dominusnode-composio) | Composio |
-
-</td>
-<td width="33%" valign="top">
-
-**Platforms & Orchestration**
-
-| Plugin | Platform |
-|:---|:---|
-| [`dominusnode-n8n`](https://github.com/Dominus-Node/dominusnode-n8n) | n8n |
-| [`dominusnode-flowise`](https://github.com/Dominus-Node/dominusnode-flowise) | Flowise |
-| [`dominusnode-dify`](https://github.com/Dominus-Node/dominusnode-dify) | Dify |
-| [`dominusnode-mastra`](https://github.com/Dominus-Node/dominusnode-mastra) | Mastra |
-| [`dominusnode-vercel-ai`](https://github.com/Dominus-Node/dominusnode-vercel-ai) | Vercel AI SDK |
-| [`dominusnode-moltbook`](https://github.com/Dominus-Node/dominusnode-moltbook) | Moltbook |
-| [`dominusnode-openclaw`](https://github.com/Dominus-Node/dominusnode-openclaw) | OpenClaw |
-| [`dominusnode-ironclaw`](https://github.com/Dominus-Node/dominusnode-ironclaw) | IronClaw |
-| [`mcp-server`](https://github.com/Dominus-Node/mcp-server) | MCP Server |
-
-**LLM Provider Plugins**
-
-| Plugin | Provider |
-|:---|:---|
-| [`dominusnode-openai`](https://github.com/Dominus-Node/dominusnode-openai) | OpenAI |
-| [`dominusnode-gemini`](https://github.com/Dominus-Node/dominusnode-gemini) | Google Gemini |
-| [`dominusnode-chatgpt`](https://github.com/Dominus-Node/dominusnode-chatgpt) | ChatGPT |
-| [`dominusnode-pi`](https://github.com/Dominus-Node/dominusnode-pi) | Pi |
-
-</td>
-<td width="33%" valign="top">
-
-**Core SDKs**
-
-| SDK | Language |
-|:---|:---|
-| [`dominusnode-python`](https://github.com/Dominus-Node/dominusnode-python) | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-| [`dominusnode-node`](https://github.com/Dominus-Node/dominusnode-node) | ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) |
-| [`dominusnode-go`](https://github.com/Dominus-Node/dominusnode-go) | ![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white) |
-| [`dominusnode-rust`](https://github.com/Dominus-Node/dominusnode-rust) | ![Rust](https://img.shields.io/badge/-Rust-000000?style=flat-square&logo=rust&logoColor=white) |
-| [`dominusnode-java`](https://github.com/Dominus-Node/dominusnode-java) | ![Java](https://img.shields.io/badge/-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) |
-| [`dominusnode-cpp`](https://github.com/Dominus-Node/dominusnode-cpp) | ![C++](https://img.shields.io/badge/-C++-00599C?style=flat-square&logo=cplusplus&logoColor=white) |
-
-<br/>
-
-**Key Capabilities**
-
-- Autonomous plugin discovery & install
-- Programmatic account provisioning
-- API key rotation & billing controls
-- Sticky sessions & IP rotation
-- Geo-targeting & concurrent sessions
-- Per-agent bandwidth telemetry
-- MCP tool server for Claude/GPT agents
-- Zero human intervention workflows
-
-</td>
-</tr>
-</table>
-
-<br/>
-
----
-
-<br/>
 
 <!-- ═══════════════════════════════════════════════════════════════════ -->
 <!-- SOLIDUS NETWORK                                                    -->
@@ -450,11 +331,11 @@ PROJECT LAVALAMP — Hardware-Level Side-Channel Mitigation
 
 ### Three Deployment Tiers
 
-| Tier | Form Factor | Leak Reduction | CPU Overhead | Price |
-|:---|:---|:---|:---|:---|
-| **Shield** | CPU-only software daemon (x86 / ARM Neoverse) | 93% | 6% | $99–299 / yr |
-| **Lite** | USB FPGA bitstream + host daemon — 7+ Artix-7 boards | 99%+ | <1% | $499–999 / yr |
-| **Pro** *(in dev)* | PCIe FPGA card + kernel driver + TLP inference | 99%+ | ~0% | $2,000–5,000 / yr |
+| Tier | Form Factor | Leak Reduction | CPU Overhead |
+|:---|:---|:---|:---|
+| **Shield** | CPU-only software daemon (x86 / ARM Neoverse) | 93% | 6% |
+| **Lite** | USB FPGA bitstream + host daemon — 7+ Artix-7 boards | 99%+ | <1% |
+| **Pro** *(in dev)* | PCIe FPGA card + kernel driver + TLP inference | 99%+ | ~0% |
 
 ### Universal FPGA Build System
 
@@ -512,31 +393,62 @@ Disabling SMT mitigates the leak but costs **~50% of compute capacity**. Lavalam
 OPENTINE — Git for Agent Runs
 </h2>
 
+<p align="center"><strong>Git for agent runs. Fork, replay, resume any execution.</strong><br/>
+<sub>~250 lines of core · Any model · Zero lock-in · <strong>Public beta</strong> v0.1.x on PyPI</sub></p>
+
 <a href="https://opentine.com"><img src="https://img.shields.io/badge/LIVE-opentine.com-ff6900?style=for-the-badge&labelColor=0d1117" alt="Live"/></a>&nbsp;
 <a href="https://github.com/0xcircuitbreaker/opentine"><img src="https://img.shields.io/badge/GitHub-opentine-ff6900?style=for-the-badge&logo=github&labelColor=0d1117" alt="Repo"/></a>&nbsp;
-<a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/v/opentine?style=for-the-badge&color=ff6900&labelColor=0d1117" alt="PyPI"/></a>
+<a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/v/opentine?style=for-the-badge&color=ff6900&labelColor=0d1117" alt="PyPI"/></a>&nbsp;
+<a href="https://github.com/0xcircuitbreaker/opentine/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-ff6900?style=for-the-badge&labelColor=0d1117" alt="License"/></a>&nbsp;
+<a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/pyversions/opentine?style=for-the-badge&color=ff6900&labelColor=0d1117" alt="Python"/></a>&nbsp;
+<a href="https://github.com/0xcircuitbreaker/opentine/actions"><img src="https://img.shields.io/github/actions/workflow/status/0xcircuitbreaker/opentine/ci.yml?style=for-the-badge&color=ff6900&labelColor=0d1117" alt="CI"/></a>
 
 </div>
 
 <br/>
 
-**opentine** is git for agent runs. Every AI agent execution becomes a **content-addressed run tree** — forkable, replayable, diffable, and serializable to disk. Pause on your laptop, resume on a server. Branch from step 7 with a different prompt. Diff two runs side by side. The core is **~250 lines of Python**, model-agnostic, and has zero framework lock-in.
-
 A **tine** is the prong of a fork. opentine literally forks your agent runs.
 
-### Recent Milestones
+Every agent execution becomes a **run tree** — content-addressed, serializable, forkable. Pause on your laptop, resume on a server. Branch from step 7 with a different prompt. Diff two runs side by side.
 
-- **Public release on PyPI** — `pip install opentine`, Apache 2.0, zero framework lock-in.
-- **Multi-provider adapters shipped** — native support for Anthropic, OpenAI, Google, and Ollama, plus OpenAI-compatible wrappers for Kimi, DeepSeek, Qwen, GLM, Groq, Together, and Mistral.
-- **Full CLI surface live** — `run`, `ls`, `show`, `replay`, `fork`, `diff`, `resume`.
-- **Serialization format stable** — `.tine` run trees are portable across machines; pause on laptop, resume on a server.
-- **Next up** — remote run sync, hosted replay viewer, and tighter integrations with agent frameworks that already appear on the comparison table below.
+### Quickstart
+
+```bash
+pip install opentine
+```
+
+```python
+from opentine import Agent
+from opentine.models.anthropic import Anthropic
+
+agent = Agent(model=Anthropic("claude-sonnet-4-20250514"))
+run = agent.run_sync("What is opentine?")
+run.save("result.tine")
+```
+
+```bash
+tine show result.tine
+```
+
+### Public beta (v0.1.x)
+
+Matches current PyPI releases in the **0.1.x** line — lightweight agent SDK, stable `.tine` serialization, full CLI (`run`, `ls`, `show`, `replay`, `fork`, `diff`, `resume`). Native adapters for **Anthropic, OpenAI, Google, Ollama**; OpenAI-compatible wrappers for **Kimi, DeepSeek, Qwen, GLM, Groq, Together, Mistral**.
 
 <p align="center">
   <a href="./assets/readme/opentine-run-tree.svg">
     <img src="./assets/readme/opentine-run-tree.svg" alt="opentine run tree and fork diagram"/>
   </a>
 </p>
+
+### Killer demo
+
+Your agent fails after many steps — fork before the bad tool call instead of burning tokens from step zero:
+
+```bash
+tine show failed_run.tine
+tine fork failed_run.tine --from-step 3 --save fixed_run.tine
+tine diff failed_run.tine fixed_run.tine
+```
 
 ### Why opentine
 
@@ -548,7 +460,7 @@ A **tine** is the prong of a fork. opentine literally forks your agent runs.
 | smolagents | 198 MB | No | Partial | ~15k |
 | **opentine** | **<5 MB** | **Yes** | **Yes** | **~250** |
 
-### CLI
+### CLI reference
 
 ```
 tine run <script.py>          Execute agent, stream steps, save run tree
@@ -560,17 +472,44 @@ tine diff <run_a> <run_b>     Side-by-side comparison
 tine resume <run_id>          Resume a paused run
 ```
 
-### Model Support
+### Built-in tools
 
-Treats every provider equally. Swap with one line — native adapters for **Anthropic, OpenAI, Google, Ollama**, plus OpenAI-compatible wrappers for **Kimi, DeepSeek, Qwen, GLM, Groq, Together, Mistral**.
+Tools are plain Python callables — opentine introspects type hints.
 
 ```python
 from opentine import Agent
 from opentine.models.anthropic import Anthropic
+from opentine.tools import web, search, fs, shell
+
+agent = Agent(
+    model=Anthropic("claude-sonnet-4-20250514"),
+    tools=[web.fetch, search.search, fs.read, fs.write, shell.run],
+)
+```
+
+### Model support
+
+```python
+from opentine import Agent
+from opentine.models.anthropic import Anthropic
+from opentine.models.openai import OpenAI
+from opentine.models.google import Google
+from opentine.models.ollama import Ollama
 
 agent = Agent(model=Anthropic("claude-sonnet-4-20250514"))
-run = agent.run_sync("What is opentine?")
-run.save("result.tine")
+agent = Agent(model=OpenAI("gpt-4o"))
+agent = Agent(model=Google("gemini-2.0-flash"))
+agent = Agent(model=Ollama("llama3.1"))
+
+from opentine.models.compat import Kimi, DeepSeek, Qwen, GLM, Groq, Together, Mistral
+
+agent = Agent(model=Kimi("moonshot-v1-8k"))
+agent = Agent(model=DeepSeek("deepseek-chat"))
+agent = Agent(model=Qwen("qwen-plus"))
+agent = Agent(model=GLM("glm-4-flash"))
+agent = Agent(model=Groq("llama-3.1-70b-versatile"))
+agent = Agent(model=Together("meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"))
+agent = Agent(model=Mistral("mistral-large-latest"))
 ```
 
 ### Tech Stack
@@ -581,6 +520,7 @@ run.save("result.tine")
 ![uv](https://img.shields.io/badge/uv-DE5FE9?style=flat-square)
 ![Anthropic](https://img.shields.io/badge/Anthropic-D97757?style=flat-square&logo=anthropic&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+![Rich](https://img.shields.io/badge/Rich-0d1117?style=flat-square)
 ![Content--Addressed](https://img.shields.io/badge/Content--Addressed%20DAG-0d1117?style=flat-square)
 ![Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-ff6900?style=flat-square)
 
@@ -592,6 +532,71 @@ run.save("result.tine")
 
 <br/>
 
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- ARP (hidden from README preview — preserved for authors / git history) -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div hidden>
+
+<div align="center">
+<h2>
+<img src="https://img.shields.io/badge/●-ff6900?style=flat-square&labelColor=ff6900" height="12"/>
+ARP — Agent Run Protocol
+</h2>
+
+<a href="https://github.com/arp-protocol/arp"><img src="https://img.shields.io/badge/GitHub-arp--protocol%2Farp-ff6900?style=for-the-badge&logo=github&labelColor=0d1117" alt="Repo"/></a>&nbsp;
+<img src="https://img.shields.io/badge/STATUS-Draft%20Spec%20v0.1-ff6900?style=for-the-badge&labelColor=0d1117" alt="Status"/>&nbsp;
+<img src="https://img.shields.io/badge/License-MIT-ff6900?style=for-the-badge&labelColor=0d1117" alt="License"/>
+
+</div>
+
+<br/>
+
+**ARP (Agent Run Protocol)** is a framework-agnostic **open standard** for agent execution versioning. Every agent framework today stores runs in a proprietary format — LangGraph checkpointer tables, CrewAI task arrays, AutoGen conversation dicts, PydanticAI JSONL — all mutually unintelligible. ARP defines a **canonical wire format, a semantic step model, and a set of operations** (fork, branch, merge, diff, replay, compact) that any conformant implementation must support. ARP is to agent executions what git is to source code: a **content-addressable Merkle DAG** with named references, branching, and merging.
+
+### Design Principles
+
+| Principle | Meaning |
+|:---|:---|
+| **Framework-agnostic** | Any framework can emit ARP records without changing its internals |
+| **Content-addressable** | Node identity derives from content — deduplication, integrity, efficient sync |
+| **Append-only** | Historical nodes are immutable once written |
+| **Minimal adapter burden** | Framework adapters implementable in ~200 lines or fewer |
+| **Git-shaped** | Reuses git's conceptual vocabulary — developers already know the model |
+
+### Reference Adapters (shipped in `arp-protocol`)
+
+| Framework | Adapter |
+|:---|:---|
+| LangGraph | `arp.adapters.langgraph` |
+| CrewAI | `arp.adapters.crewai` |
+| AutoGen | `arp.adapters.autogen` |
+| OpenAI Agents | `arp.adapters.openai_agents` |
+
+### Why ARP Alongside opentine
+
+**opentine** is a minimalist agent SDK with a forkable run tree. **ARP** is the wire-format and semantic spec that any framework — opentine included — can emit and consume, so runs produced in one ecosystem can be forked, replayed, and diffed from another. opentine is an implementation; ARP is the protocol.
+
+### Tech Stack
+
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=flat-square&logo=pydantic&logoColor=white)
+![Merkle DAG](https://img.shields.io/badge/Content--Addressable%20Merkle%20DAG-0d1117?style=flat-square)
+![Open Spec](https://img.shields.io/badge/Open%20Spec-ff6900?style=flat-square)
+![MIT](https://img.shields.io/badge/License-MIT-ff6900?style=flat-square)
+
+</div>
+
+<br/>
+
+---
+
+<br/>
+
+</div>
 
 <!-- ═══════════════════════════════════════════════════════════════════ -->
 <!-- FULL TECH STACK                                                    -->
@@ -704,15 +709,6 @@ Pinned Repositories
 <a href="https://github.com/0xcircuitbreaker/opentine">
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=0xcircuitbreaker&repo=opentine&hide_border=true&bg_color=0d1117&title_color=ff6900&icon_color=ff6900&text_color=c9d1d9" alt="opentine"/>
 </a>
-<a href="https://github.com/Dominus-Node/mcp-server">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dominus-Node&repo=mcp-server&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" alt="mcp-server"/>
-</a>
-<a href="https://github.com/Dominus-Node/dominusnode-openclaw">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dominus-Node&repo=dominusnode-openclaw&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" alt="openclaw"/>
-</a>
-<a href="https://github.com/Dominus-Node/dominusnode-python">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Dominus-Node&repo=dominusnode-python&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" alt="python-sdk"/>
-</a>
 
 </div>
 
@@ -726,7 +722,7 @@ Pinned Repositories
 <!-- ADDITIONAL ECOSYSTEM                                               -->
 <!-- ═══════════════════════════════════════════════════════════════════ -->
 
-<details>
+<details align="center">
 <summary><h3>Additional Research</h3></summary>
 
 <br/>
@@ -735,9 +731,11 @@ Pinned Repositories
 
 **Cryptanalysis & Bitcoin Research** — UTXO analysis, chainstate parsing, vanity address generation, and parallel cryptanalysis tooling.
 
-**AI/ML** — Autonomous agent architectures, multimodal models, and research that feeds directly into Dominus Node's agent-first design philosophy.
+**AI/ML** — Autonomous agent architectures, multimodal models, and research aligned with agent-first design philosophy.
 
 </details>
+
+</div>
 
 <br/>
 

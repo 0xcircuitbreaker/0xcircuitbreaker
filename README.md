@@ -675,6 +675,8 @@ Pinned Repositories
 
 **Cryptanalysis & Bitcoin Research** — UTXO analysis, chainstate parsing, vanity address generation, and parallel cryptanalysis tooling.
 
+**Priscus Research** — Applied AI systems research under private development. Public releases will focus on verifiable claims, reproducible evaluation summaries, and externally reviewable findings while keeping proprietary code, architecture details, model weights, datasets, and internal design materials confidential.
+
 **AI/ML** — Autonomous agent architectures, multimodal models, and research aligned with agent-first design philosophy.
 
 </details>

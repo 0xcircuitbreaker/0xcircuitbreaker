@@ -390,16 +390,17 @@ Disabling SMT mitigates the leak but costs **~50% of compute capacity**. Lavalam
 <div align="center">
 <h2>
 <img src="https://img.shields.io/badge/●-b7ff3c?style=flat-square&labelColor=b7ff3c" height="12"/>
-OPENTINE — Git for Agent Runs
+OpenTine — Git-Shaped Provenance for Agent Runs
 </h2>
 
-<p align="center"><strong>Git for agent runs. Fork, replay, resume any execution.</strong><br/>
-<sub>~250 lines of core · Any model · Zero lock-in · <strong>Public beta</strong> v0.1.x on PyPI</sub></p>
+<p align="center"><strong>Record, verify, fork, compare, attest, and synchronize agent execution history.</strong><br/>
+<sub>&le;250-line trusted kernel · Portable v2 artifacts + verified v3 repositories · <strong>Beta v0.5.0</strong> on PyPI</sub></p>
 
 <a href="https://opentine.com"><img src="https://img.shields.io/badge/LIVE-opentine.com-b7ff3c?style=for-the-badge&labelColor=020403" alt="Live"/></a>&nbsp;
 <a href="https://github.com/0xcircuitbreaker/opentine"><img src="https://img.shields.io/badge/GitHub-opentine-b7ff3c?style=for-the-badge&logo=github&labelColor=020403" alt="Repo"/></a>&nbsp;
-<a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/v/opentine?style=for-the-badge&color=b7ff3c&labelColor=020403" alt="PyPI"/></a>&nbsp;
-<a href="https://github.com/0xcircuitbreaker/opentine/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-b7ff3c?style=for-the-badge&labelColor=020403" alt="License"/></a>&nbsp;
+<a href="https://github.com/0xcircuitbreaker/opentine/releases/tag/v0.5.0"><img src="https://img.shields.io/badge/release-v0.5.0-b7ff3c?style=for-the-badge&labelColor=020403" alt="OpenTine v0.5.0 release"/></a>&nbsp;
+<a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/v/opentine?style=for-the-badge&color=b7ff3c&labelColor=020403" alt="PyPI version"/></a>&nbsp;
+<a href="https://github.com/0xcircuitbreaker/opentine/blob/v0.5.0/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-b7ff3c?style=for-the-badge&labelColor=020403" alt="License"/></a>&nbsp;
 <a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/pyversions/opentine?style=for-the-badge&color=b7ff3c&labelColor=020403" alt="Python"/></a>&nbsp;
 <a href="https://github.com/0xcircuitbreaker/opentine/actions"><img src="https://img.shields.io/github/actions/workflow/status/0xcircuitbreaker/opentine/ci.yml?style=for-the-badge&color=b7ff3c&labelColor=020403" alt="CI"/></a>
 
@@ -407,42 +408,60 @@ OPENTINE — Git for Agent Runs
 
 <br/>
 
-A **tine** is the prong of a fork. opentine literally forks your agent runs.
+A **tine** is the prong of a fork. OpenTine gives agent execution history Git-shaped provenance without requiring a hosted control plane.
 
-Every agent execution becomes a **run tree** — content-addressed, serializable, forkable. Pause on your laptop, resume on a server. Branch from step 7 with a different prompt. Diff two runs side by side.
+OpenTine v0.5.0 keeps two deliberately separate, compatible storage surfaces:
+
+| Surface | Format | Purpose |
+|:---|:---|:---|
+| **Portable run** | `*.tine` v2 | Save, sign, verify, fork, replay, diff, resume, tag, search, and migrate individual run trees. Readers still load v1 and v2 artifacts. |
+| **Verified repository** | `.tine/` v3 | Store typed content-addressed objects, refs/reflogs, attestations, annotations, packs, semantic diffs, causal context, and synchronized remotes. |
 
 ### Quickstart
 
+OpenTine v0.5.0 supports **Python 3.11–3.14**. This example uses the optional Anthropic adapter and expects `ANTHROPIC_API_KEY` in the environment.
+
 ```bash
-pip install opentine
+pip install "opentine[anthropic]==0.5.0"
 ```
 
 ```python
 from opentine import Agent
 from opentine.models.anthropic import Anthropic
 
-agent = Agent(model=Anthropic("claude-sonnet-4-20250514"))
-run = agent.run_sync("What is opentine?")
+agent = Agent(model=Anthropic("claude-sonnet-5"))
+run = agent.run_sync("Explain the current branch")
 run.save("result.tine")
 ```
 
 ```bash
 tine show result.tine
+tine verify result.tine
+tine cost result.tine
 ```
 
-### Public beta (v0.1.x)
+### v0.5.0 — Ecosystem Release
 
-Matches current PyPI releases in the **0.1.x** line — lightweight agent SDK, stable `.tine` serialization, full CLI (`run`, `ls`, `show`, `replay`, `fork`, `diff`, `resume`). Native adapters for **Anthropic, OpenAI, Google, Ollama**; OpenAI-compatible wrappers for **Kimi, DeepSeek, Qwen, GLM, Groq, Together, Mistral**.
+Released July 31, 2026, v0.5.0 extends the verified run model into the surrounding agent ecosystem while keeping prior stored data readable. [Read the v0.5.0 changelog →](https://github.com/0xcircuitbreaker/opentine/blob/v0.5.0/CHANGELOG.md)
+
+| Area | Current capability |
+|:---|:---|
+| **OpenTelemetry GenAI** | Imports modern GenAI spans and complete OTLP/JSON documents; exports portable or repository runs back to matching GenAI spans. |
+| **Framework interoperability** | Imports LangChain, LlamaIndex, AutoGen, CrewAI, and OpenAI Agents logs; optional `opentine[langchain]` records LangChain/LangGraph runs live. |
+| **Verification** | Content-addressed run history, integrity checks, HMAC-SHA256 and Ed25519 signing, typed links, deep `fsck`, and attestation objects. |
+| **Usage and billing** | Normalized provider usage, explicit complete/partial/unknown/unmetered billing states, signed pricing catalogs, and strict cost budgets. |
+| **Automation** | `tine import`, stable `--json` output, MCP operations, external CLI harness capture, and a bounded self-hosted reference remote. |
+| **Compatibility** | Golden-fixture gates verify that artifacts and repositories written by v0.3.0 and v0.4.0 still load under v0.5.0. |
 
 <p align="center">
   <a href="./assets/readme/opentine-run-tree.svg">
-    <img src="./assets/readme/opentine-run-tree.svg" alt="opentine run tree and fork diagram"/>
+    <img src="./assets/readme/opentine-run-tree.svg" alt="OpenTine v0.5.0 run tree and fork diagram"/>
   </a>
 </p>
 
-### Killer demo
+### Fork-and-diff workflow
 
-Your agent fails after many steps — fork before the bad tool call instead of burning tokens from step zero:
+When a run fails after many steps, branch from the last good point and compare the resulting histories:
 
 ```bash
 tine show failed_run.tine
@@ -450,76 +469,49 @@ tine fork failed_run.tine --from-step 3 --save fixed_run.tine
 tine diff failed_run.tine fixed_run.tine
 ```
 
-### Why opentine
+### Selected CLI surface
 
-| | Install size | Forkable runs | Any model | Core LOC |
-|:---|:---|:---|:---|:---|
-| LangChain | 166 MB | No | Partial | ~200k |
-| LangGraph | 51 MB | Checkpoints only | Partial | ~50k |
-| CrewAI | 173 MB | No | Partial | ~30k |
-| smolagents | 198 MB | No | Partial | ~15k |
-| **opentine** | **<5 MB** | **Yes** | **Yes** | **~250** |
+The `tine` CLI ships **27 subcommands** across portable artifacts, interoperability, pricing, verified repositories, and self-hosted synchronization.
 
-### CLI reference
+```bash
+# Portable artifacts
+tine run <script.py> --save result.tine
+tine show result.tine
+tine verify result.tine --json
+tine fork result.tine --from-step 3 --save fork.tine
+tine replay result.tine --from-step 3 --mode cache --save replay.tine
+tine diff result.tine fork.tine
 
-```
-tine run <script.py>          Execute agent, stream steps, save run tree
-tine ls                       List recent runs (status, cost, model)
-tine show <run_id>            Pretty-print the tree (like git log --graph)
-tine replay <id> [--from N]   Replay from a step
-tine fork <id> --from-step N  Branch a new run
-tine diff <run_a> <run_b>     Side-by-side comparison
-tine resume <run_id>          Resume a paused run
+# Verified repository and trace interoperability
+tine init .
+tine migrate-v3 result.tine --repo . --ref heads/main
+tine import trace.json --format otel-json --repo . --ref heads/imported
+tine fsck --repo .
 ```
 
-### Built-in tools
+### Built-in tools and policy boundaries
 
-Tools are plain Python callables — opentine introspects type hints. Common symbols from **`opentine.tools`**:
+Tools remain ordinary typed Python callables, but host-owned policy objects control filesystem, network, shell, and Python execution boundaries.
 
-| Module | Callables |
+| Capability | Symbols | Default boundary |
+|:---|:---|:---|
+| **Web** | `web.fetch`, `web.fetch_raw` | Scheme, DNS, redirect, body-size, and timeout checks. |
+| **Search** | `search.search` | Bounded Tavily, Exa, Brave, or DuckDuckGo retrieval. |
+| **Filesystem** | `fs.read`, `fs.write`, `fs.edit`, `fs.ls` | Scoped roots; writes require an allowed write root. |
+| **Execution** | `shell.run`, `python.execute` | Disabled until the embedding host supplies an explicit enabling policy. |
+
+[Read the v0.5.0 security model →](https://github.com/0xcircuitbreaker/opentine/blob/v0.5.0/docs/SECURITY_MODEL.md)
+
+### Model and ecosystem support
+
+| Surface | Coverage |
 |:---|:---|
-| **`web`** | `web.fetch` |
-| **`search`** | `search.search` |
-| **`fs`** | `fs.read`, `fs.write` |
-| **`shell`** | `shell.run` |
+| **Native adapters** | Anthropic, OpenAI Responses API, Google Gemini, and Ollama. |
+| **Hosted compatible adapters** | Kimi/Moonshot, DeepSeek, GLM/Z.AI, xAI/Grok, Groq, Qwen, Together, Mistral/Ministral, OpenRouter, and Nous/Hermes. |
+| **Local and generic runtimes** | LM Studio, vLLM, Unsloth, llama.cpp, LocalAI, Jan, SGLang, TGI, MLX-LM, NVIDIA NIM, TensorRT-LLM, KoboldCpp, LiteLLM, and exact-base OpenAI-compatible servers. |
+| **Trace ecosystems** | OpenTelemetry GenAI, LangChain/LangGraph, LlamaIndex, AutoGen, CrewAI, and OpenAI Agents. |
 
-Optional extras (e.g. **`python`**) live in the same package when you want sandboxed scripting steps — see upstream docs.
-
-```python
-from opentine import Agent
-from opentine.models.anthropic import Anthropic
-from opentine.tools import web, search, fs, shell
-
-agent = Agent(
-    model=Anthropic("claude-sonnet-4-20250514"),
-    tools=[web.fetch, search.search, fs.read, fs.write, shell.run],
-)
-```
-
-### Model support
-
-**Native backends** (`opentine.models`)
-
-| Backend | Wrapper | Example model ID |
-|:---|:---|:---|
-| Anthropic | `Anthropic` | `claude-sonnet-4-20250514` |
-| OpenAI | `OpenAI` | `gpt-4o` |
-| Google | `Google` | `gemini-2.0-flash` |
-| Local / Ollama | `Ollama` | `llama3.1` |
-
-**OpenAI-compatible** (`opentine.models.compat` — one shared SDK surface)
-
-| Provider | Wrapper | Example model ID |
-|:---|:---|:---|
-| Kimi (Moonshot) | `Kimi` | `moonshot-v1-8k` |
-| DeepSeek | `DeepSeek` | `deepseek-chat` |
-| Qwen | `Qwen` | `qwen-plus` |
-| Zhipu (GLM) | `GLM` | `glm-4-flash` |
-| Groq | `Groq` | `llama-3.1-70b-versatile` |
-| Together | `Together` | `meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo` |
-| Mistral | `Mistral` | `mistral-large-latest` |
-
-Wire-up is always **`Agent(model=…(...))`** after the matching `from opentine.models…` import (see **Quickstart** for a full runnable Anthropic snippet).
+Unknown model identifiers remain runnable through their supported transport and are reported as **unpriced** rather than receiving a guessed cost.
 
 ### Tech Stack
 
@@ -529,8 +521,11 @@ Wire-up is always **`Agent(model=…(...))`** after the matching `from opentine.
 ![uv](https://img.shields.io/badge/uv-DE5FE9?style=flat-square)
 ![Anthropic](https://img.shields.io/badge/Anthropic-D97757?style=flat-square&logo=anthropic&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-0d1117?style=flat-square)
 ![Rich](https://img.shields.io/badge/Rich-0d1117?style=flat-square)
-![Content--Addressed](https://img.shields.io/badge/Content--Addressed%20DAG-0d1117?style=flat-square)
+![Verified Provenance](https://img.shields.io/badge/Verified%20Provenance-0d1117?style=flat-square)
 ![Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-b7ff3c?style=flat-square&labelColor=020403)
 
 </div>

@@ -8,7 +8,7 @@
 
 <br/>
 
-<a href="https://daedalusdevelopmentgroup.com"><img src="https://img.shields.io/badge/daedalusdevelopmentgroup.com-58a6ff?style=for-the-badge&logo=googlechrome&logoColor=0d1117" alt="Portfolio"/></a>
+<a href="https://daedalusdevelopmentgroup.com"><img src="https://img.shields.io/badge/daedalusdevelopmentgroup.com-39ff88?style=for-the-badge&logo=googlechrome&logoColor=020403" alt="Portfolio"/></a>
 
 <br/><br/>
 
@@ -16,10 +16,10 @@
 
 <br/>
 
-<a href="#-solidus-network--high-performance-multi-chain-perps-exchange"><img src="https://img.shields.io/badge/01-SOLIDUS%20NETWORK-0d1117?style=for-the-badge&labelColor=58a6ff" alt="01"/></a>
-<a href="#-innova-inn--privacy-first-blockchain-protocol"><img src="https://img.shields.io/badge/02-INNOVA%20%2F%20IDAG-0d1117?style=for-the-badge&labelColor=58a6ff" alt="02"/></a>
+<a href="#-solidus-network--high-performance-multi-chain-perps-exchange"><img src="https://img.shields.io/badge/01-SOLIDUS%20NETWORK-020403?style=for-the-badge&labelColor=39ff88" alt="01"/></a>
+<a href="#-innova-inn--privacy-first-blockchain-protocol"><img src="https://img.shields.io/badge/02-INNOVA%20%2F%20IDAG-020403?style=for-the-badge&labelColor=39ff88" alt="02"/></a>
 <a href="#-project-lavalamp--hardware-level-side-channel-mitigation"><img src="https://img.shields.io/badge/03-PROJECT%20LAVALAMP-0d1117?style=for-the-badge&labelColor=ff6b2b" alt="03"/></a>
-<a href="#-opentine--git-for-agent-runs"><img src="https://img.shields.io/badge/04-OPENTINE-0d1117?style=for-the-badge&labelColor=ff6900" alt="04"/></a>
+<a href="#-opentine--git-for-agent-runs"><img src="https://img.shields.io/badge/04-OPENTINE-020403?style=for-the-badge&labelColor=b7ff3c" alt="04"/></a>
 
 </div>
 
@@ -37,11 +37,11 @@
 
 <div align="center">
 <h2>
-<img src="https://img.shields.io/badge/●-58a6ff?style=flat-square&labelColor=58a6ff" height="12"/>
+<img src="https://img.shields.io/badge/●-39ff88?style=flat-square&labelColor=39ff88" height="12"/>
 SOLIDUS NETWORK — High-Performance Multi-Chain Perps Exchange
 </h2>
 
-<img src="https://img.shields.io/badge/STATUS-Active%20Development-58a6ff?style=for-the-badge&labelColor=0d1117" alt="Status"/>
+<img src="https://img.shields.io/badge/STATUS-Active%20Development-39ff88?style=for-the-badge&labelColor=020403" alt="Status"/>
 
 </div>
 
@@ -120,19 +120,19 @@ Each region contains **4 parallel zones**, each running a distinct consensus alg
 
 <div align="center">
 <h2>
-<img src="https://img.shields.io/badge/●-58a6ff?style=flat-square&labelColor=58a6ff" height="12"/>
+<img src="https://img.shields.io/badge/●-39ff88?style=flat-square&labelColor=39ff88" height="12"/>
 INNOVA (INN) — Privacy-First Blockchain Protocol
 </h2>
 
-<a href="https://innova-foundation.com"><img src="https://img.shields.io/badge/LIVE-innova--foundation.com-58a6ff?style=for-the-badge&labelColor=0d1117" alt="Live"/></a>&nbsp;
-<a href="https://github.com/innova-foundation"><img src="https://img.shields.io/badge/GitHub-innova--foundation-58a6ff?style=for-the-badge&logo=github&labelColor=0d1117" alt="Org"/></a>
+<a href="https://innova-foundation.com"><img src="https://img.shields.io/badge/LIVE-innova--foundation.com-39ff88?style=for-the-badge&labelColor=020403" alt="Live"/></a>&nbsp;
+<a href="https://github.com/innova-foundation"><img src="https://img.shields.io/badge/GitHub-innova--foundation-39ff88?style=for-the-badge&logo=github&labelColor=020403" alt="Org"/></a>
 
 <br/><br/>
 
-[![Commits](https://img.shields.io/github/commit-activity/y/innova-foundation/innova?style=flat-square&color=58a6ff&label=Commit%20Activity)](https://github.com/innova-foundation/innova)
-[![Last Commit](https://img.shields.io/github/last-commit/innova-foundation/innova?style=flat-square&color=58a6ff)](https://github.com/innova-foundation/innova)
-[![Stars](https://img.shields.io/github/stars/innova-foundation/innova?style=flat-square&color=58a6ff)](https://github.com/innova-foundation/innova)
-[![License](https://img.shields.io/github/license/innova-foundation/innova?style=flat-square&color=58a6ff)](https://github.com/innova-foundation/innova)
+[![Commits](https://img.shields.io/github/commit-activity/y/innova-foundation/innova?style=flat-square&color=39ff88&labelColor=020403&label=Commit%20Activity)](https://github.com/innova-foundation/innova)
+[![Last Commit](https://img.shields.io/github/last-commit/innova-foundation/innova?style=flat-square&color=39ff88&labelColor=020403)](https://github.com/innova-foundation/innova)
+[![Stars](https://img.shields.io/github/stars/innova-foundation/innova?style=flat-square&color=39ff88&labelColor=020403)](https://github.com/innova-foundation/innova)
+[![License](https://img.shields.io/github/license/innova-foundation/innova?style=flat-square&color=39ff88&labelColor=020403)](https://github.com/innova-foundation/innova)
 
 </div>
 
@@ -389,19 +389,19 @@ Disabling SMT mitigates the leak but costs **~50% of compute capacity**. Lavalam
 
 <div align="center">
 <h2>
-<img src="https://img.shields.io/badge/●-ff6900?style=flat-square&labelColor=ff6900" height="12"/>
+<img src="https://img.shields.io/badge/●-b7ff3c?style=flat-square&labelColor=b7ff3c" height="12"/>
 OPENTINE — Git for Agent Runs
 </h2>
 
 <p align="center"><strong>Git for agent runs. Fork, replay, resume any execution.</strong><br/>
 <sub>~250 lines of core · Any model · Zero lock-in · <strong>Public beta</strong> v0.1.x on PyPI</sub></p>
 
-<a href="https://opentine.com"><img src="https://img.shields.io/badge/LIVE-opentine.com-ff6900?style=for-the-badge&labelColor=0d1117" alt="Live"/></a>&nbsp;
-<a href="https://github.com/0xcircuitbreaker/opentine"><img src="https://img.shields.io/badge/GitHub-opentine-ff6900?style=for-the-badge&logo=github&labelColor=0d1117" alt="Repo"/></a>&nbsp;
-<a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/v/opentine?style=for-the-badge&color=ff6900&labelColor=0d1117" alt="PyPI"/></a>&nbsp;
-<a href="https://github.com/0xcircuitbreaker/opentine/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-ff6900?style=for-the-badge&labelColor=0d1117" alt="License"/></a>&nbsp;
-<a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/pyversions/opentine?style=for-the-badge&color=ff6900&labelColor=0d1117" alt="Python"/></a>&nbsp;
-<a href="https://github.com/0xcircuitbreaker/opentine/actions"><img src="https://img.shields.io/github/actions/workflow/status/0xcircuitbreaker/opentine/ci.yml?style=for-the-badge&color=ff6900&labelColor=0d1117" alt="CI"/></a>
+<a href="https://opentine.com"><img src="https://img.shields.io/badge/LIVE-opentine.com-b7ff3c?style=for-the-badge&labelColor=020403" alt="Live"/></a>&nbsp;
+<a href="https://github.com/0xcircuitbreaker/opentine"><img src="https://img.shields.io/badge/GitHub-opentine-b7ff3c?style=for-the-badge&logo=github&labelColor=020403" alt="Repo"/></a>&nbsp;
+<a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/v/opentine?style=for-the-badge&color=b7ff3c&labelColor=020403" alt="PyPI"/></a>&nbsp;
+<a href="https://github.com/0xcircuitbreaker/opentine/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-b7ff3c?style=for-the-badge&labelColor=020403" alt="License"/></a>&nbsp;
+<a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/pyversions/opentine?style=for-the-badge&color=b7ff3c&labelColor=020403" alt="Python"/></a>&nbsp;
+<a href="https://github.com/0xcircuitbreaker/opentine/actions"><img src="https://img.shields.io/github/actions/workflow/status/0xcircuitbreaker/opentine/ci.yml?style=for-the-badge&color=b7ff3c&labelColor=020403" alt="CI"/></a>
 
 </div>
 
@@ -531,7 +531,7 @@ Wire-up is always **`Agent(model=…(...))`** after the matching `from opentine.
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
 ![Rich](https://img.shields.io/badge/Rich-0d1117?style=flat-square)
 ![Content--Addressed](https://img.shields.io/badge/Content--Addressed%20DAG-0d1117?style=flat-square)
-![Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-ff6900?style=flat-square)
+![Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-b7ff3c?style=flat-square&labelColor=020403)
 
 </div>
 
@@ -548,7 +548,7 @@ Wire-up is always **`Agent(model=…(...))`** after the matching `from opentine.
 
 <div align="center">
 <h2>
-<img src="https://img.shields.io/badge/●-58a6ff?style=flat-square&labelColor=58a6ff" height="12"/>
+<img src="https://img.shields.io/badge/●-39ff88?style=flat-square&labelColor=39ff88" height="12"/>
 Full Tech Stack
 </h2>
 </div>
@@ -614,20 +614,20 @@ Full Tech Stack
 
 <div align="center">
 <h2>
-<img src="https://img.shields.io/badge/●-58a6ff?style=flat-square&labelColor=58a6ff" height="12"/>
+<img src="https://img.shields.io/badge/●-39ff88?style=flat-square&labelColor=39ff88" height="12"/>
 GitHub Analytics
 </h2>
 
-<img src="https://github-readme-stats.vercel.app/api?username=0xcircuitbreaker&show_icons=true&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9&ring_color=58a6ff&include_all_commits=true" width="49%" alt="Stats"/>
-<img src="https://streak-stats.demolab.com/?user=0xcircuitbreaker&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff&sideLabels=c9d1d9&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=8b949e" width="49%" alt="Streak"/>
+<img src="https://github-stats-extended.vercel.app/api?username=0xcircuitbreaker&show_icons=true&hide_border=true&bg_color=020403&title_color=39ff88&icon_color=b7ff3c&text_color=7a8b80&ring_color=39ff88&include_all_commits=true" width="49%" alt="GitHub stats"/>
+<img src="https://streak-stats.demolab.com/?user=0xcircuitbreaker&hide_border=true&background=020403&ring=39ff88&fire=b7ff3c&currStreakLabel=39ff88&sideLabels=7a8b80&currStreakNum=b7ff3c&sideNums=d8ffe7&dates=7a8b80&stroke=39ff8840" width="49%" alt="Contribution streak"/>
 
 <br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=0xcircuitbreaker&layout=compact&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&langs_count=10" width="42%" alt="Languages"/>
+<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=0xcircuitbreaker&layout=compact&hide_border=true&bg_color=020403&title_color=39ff88&text_color=7a8b80&langs_count=10" width="49%" alt="Top languages"/>
 
 <br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=0xcircuitbreaker&bg_color=0d1117&color=58a6ff&line=58a6ff&point=c9d1d9&area_color=161b22&area=true&hide_border=true" width="98%" alt="Contribution Graph"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=0xcircuitbreaker&bg_color=020403&color=7a8b80&line=39ff88&point=b7ff3c&area_color=39ff88&area=true&hide_border=true" width="98%" alt="Contribution graph"/>
 
 </div>
 
@@ -643,18 +643,34 @@ GitHub Analytics
 
 <div align="center">
 <h2>
-<img src="https://img.shields.io/badge/●-58a6ff?style=flat-square&labelColor=58a6ff" height="12"/>
+<img src="https://img.shields.io/badge/●-39ff88?style=flat-square&labelColor=39ff88" height="12"/>
 Pinned Repositories
 </h2>
 
-<a href="https://github.com/innova-foundation/innova">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=innova-foundation&repo=innova&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" alt="innova"/>
-</a>
-<a href="https://github.com/0xcircuitbreaker/opentine">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=0xcircuitbreaker&repo=opentine&hide_border=true&bg_color=0d1117&title_color=ff6900&icon_color=ff6900&text_color=c9d1d9" alt="opentine"/>
-</a>
-
 </div>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3><a href="https://github.com/innova-foundation/innova">innova-foundation/innova</a></h3>
+<p>Privacy-first hybrid PoW/PoS blockchain with collateral nodes, native Tor, selective privacy, and IDAG research.</p>
+<p>
+<a href="https://github.com/innova-foundation/innova/stargazers"><img src="https://img.shields.io/github/stars/innova-foundation/innova?style=flat-square&amp;color=39ff88&amp;labelColor=020403" alt="Innova stars"/></a>
+<a href="https://github.com/innova-foundation/innova/forks"><img src="https://img.shields.io/github/forks/innova-foundation/innova?style=flat-square&amp;color=39ff88&amp;labelColor=020403" alt="Innova forks"/></a>
+<a href="https://github.com/innova-foundation/innova/commits"><img src="https://img.shields.io/github/last-commit/innova-foundation/innova?style=flat-square&amp;color=39ff88&amp;labelColor=020403" alt="Innova last commit"/></a>
+</p>
+</td>
+<td width="50%" valign="top">
+<h3><a href="https://github.com/0xcircuitbreaker/opentine">0xcircuitbreaker/opentine</a></h3>
+<p>Git for agent runs: content-addressed execution trees that can be forked, replayed, diffed, paused, and resumed.</p>
+<p>
+<a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/v/opentine?style=flat-square&amp;color=b7ff3c&amp;labelColor=020403" alt="OpenTine on PyPI"/></a>
+<a href="https://github.com/0xcircuitbreaker/opentine/stargazers"><img src="https://img.shields.io/github/stars/0xcircuitbreaker/opentine?style=flat-square&amp;color=b7ff3c&amp;labelColor=020403" alt="OpenTine stars"/></a>
+<a href="https://github.com/0xcircuitbreaker/opentine/commits"><img src="https://img.shields.io/github/last-commit/0xcircuitbreaker/opentine?style=flat-square&amp;color=b7ff3c&amp;labelColor=020403" alt="OpenTine last commit"/></a>
+</p>
+</td>
+</tr>
+</table>
 
 <br/>
 
@@ -691,18 +707,14 @@ Pinned Repositories
 
 <br/>
 
-<a href="./assets/readme/circuitbreaker-banner.png">
-  <img src="./assets/readme/circuitbreaker-banner.png" alt="0xcircuitbreaker ASCII banner"/>
-</a>
-
 <sub>Building autonomous AI infrastructure, high-performance DeFi, and privacy-first blockchain protocols.</sub>
 
 <br/><br/>
 
-<img src="https://komarev.com/ghpvc/?username=0xcircuitbreaker&style=for-the-badge&color=0d1117&label=PROFILE+VIEWS" alt="Views"/>
+<img src="https://komarev.com/ghpvc/?username=0xcircuitbreaker&style=for-the-badge&color=39ff88&labelColor=020403&label=PROFILE+VIEWS" alt="Profile views"/>
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:1a1b27&height=120&section=footer" width="100%"/>
+<img src="./assets/readme/profile-footer-ghost-mesh.svg" width="100%" alt="Ghost Mesh terminal signal footer"/>
 
 </div>

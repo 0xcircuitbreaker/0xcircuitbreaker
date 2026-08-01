@@ -47,21 +47,21 @@ SOLIDUS NETWORK — High-Performance Multi-Chain Perps Exchange
 
 <br/>
 
-**Solidus Network** is a high-performance perpetuals exchange built on a **multi-algorithm, multi-chain DAGKNIGHT architecture**. Forked from Quai Network and re-engineered with **4 zones per region**, each running a **different mining algorithm for a different hardware class** — ASIC, GPU, CPU, and Mobile miners all participate **without competing against each other**. Built-in perps core with on-chain order matching. Research benchmarks are **matching Hyperliquid-class speeds and TPS**.
+**Solidus Network** is an active-development perpetuals exchange targeting a **multi-algorithm, multi-chain DAGKNIGHT architecture**. The design proposes **4 zones per region**, each mapped to a **different mining algorithm and hardware class** — ASIC, GPU, CPU, and mobile — plus a built-in perps core with on-chain order matching. Performance figures below are engineering targets, not deployed benchmarks.
 
 ### DAGKNIGHT Zone-Level DAG Architecture
 
-DAGKNIGHT consensus runs **at the zone level** where transaction throughput matters. Region and Prime chains use **entropic block ordering**
+The target design places DAGKNIGHT consensus **at the zone level** where transaction throughput matters, while Region and Prime chains use **entropic block ordering**.
 
 <p align="center">
-  <a href="./assets/readme/solidus-network-topology.png">
-    <img src="./assets/readme/solidus-network-topology.png" alt="Solidus Network topology diagram"/>
+  <a href="./assets/readme/solidus-network-topology.svg">
+    <img src="./assets/readme/solidus-network-topology.svg" width="100%" alt="Solidus Network target architecture with hierarchical topology, proposed zone consensus, hash lanes, and planned perps core"/>
   </a>
 </p>
 
-### Multi-Algorithm Zone Architecture — No Cross-Class Competition
+### Multi-Algorithm Zone Architecture — Dedicated Hardware Lanes
 
-Each region contains **4 parallel zones**, each running a distinct consensus algorithm. Miners of different hardware classes **never compete against each other** — each class has its own dedicated zone with balanced difficulty, ensuring fair participation from enterprise ASICs down to mobile devices.
+Each planned region contains **4 parallel zones**, each mapped to a distinct consensus algorithm. The design gives each hardware class a dedicated lane with separately balanced difficulty, from enterprise ASICs down to mobile devices.
 
 | Zone | Algorithm | Hardware Class | Design Goal |
 |:---|:---|:---|:---|
@@ -70,18 +70,18 @@ Each region contains **4 parallel zones**, each running a distinct consensus alg
 | **Zone 3** | RandomX-S | CPU miners | Modified RandomX — breaks Antminer RandomX ASICs |
 | **Zone 4** | Panthera | Mobile devices | Lightweight mobile-optimized algorithm |
 
-### Performance — Matching Hyperliquid
+### Performance Targets
 
 | Metric | Target |
 |:---|:---|
-| **Throughput** | Hyperliquid-competitive TPS (200,000+ ops/sec) |
-| **Zone Consensus** | DAGKNIGHT — completed from Kaspa research |
-| **Region/Prime** | Entropic block ordering (no DAG overhead) |
-| **Order Matching** | Sub-second on-chain execution |
-| **Finality** | Instant at zone level, cross-region within epoch |
+| **Throughput** | Hyperliquid-competitive throughput; benchmark pending |
+| **Zone Consensus** | Proposed DAGKNIGHT-based ordering |
+| **Region/Prime** | Target entropic block ordering without a DAG |
+| **Order Matching** | Target sub-second on-chain execution |
+| **Finality** | Target zone-level and cross-region finality model |
 | **Architecture** | Quai fork — hierarchical, sharded, merged-mined |
 
-### Perps Core
+### Planned Perps Core
 
 | Feature | Description |
 |:---|:---|
@@ -138,17 +138,17 @@ INNOVA (INN) — Privacy-First Blockchain Protocol
 
 <br/>
 
-**Innova** is a hybrid PoW/PoS privacy blockchain with **1,500+ commits**, built on the **Tribus** hashing algorithm (three NIST5 algorithms), ~15s block times, and a hardcapped 18M supply. Five-layer privacy architecture, decentralized services layer, and a Collateral Node network.
+**Innova** is a hybrid PoW/PoS privacy blockchain with **1,500+ commits**, built on the **Tribus** hashing algorithm (three NIST5 algorithms), ~15s block times, and a hardcapped 18M supply. Its protocol combines composable privacy surfaces, a decentralized services layer, and a Collateral Node network.
 
-### Five-Layer Privacy Stack
+### Privacy Surfaces & Proof Paths
 
 <p align="center">
-  <a href="./assets/readme/innova-privacy-stack.png">
-    <img src="./assets/readme/innova-privacy-stack.png" alt="Innova five-layer privacy stack diagram"/>
+  <a href="./assets/readme/innova-privacy-stack.svg">
+    <img src="./assets/readme/innova-privacy-stack.svg" width="100%" alt="Innova privacy surfaces for network origin, receiving, alternative membership-proof paths, and confidential values"/>
   </a>
 </p>
 
-<sub>¹ Layer 4 Silent Shielding: RPC commands registered (`sp_send`, `sp_getnewaddress`);</sub>
+<sub>¹ Silent Shielding: RPC commands registered (`sp_send`, `sp_getnewaddress`);</sub>
 
 ### Protocol Features
 
@@ -191,15 +191,15 @@ INNOVA (INN) — Privacy-First Blockchain Protocol
 
 **Live now:**
 <p align="center">
-  <a href="./assets/readme/nyx-current-live.png">
-    <img src="./assets/readme/nyx-current-live.png" alt="Nyx current live encryption stack diagram"/>
+  <a href="./assets/readme/nyx-current-live.svg">
+    <img src="./assets/readme/nyx-current-live.svg" width="100%" alt="Nyx current live secure messaging stack"/>
   </a>
 </p>
 
 **Proposed upgrade (IIP):**
 <p align="center">
-  <a href="./assets/readme/nyx-planned-triple-encryption.png">
-    <img src="./assets/readme/nyx-planned-triple-encryption.png" alt="Nyx planned triple encryption diagram"/>
+  <a href="./assets/readme/nyx-planned-triple-encryption.svg">
+    <img src="./assets/readme/nyx-planned-triple-encryption.svg" width="100%" alt="Nyx planned post-quantum triple-encryption roadmap"/>
   </a>
 </p>
 
@@ -211,8 +211,8 @@ INNOVA (INN) — Privacy-First Blockchain Protocol
 <br/>
 
 <p align="center">
-  <a href="./assets/readme/innova-iips.png">
-    <img src="./assets/readme/innova-iips.png" alt="Innova Improvement Proposals list"/>
+  <a href="./assets/readme/innova-iips.svg">
+    <img src="./assets/readme/innova-iips.svg" width="100%" alt="Innova Improvement Proposals IIP-0001 through IIP-0010"/>
   </a>
 </p>
 
@@ -247,18 +247,18 @@ INNOVA (INN) — Privacy-First Blockchain Protocol
 IDAG is Innova's next-generation consensus — a four-phase migration from linear blockchain to a high-throughput block DAG. First to implement **epoch-anchored FCMP++ membership proofs** in a DAG and **adaptive DAGKNIGHT k inference**.
 
 <p align="center">
-  <a href="./assets/readme/idag-consensus-flow.png">
-    <img src="./assets/readme/idag-consensus-flow.png" alt="IDAG consensus flow diagram"/>
+  <a href="./assets/readme/idag-consensus-flow.svg">
+    <img src="./assets/readme/idag-consensus-flow.svg" width="100%" alt="IDAG consensus flow from GHOSTDAG ordering through DAGKNIGHT adaptation to proof-of-stake finality"/>
   </a>
 </p>
 
 | Parameter | Value |
 |:---|:---|
-| **Block Interval** | ~1 second (post-DAG fork at block 7,450,000) |
+| **Block Interval** | ~1 second (post-DAG fork at block 7,950,000) |
 | **Block Size** | 300 KB floor – 8 MB ceiling (adaptive median over 1000-block window) |
 | **Finality** | `TENTATIVE` (⅓ stake) → `SOFT` (½ stake) → `HARD` (⅔ stake, 3 consecutive epochs) |
 | **GHOSTDAG** | Fixed k=18, pre-DAGKNIGHT ordering |
-| **DAGKNIGHT** | Adaptive k=3..32 (EMA-inferred, activates at block 7,500,000) |
+| **DAGKNIGHT** | Adaptive k=3..32 (EMA-inferred, activates at block 8,000,000) |
 | **Fork Resolution** | POEM — `GetBlockEntropy()` computes entropy from inverted block hash (staged) |
 | **Epoch** | 300 blocks (~5 min), min 2 unique voters for finality |
 | **Privacy** | Epoch-anchored FCMP++ membership proofs via dual curve tree (secp256k1 + Ed25519) with deterministic DAG-ordered commits |
@@ -267,7 +267,7 @@ IDAG is Innova's next-generation consensus — a four-phase migration from linea
 
 ### INVS — Shielded Asset Protocol
 
-**INVS** is the shielded asset layer within the Innova ecosystem — fully private value transfer with ZK-proof verification, leveraging all five privacy layers and IDAG's throughput for high-frequency confidential transactions.
+**INVS** is the shielded asset layer within the Innova ecosystem — private value transfer with ZK-proof verification, leveraging Innova's privacy surfaces and IDAG's throughput for confidential transactions.
 
 ### Innova Tech Stack
 

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="iips-title iips-desc">
+  <title id="iips-title">Innova Improvement Proposals</title>
+  <desc id="iips-desc">A numbered catalog of ten Innova Improvement Proposals. IIP-0001 through IIP-0009 are active; IIP-0010 NullStake V2 with Poseidon2 is proposed.</desc>
+  <defs>
+    <linearGradient id="iips-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020403"/>
+      <stop offset="0.55" stop-color="#07110A"/>
+      <stop offset="1" stop-color="#020403"/>
+    </linearGradient>
+    <pattern id="iips-mesh" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#39FF88" stroke-opacity="0.045"/>
+      <circle cx="0" cy="0" r="1" fill="#B7FF3C" fill-opacity="0.1"/>
+    </pattern>
+    <pattern id="iips-scan" width="5" height="5" patternUnits="userSpaceOnUse">
+      <path d="M0 4.5H5" stroke="#D8FFE7" stroke-opacity="0.02" stroke-width="0.5"/>
+    </pattern>
+    <linearGradient id="iips-rail" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B7FF3C"/>
+      <stop offset="1" stop-color="#39FF88"/>
+    </linearGradient>
+    <filter id="iips-glow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .iips-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      .iips-panel { fill: #07110A; fill-opacity: 0.9; stroke: #7A8B80; stroke-opacity: 0.32; }
+      .iips-id { fill: #39FF88; font-size: 16px; font-weight: 700; letter-spacing: 0.4px; }
+      .iips-name { fill: #D8FFE7; font-size: 15.5px; }
+      .iips-rule { stroke: #7A8B80; stroke-opacity: 0.2; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="430" rx="22" fill="url(#iips-bg)"/>
+  <rect width="1200" height="430" rx="22" fill="url(#iips-mesh)"/>
+  <rect width="1200" height="430" rx="22" fill="url(#iips-scan)"/>
+  <rect x="1" y="1" width="1198" height="428" rx="21" fill="none" stroke="#7A8B80" stroke-opacity="0.45" stroke-width="2"/>
+
+  <g class="iips-mono">
+    <text x="48" y="48" fill="#39FF88" font-size="13" font-weight="700" letter-spacing="2.4">INNOVA // PROTOCOL CATALOG</text>
+    <text x="48" y="82" fill="#D8FFE7" font-size="27" font-weight="700" letter-spacing="0.8">INNOVA IMPROVEMENT PROPOSALS</text>
+    <g transform="translate(1010 42)">
+      <rect width="142" height="42" rx="8" fill="#020403" stroke="#B7FF3C" stroke-opacity="0.75"/>
+      <text x="71" y="27" text-anchor="middle" fill="#B7FF3C" font-size="13" font-weight="700" letter-spacing="1.2">IIP-0001—0010</text>
+    </g>
+
+    <g transform="translate(48 116)">
+      <rect class="iips-panel" width="540" height="262" rx="14"/>
+      <rect x="0" y="0" width="5" height="262" rx="2.5" fill="url(#iips-rail)"/>
+      <text x="24" y="30" fill="#7A8B80" font-size="11" font-weight="700" letter-spacing="1.8">ACTIVE // IIP-0001—0005</text>
+      <line class="iips-rule" x1="24" y1="45" x2="516" y2="45"/>
+      <line x1="42" y1="66" x2="42" y2="230" stroke="url(#iips-rail)" stroke-width="1.5"/>
+
+      <circle cx="42" cy="72" r="4" fill="#B7FF3C" filter="url(#iips-glow)"/>
+      <text class="iips-id" x="62" y="78">IIP-0001</text>
+      <text class="iips-name" x="188" y="78">Cold Staking</text>
+      <line class="iips-rule" x1="62" y1="91" x2="516" y2="91"/>
+
+      <circle cx="42" cy="112" r="4" fill="#39FF88"/>
+      <text class="iips-id" x="62" y="118">IIP-0002</text>
+      <text class="iips-name" x="188" y="118">Shielded Transactions</text>
+      <line class="iips-rule" x1="62" y1="131" x2="516" y2="131"/>
+
+      <circle cx="42" cy="152" r="4" fill="#39FF88"/>
+      <text class="iips-id" x="62" y="158">IIP-0003</text>
+      <text class="iips-name" x="188" y="158">Ring Signature Deprecation</text>
+      <line class="iips-rule" x1="62" y1="171" x2="516" y2="171"/>
+
+      <circle cx="42" cy="192" r="4" fill="#39FF88"/>
+      <text class="iips-id" x="62" y="198">IIP-0004</text>
+      <text class="iips-name" x="188" y="198">Dynamic Selective Privacy</text>
+      <line class="iips-rule" x1="62" y1="211" x2="516" y2="211"/>
+
+      <circle cx="42" cy="232" r="4" fill="#39FF88"/>
+      <text class="iips-id" x="62" y="238">IIP-0005</text>
+      <text class="iips-name" x="188" y="238">Confidential CoinJoin</text>
+    </g>
+
+    <g transform="translate(612 116)">
+      <rect class="iips-panel" width="540" height="262" rx="14"/>
+      <rect x="0" y="0" width="5" height="262" rx="2.5" fill="url(#iips-rail)"/>
+      <text x="24" y="30" fill="#7A8B80" font-size="11" font-weight="700" letter-spacing="1.35">ACTIVE 0006—0009 // PROPOSED 0010</text>
+      <line class="iips-rule" x1="24" y1="45" x2="516" y2="45"/>
+      <line x1="42" y1="66" x2="42" y2="230" stroke="url(#iips-rail)" stroke-width="1.5"/>
+
+      <circle cx="42" cy="72" r="4" fill="#B7FF3C" filter="url(#iips-glow)"/>
+      <text class="iips-id" x="62" y="78">IIP-0006</text>
+      <text class="iips-name" x="188" y="78">FCMP++ Integration</text>
+      <line class="iips-rule" x1="62" y1="91" x2="516" y2="91"/>
+
+      <circle cx="42" cy="112" r="4" fill="#39FF88"/>
+      <text class="iips-id" x="62" y="118">IIP-0007</text>
+      <text class="iips-name" x="188" y="118">Silent Payments + Silent Shielding</text>
+      <line class="iips-rule" x1="62" y1="131" x2="516" y2="131"/>
+
+      <circle cx="42" cy="152" r="4" fill="#39FF88"/>
+      <text class="iips-id" x="62" y="158">IIP-0008</text>
+      <text class="iips-name" x="188" y="158">Dandelion++ Network Privacy</text>
+      <line class="iips-rule" x1="62" y1="171" x2="516" y2="171"/>
+
+      <circle cx="42" cy="192" r="4" fill="#39FF88"/>
+      <text class="iips-id" x="62" y="198">IIP-0009</text>
+      <text class="iips-name" x="188" y="198">NullStake V1</text>
+      <line class="iips-rule" x1="62" y1="211" x2="516" y2="211"/>
+
+      <circle cx="42" cy="232" r="5" fill="#020403" stroke="#B7FF3C" stroke-width="2"/>
+      <text class="iips-id" x="62" y="238">IIP-0010</text>
+      <text class="iips-name" x="188" y="238">NullStake V2 (Poseidon2)</text>
+      <text x="516" y="238" text-anchor="end" fill="#B7FF3C" font-size="10" font-weight="700" letter-spacing="1.1">PROPOSED</text>
+    </g>
+
+    <text x="48" y="406" fill="#7A8B80" font-size="12" letter-spacing="1.2">STATUS // IIP-0001—0009 ACTIVE</text>
+    <text x="1152" y="406" text-anchor="end" fill="#B7FF3C" font-size="12" letter-spacing="1.4">IIP-0010 PROPOSED</text>
+  </g>
+</svg>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="ips-title ips-desc">
+  <title id="ips-title">Innova privacy surfaces and proof paths</title>
+  <desc id="ips-desc">Composable privacy surfaces for network origin, receiving, membership, and value confidentiality. FCMP++ covers the entire shielded UTXO set, while Lelantus is shown as an alternative membership-proof path rather than a mandatory cumulative layer.</desc>
+  <defs>
+    <linearGradient id="ips-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020403"/>
+      <stop offset="0.58" stop-color="#07110A"/>
+      <stop offset="1" stop-color="#020403"/>
+    </linearGradient>
+    <linearGradient id="ips-edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B7FF3C"/>
+      <stop offset="0.5" stop-color="#39FF88"/>
+      <stop offset="1" stop-color="#39FF88" stop-opacity="0.25"/>
+    </linearGradient>
+    <pattern id="ips-mesh" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#39FF88" stroke-opacity="0.045" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.2" fill="#B7FF3C" fill-opacity="0.12"/>
+    </pattern>
+    <pattern id="ips-scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M0 3.5H4" stroke="#D8FFE7" stroke-opacity="0.022" stroke-width="0.5"/>
+    </pattern>
+    <filter id="ips-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .ips-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      .ips-row { fill: #07110A; fill-opacity: 0.88; stroke: #7A8B80; stroke-opacity: 0.3; }
+      .ips-path { fill: #020403; fill-opacity: 0.72; stroke: #39FF88; stroke-opacity: 0.5; }
+      .ips-protocol { fill: #D8FFE7; font-size: 22px; font-weight: 700; }
+      .ips-copy { fill: #D8FFE7; font-size: 17px; }
+      .ips-muted { fill: #7A8B80; font-size: 14px; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="660" rx="22" fill="url(#ips-bg)"/>
+  <rect width="1200" height="660" rx="22" fill="url(#ips-mesh)"/>
+  <rect width="1200" height="660" rx="22" fill="url(#ips-scan)"/>
+  <rect x="1" y="1" width="1198" height="658" rx="21" fill="none" stroke="#7A8B80" stroke-opacity="0.45" stroke-width="2"/>
+
+  <g class="ips-mono">
+    <text x="48" y="50" fill="#39FF88" font-size="13" font-weight="700" letter-spacing="2.4">INNOVA // PRIVACY ARCHITECTURE</text>
+    <text x="48" y="84" fill="#D8FFE7" font-size="27" font-weight="700" letter-spacing="0.8">PRIVACY SURFACES &amp; PROOF PATHS</text>
+    <g transform="translate(970 42)">
+      <rect width="182" height="42" rx="8" fill="#020403" stroke="#B7FF3C" stroke-opacity="0.75"/>
+      <text x="91" y="27" text-anchor="middle" fill="#B7FF3C" font-size="12" font-weight="700" letter-spacing="1.2">COMPOSABLE // PATHS</text>
+    </g>
+
+    <g transform="translate(48 116)">
+      <rect class="ips-row" width="1104" height="82" rx="12"/>
+      <rect width="5" height="82" rx="2.5" fill="#B7FF3C"/>
+      <circle cx="36" cy="41" r="9" fill="#020403" stroke="#B7FF3C" stroke-width="2" filter="url(#ips-glow)"/>
+      <text x="70" y="29" fill="#B7FF3C" font-size="12" font-weight="700" letter-spacing="1.5">NETWORK SURFACE</text>
+      <text class="ips-protocol" x="70" y="58">Dandelion++</text>
+      <text class="ips-copy" x="372" y="35">Network-origin obfuscation</text>
+      <text class="ips-muted" x="372" y="61">30s stem · 10% fluff · 10 hops</text>
+    </g>
+
+    <g transform="translate(48 210)">
+      <rect class="ips-row" width="1104" height="72" rx="12"/>
+      <rect width="5" height="72" rx="2.5" fill="#39FF88"/>
+      <circle cx="36" cy="36" r="9" fill="#020403" stroke="#39FF88" stroke-width="2"/>
+      <text x="70" y="27" fill="#39FF88" font-size="12" font-weight="700" letter-spacing="1.5">RECEIVING SURFACE</text>
+      <text class="ips-protocol" x="70" y="55">Silent Shielding</text>
+      <text class="ips-copy" x="372" y="45">Silent Payments + value shielding¹</text>
+    </g>
+
+    <g>
+      <rect x="48" y="294" width="1104" height="176" rx="12" fill="#07110A" fill-opacity="0.58" stroke="#7A8B80" stroke-opacity="0.3"/>
+      <text x="72" y="321" fill="#39FF88" font-size="12" font-weight="700" letter-spacing="1.5">MEMBERSHIP SURFACE // ALTERNATIVE PROOF PATHS</text>
+      <path d="M600 325V339M600 339H330V348M600 339H870V348" fill="none" stroke="url(#ips-edge)" stroke-width="1.5"/>
+
+      <g transform="translate(72 344)">
+        <rect class="ips-path" width="516" height="106" rx="10"/>
+        <circle cx="28" cy="53" r="13" fill="#020403" stroke="#B7FF3C" stroke-width="2" filter="url(#ips-glow)"/>
+        <text x="28" y="58" text-anchor="middle" fill="#B7FF3C" font-size="13" font-weight="700">A</text>
+        <text x="58" y="31" fill="#B7FF3C" font-size="11" font-weight="700" letter-spacing="1.4">PATH A</text>
+        <text class="ips-protocol" x="58" y="54">FCMP++</text>
+        <text class="ips-copy" x="58" y="76">Full-Chain Membership Proofs</text>
+        <text class="ips-muted" x="58" y="96">entire shielded UTXO set</text>
+      </g>
+
+      <g transform="translate(612 344)">
+        <rect class="ips-path" width="516" height="106" rx="10"/>
+        <circle cx="28" cy="53" r="13" fill="#020403" stroke="#39FF88" stroke-width="2"/>
+        <text x="28" y="58" text-anchor="middle" fill="#39FF88" font-size="13" font-weight="700">B</text>
+        <text x="58" y="31" fill="#39FF88" font-size="11" font-weight="700" letter-spacing="1.4">PATH B</text>
+        <text class="ips-protocol" x="58" y="54">Lelantus</text>
+        <text class="ips-copy" x="58" y="76">One-out-of-many proofs (set=64)</text>
+        <text class="ips-muted" x="58" y="96">sender ambiguity</text>
+      </g>
+    </g>
+
+    <g transform="translate(48 482)">
+      <rect class="ips-row" width="1104" height="76" rx="12"/>
+      <rect width="5" height="76" rx="2.5" fill="#39FF88"/>
+      <circle cx="36" cy="38" r="9" fill="#020403" stroke="#39FF88" stroke-width="2"/>
+      <text x="70" y="29" fill="#39FF88" font-size="12" font-weight="700" letter-spacing="1.5">VALUE SURFACE</text>
+      <text class="ips-protocol" x="70" y="56">Pedersen + Bulletproofs</text>
+      <text class="ips-copy" x="510" y="47">Confidential transaction values</text>
+    </g>
+
+    <text x="48" y="624" fill="#7A8B80" font-size="12" letter-spacing="1.2">COMPOSABLE PRIVACY SURFACES // MEMBERSHIP PATHS ARE ALTERNATIVES</text>
+    <text x="1152" y="624" text-anchor="end" fill="#39FF88" font-size="12" letter-spacing="1.6">GHOST MESH // PRIVACY</text>
+  </g>
+</svg>

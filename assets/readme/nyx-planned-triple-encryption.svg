@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="nyx-plan-title nyx-plan-desc" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace">
+  <title id="nyx-plan-title">Nyx planned triple-encryption stack</title>
+  <desc id="nyx-plan-desc">A proposed Nyx stack combining ML-KEM-1024, XChaCha20-Poly1305, and AES-256-GCM, plus group chats, encrypted Hyperfile or IPFS transfers, and per-session key rotation.</desc>
+  <defs>
+    <linearGradient id="nyx-plan-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020403"/>
+      <stop offset="0.5" stop-color="#07110A"/>
+      <stop offset="1" stop-color="#020403"/>
+    </linearGradient>
+    <linearGradient id="nyx-plan-signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#39FF88"/>
+      <stop offset="1" stop-color="#B7FF3C"/>
+    </linearGradient>
+    <pattern id="nyx-plan-mesh" width="72" height="42" patternUnits="userSpaceOnUse">
+      <path d="M18 1h36l17 20-17 20H18L1 21Z" fill="none" stroke="#39FF88" stroke-width="0.8" stroke-opacity="0.07"/>
+    </pattern>
+    <pattern id="nyx-plan-scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M0 .5H4" stroke="#39FF88" stroke-width="0.6" stroke-opacity="0.045"/>
+    </pattern>
+    <filter id="nyx-plan-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.6" result="nyx-plan-blur"/>
+      <feMerge>
+        <feMergeNode in="nyx-plan-blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="nyx-plan-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#B7FF3C"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="860" rx="18" fill="url(#nyx-plan-bg)"/>
+  <rect width="1200" height="860" rx="18" fill="url(#nyx-plan-mesh)"/>
+  <rect width="1200" height="860" rx="18" fill="url(#nyx-plan-scanlines)"/>
+  <rect x="1" y="1" width="1198" height="858" rx="17" fill="none" stroke="#7A8B80" stroke-opacity="0.5"/>
+
+  <g transform="translate(42 30)">
+    <path d="M0 20h118l16 16h128" fill="none" stroke="#39FF88" stroke-opacity="0.5"/>
+    <circle cx="0" cy="20" r="3" fill="#39FF88"/>
+    <circle cx="262" cy="36" r="3" fill="#39FF88"/>
+    <text x="0" y="72" fill="#D8FFE7" font-size="31" font-weight="700" letter-spacing="1.4">NYX // TRIPLE ENCRYPTION</text>
+    <text x="0" y="98" fill="#7A8B80" font-size="15" letter-spacing="1.5">POST-QUANTUM MESSAGING ROADMAP</text>
+  </g>
+
+  <g transform="translate(922 38)">
+    <rect width="230" height="48" rx="24" fill="#B7FF3C" fill-opacity="0.08" stroke="#B7FF3C" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <circle cx="28" cy="24" r="6" fill="#B7FF3C" filter="url(#nyx-plan-glow)"/>
+    <text x="130" y="31" text-anchor="middle" fill="#B7FF3C" font-size="17" font-weight="700" letter-spacing="2.2">PLANNED</text>
+  </g>
+
+  <line x1="48" y1="138" x2="1152" y2="138" stroke="#7A8B80" stroke-opacity="0.45"/>
+
+  <g transform="translate(48 164)">
+    <rect width="1104" height="142" rx="10" fill="#020403" fill-opacity="0.8" stroke="#39FF88" stroke-opacity="0.35"/>
+    <rect width="7" height="142" rx="3.5" fill="url(#nyx-plan-signal)"/>
+    <circle cx="68" cy="71" r="30" fill="#07110A" stroke="#39FF88" stroke-width="2"/>
+    <text x="68" y="80" text-anchor="middle" fill="#39FF88" font-size="26" font-weight="700">01</text>
+    <text x="124" y="51" fill="#39FF88" font-size="17" font-weight="700" letter-spacing="2">LAYER 1 // POST-QUANTUM KEM</text>
+    <text x="124" y="87" fill="#D8FFE7" font-size="29" font-weight="700">ML-KEM-1024 <tspan fill="#7A8B80" font-size="21" font-weight="400">(FIPS 203)</tspan></text>
+    <text x="124" y="117" fill="#B7FF3C" font-size="21">Post-quantum key encapsulation &#8594; 256-bit shared secret</text>
+  </g>
+
+  <path d="M600 306V334" stroke="#B7FF3C" stroke-width="2" marker-end="url(#nyx-plan-arrow)"/>
+
+  <g transform="translate(48 344)">
+    <rect width="1104" height="142" rx="10" fill="#020403" fill-opacity="0.8" stroke="#39FF88" stroke-opacity="0.35"/>
+    <rect width="7" height="142" rx="3.5" fill="url(#nyx-plan-signal)"/>
+    <circle cx="68" cy="71" r="30" fill="#07110A" stroke="#39FF88" stroke-width="2"/>
+    <text x="68" y="80" text-anchor="middle" fill="#39FF88" font-size="26" font-weight="700">02</text>
+    <text x="124" y="51" fill="#39FF88" font-size="17" font-weight="700" letter-spacing="2">LAYER 2 // AEAD</text>
+    <text x="124" y="88" fill="#D8FFE7" font-size="29" font-weight="700">XChaCha20-Poly1305</text>
+    <text x="124" y="118" fill="#B7FF3C" font-size="21">24-byte nonce // 128-bit auth tags</text>
+  </g>
+
+  <path d="M600 486V514" stroke="#B7FF3C" stroke-width="2" marker-end="url(#nyx-plan-arrow)"/>
+
+  <g transform="translate(48 524)">
+    <rect width="1104" height="142" rx="10" fill="#020403" fill-opacity="0.8" stroke="#39FF88" stroke-opacity="0.35"/>
+    <rect width="7" height="142" rx="3.5" fill="url(#nyx-plan-signal)"/>
+    <circle cx="68" cy="71" r="30" fill="#07110A" stroke="#39FF88" stroke-width="2"/>
+    <text x="68" y="80" text-anchor="middle" fill="#39FF88" font-size="26" font-weight="700">03</text>
+    <text x="124" y="51" fill="#39FF88" font-size="17" font-weight="700" letter-spacing="2">LAYER 3 // AEAD</text>
+    <text x="124" y="88" fill="#D8FFE7" font-size="29" font-weight="700">AES-256-GCM</text>
+    <text x="124" y="118" fill="#B7FF3C" font-size="21">ECDH secp256k1 derived // 12-byte nonce</text>
+  </g>
+
+  <line x1="48" y1="700" x2="1152" y2="700" stroke="#7A8B80" stroke-opacity="0.45"/>
+  <text x="48" y="730" fill="#7A8B80" font-size="14" font-weight="700" letter-spacing="2">PLANNED CAPABILITIES</text>
+
+  <g font-size="19">
+    <circle cx="58" cy="762" r="4" fill="#39FF88"/>
+    <text x="78" y="769" fill="#D8FFE7"><tspan fill="#39FF88" font-weight="700">GROUP CHATS</tspan><tspan fill="#7A8B80"> // </tspan>tree-based key agreement (up to 16 participants)</text>
+    <circle cx="58" cy="798" r="4" fill="#39FF88"/>
+    <text x="78" y="805" fill="#D8FFE7"><tspan fill="#39FF88" font-weight="700">FILE TRANSFERS</tspan><tspan fill="#7A8B80"> // </tspan>up to 10 TB via encrypted Hyperfile/IPFS chunks</text>
+    <circle cx="58" cy="834" r="4" fill="#39FF88"/>
+    <text x="78" y="841" fill="#D8FFE7"><tspan fill="#39FF88" font-weight="700">KEY ROTATION</tspan><tspan fill="#7A8B80"> // </tspan>automatic per session</text>
+  </g>
+</svg>

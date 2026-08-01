@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="nyx-live-title nyx-live-desc" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace">
+  <title id="nyx-live-title">Nyx current live encryption stack</title>
+  <desc id="nyx-live-desc">The live Nyx stack uses AES-256-CBC with HMAC-SHA256 over SMSG, secp256k1 ECDH key exchange, Dandelion++ relay, and FCMP++ membership proofs.</desc>
+  <defs>
+    <linearGradient id="nyx-live-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020403"/>
+      <stop offset="0.52" stop-color="#07110A"/>
+      <stop offset="1" stop-color="#020403"/>
+    </linearGradient>
+    <linearGradient id="nyx-live-signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#39FF88"/>
+      <stop offset="1" stop-color="#B7FF3C"/>
+    </linearGradient>
+    <pattern id="nyx-live-mesh" width="72" height="42" patternUnits="userSpaceOnUse">
+      <path d="M18 1h36l17 20-17 20H18L1 21Z" fill="none" stroke="#39FF88" stroke-width="0.8" stroke-opacity="0.075"/>
+    </pattern>
+    <pattern id="nyx-live-scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M0 .5H4" stroke="#39FF88" stroke-width="0.6" stroke-opacity="0.045"/>
+    </pattern>
+    <filter id="nyx-live-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.4" result="nyx-live-blur"/>
+      <feMerge>
+        <feMergeNode in="nyx-live-blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="600" rx="18" fill="url(#nyx-live-bg)"/>
+  <rect width="1200" height="600" rx="18" fill="url(#nyx-live-mesh)"/>
+  <rect width="1200" height="600" rx="18" fill="url(#nyx-live-scanlines)"/>
+  <rect x="1" y="1" width="1198" height="598" rx="17" fill="none" stroke="#7A8B80" stroke-opacity="0.5"/>
+
+  <g transform="translate(42 30)">
+    <path d="M0 20h118l16 16h128" fill="none" stroke="#39FF88" stroke-opacity="0.5"/>
+    <circle cx="0" cy="20" r="3" fill="#39FF88"/>
+    <circle cx="262" cy="36" r="3" fill="#39FF88"/>
+    <text x="0" y="72" fill="#D8FFE7" font-size="31" font-weight="700" letter-spacing="1.4">NYX // CURRENT</text>
+    <text x="0" y="98" fill="#7A8B80" font-size="15" letter-spacing="1.5">SECURE MESSAGING STACK</text>
+  </g>
+
+  <g transform="translate(954 38)">
+    <rect width="198" height="48" rx="24" fill="#39FF88" fill-opacity="0.1" stroke="#39FF88" stroke-width="1.5"/>
+    <circle cx="28" cy="24" r="6" fill="#39FF88" filter="url(#nyx-live-glow)"/>
+    <text x="116" y="31" text-anchor="middle" fill="#39FF88" font-size="18" font-weight="700" letter-spacing="2.4">LIVE</text>
+  </g>
+
+  <line x1="48" y1="138" x2="1152" y2="138" stroke="#7A8B80" stroke-opacity="0.45"/>
+
+  <g transform="translate(48 160)">
+    <rect width="1104" height="92" rx="9" fill="#020403" fill-opacity="0.76" stroke="#39FF88" stroke-opacity="0.3"/>
+    <rect width="5" height="92" rx="2.5" fill="url(#nyx-live-signal)"/>
+    <text x="34" y="38" fill="#39FF88" font-size="16" font-weight="700" letter-spacing="2">01 // ENCRYPTION</text>
+    <text x="34" y="68" fill="#7A8B80" font-size="14">payload confidentiality + integrity</text>
+    <line x1="302" y1="18" x2="302" y2="74" stroke="#7A8B80" stroke-opacity="0.38"/>
+    <text x="336" y="56" fill="#D8FFE7" font-size="26">AES-256-CBC + HMAC-SHA256 via SMSG protocol</text>
+  </g>
+
+  <g transform="translate(48 264)">
+    <rect width="1104" height="92" rx="9" fill="#020403" fill-opacity="0.76" stroke="#39FF88" stroke-opacity="0.3"/>
+    <rect width="5" height="92" rx="2.5" fill="url(#nyx-live-signal)"/>
+    <text x="34" y="38" fill="#39FF88" font-size="16" font-weight="700" letter-spacing="2">02 // KEY EXCHANGE</text>
+    <text x="34" y="68" fill="#7A8B80" font-size="14">session key agreement</text>
+    <line x1="302" y1="18" x2="302" y2="74" stroke="#7A8B80" stroke-opacity="0.38"/>
+    <text x="336" y="56" fill="#D8FFE7" font-size="26">ECDH secp256k1</text>
+  </g>
+
+  <g transform="translate(48 368)">
+    <rect width="1104" height="92" rx="9" fill="#020403" fill-opacity="0.76" stroke="#39FF88" stroke-opacity="0.3"/>
+    <rect width="5" height="92" rx="2.5" fill="url(#nyx-live-signal)"/>
+    <text x="34" y="38" fill="#39FF88" font-size="16" font-weight="700" letter-spacing="2">03 // RELAY</text>
+    <text x="34" y="68" fill="#7A8B80" font-size="14">network-layer obfuscation</text>
+    <line x1="302" y1="18" x2="302" y2="74" stroke="#7A8B80" stroke-opacity="0.38"/>
+    <text x="336" y="42" fill="#D8FFE7" font-size="24">Dandelion++ (30s stem &#177; 15s jitter,</text>
+    <text x="336" y="72" fill="#B7FF3C" font-size="22">10% fluff, 10 hops)</text>
+  </g>
+
+  <g transform="translate(48 472)">
+    <rect width="1104" height="92" rx="9" fill="#020403" fill-opacity="0.76" stroke="#39FF88" stroke-opacity="0.3"/>
+    <rect width="5" height="92" rx="2.5" fill="url(#nyx-live-signal)"/>
+    <text x="34" y="38" fill="#39FF88" font-size="16" font-weight="700" letter-spacing="2">04 // VERIFICATION</text>
+    <text x="34" y="68" fill="#7A8B80" font-size="14">membership proof</text>
+    <line x1="302" y1="18" x2="302" y2="74" stroke="#7A8B80" stroke-opacity="0.38"/>
+    <text x="336" y="42" fill="#D8FFE7" font-size="24">FCMP++ membership proofs</text>
+    <text x="336" y="72" fill="#B7FF3C" font-size="22">dual curve tree // &#8804;4096 bytes</text>
+  </g>
+
+  <text x="1152" y="588" text-anchor="end" fill="#7A8B80" font-size="11" letter-spacing="1.4">NYX::SMSG // CHANNEL ACTIVE</text>
+</svg>

@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1030" viewBox="0 0 1200 1030" role="img" aria-labelledby="snt-title snt-desc" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+  <title id="snt-title">Solidus target network architecture</title>
+  <desc id="snt-desc">Ghost Mesh concept diagram of the Solidus active-development target architecture: a prime coordination layer, proposed entropic regions and DAGKNIGHT zone consensus, a proposed proof-of-work hash-lane mapping, and planned perpetuals components. It does not represent independently verified deployed behavior.</desc>
+
+  <defs>
+    <linearGradient id="snt-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#07110A"/>
+      <stop offset="1" stop-color="#020403"/>
+    </linearGradient>
+    <linearGradient id="snt-signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#39FF88"/>
+      <stop offset="1" stop-color="#B7FF3C"/>
+    </linearGradient>
+    <pattern id="snt-hex-mesh" width="72" height="42" patternUnits="userSpaceOnUse">
+      <path d="M18 1H54L71 21 54 41H18L1 21Z" fill="none" stroke="#39FF88" stroke-opacity=".055" stroke-width="1"/>
+      <path d="M54 1L72-20M54 41L72 62M18 1L0-20M18 41L0 62" fill="none" stroke="#39FF88" stroke-opacity=".035" stroke-width="1"/>
+    </pattern>
+    <pattern id="snt-scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M0 .5H4" stroke="#D8FFE7" stroke-opacity=".018" stroke-width="1"/>
+    </pattern>
+    <filter id="snt-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2" result="snt-blur"/>
+      <feMerge>
+        <feMergeNode in="snt-blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="snt-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5 0 10Z" fill="#39FF88"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="1030" fill="url(#snt-bg)"/>
+  <rect width="1200" height="1030" fill="url(#snt-hex-mesh)"/>
+  <rect width="1200" height="1030" fill="url(#snt-scanlines)"/>
+  <rect x="18.5" y="18.5" width="1163" height="993" rx="18" fill="none" stroke="#7A8B80" stroke-opacity=".42"/>
+
+  <!-- Header -->
+  <g>
+    <text x="50" y="51" fill="#B7FF3C" font-size="11" font-weight="700" letter-spacing="2.5">SOLIDUS</text>
+    <text x="50" y="82" fill="#D8FFE7" font-size="28" font-weight="700" letter-spacing=".7">NETWORK TOPOLOGY</text>
+    <text x="1150" y="51" text-anchor="end" fill="#7A8B80" font-size="10" letter-spacing="1.6">TARGET ARCHITECTURE</text>
+    <text x="1150" y="78" text-anchor="end" fill="#39FF88" font-size="11" font-weight="700" letter-spacing="1.2">[ ACTIVE DEVELOPMENT ]</text>
+    <path d="M50 106H1150" stroke="#7A8B80" stroke-opacity=".38"/>
+    <path d="M50 106H250" stroke="url(#snt-signal)" stroke-width="2"/>
+  </g>
+
+  <!-- Prime chain -->
+  <g>
+    <text x="50" y="137" fill="#7A8B80" font-size="10" font-weight="700" letter-spacing="2">01 / COORDINATION LAYER</text>
+
+    <rect x="240" y="154" width="450" height="126" rx="8" fill="#07110A" stroke="#39FF88" stroke-width="1.5"/>
+    <rect x="240" y="154" width="5" height="126" rx="2.5" fill="url(#snt-signal)"/>
+    <circle cx="655" cy="179" r="4" fill="#B7FF3C" filter="url(#snt-glow)"/>
+    <text x="275" y="188" fill="#B7FF3C" font-size="11" font-weight="700" letter-spacing="2">PRIME CHAIN</text>
+    <text x="275" y="224" fill="#D8FFE7" font-size="24" font-weight="700">Target coordination</text>
+    <text x="275" y="253" fill="#D8FFE7" font-size="24" font-weight="700">+ finality layer</text>
+
+    <rect x="720" y="154" width="430" height="126" rx="8" fill="#07110A" fill-opacity=".82" stroke="#7A8B80" stroke-opacity=".45"/>
+    <path d="M742 187H756M742 217H756M742 247H756" stroke="#39FF88" stroke-width="2"/>
+    <text x="772" y="191" fill="#D8FFE7" font-size="14">Entropic ordering target</text>
+    <text x="772" y="221" fill="#D8FFE7" font-size="14">Cross-region sync path</text>
+    <text x="772" y="251" fill="#B7FF3C" font-size="14">Prime layer: non-DAG target</text>
+  </g>
+
+  <!-- Region fan-out -->
+  <g fill="none" stroke="#39FF88" stroke-width="1.5" stroke-opacity=".82">
+    <path d="M465 280V318H200V345" marker-end="url(#snt-arrow)"/>
+    <path d="M465 318H600V345" marker-end="url(#snt-arrow)"/>
+    <path d="M600 318H1000V345" marker-end="url(#snt-arrow)"/>
+  </g>
+  <text x="50" y="333" fill="#7A8B80" font-size="10" font-weight="700" letter-spacing="2">02 / EXECUTION REGIONS</text>
+
+  <!-- Region 1 -->
+  <g>
+    <rect x="50" y="352" width="300" height="238" rx="8" fill="#07110A" fill-opacity=".88" stroke="#7A8B80" stroke-opacity=".5"/>
+    <path d="M50 430H350" stroke="#7A8B80" stroke-opacity=".3"/>
+    <text x="72" y="383" fill="#D8FFE7" font-size="19" font-weight="700">REGION 1</text>
+    <text x="72" y="408" fill="#39FF88" font-size="10" font-weight="700" letter-spacing="1.6">TARGET: ENTROPIC ORDERING</text>
+    <g text-anchor="middle">
+      <g transform="translate(67 452)">
+        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z1</text>
+        <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
+      </g>
+      <g transform="translate(134 452)">
+        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z2</text>
+        <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
+      </g>
+      <g transform="translate(201 452)">
+        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z3</text>
+        <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
+      </g>
+      <g transform="translate(268 452)">
+        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z4</text>
+        <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
+      </g>
+    </g>
+    <text x="200" y="563" text-anchor="middle" fill="#B7FF3C" font-size="10" font-weight="700" letter-spacing="1.4">DAGKNIGHT TARGET</text>
+  </g>
+
+  <!-- Region 2 -->
+  <g>
+    <rect x="450" y="352" width="300" height="238" rx="8" fill="#07110A" fill-opacity=".88" stroke="#7A8B80" stroke-opacity=".5"/>
+    <path d="M450 430H750" stroke="#7A8B80" stroke-opacity=".3"/>
+    <text x="472" y="383" fill="#D8FFE7" font-size="19" font-weight="700">REGION 2</text>
+    <text x="472" y="408" fill="#39FF88" font-size="10" font-weight="700" letter-spacing="1.6">TARGET: ENTROPIC ORDERING</text>
+    <g text-anchor="middle">
+      <g transform="translate(467 452)">
+        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z1</text>
+        <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
+      </g>
+      <g transform="translate(534 452)">
+        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z2</text>
+        <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
+      </g>
+      <g transform="translate(601 452)">
+        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z3</text>
+        <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
+      </g>
+      <g transform="translate(668 452)">
+        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z4</text>
+        <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
+      </g>
+    </g>
+    <text x="600" y="563" text-anchor="middle" fill="#B7FF3C" font-size="10" font-weight="700" letter-spacing="1.4">DAGKNIGHT TARGET</text>
+  </g>
+
+  <!-- Region N -->
+  <g>
+    <rect x="850" y="352" width="300" height="238" rx="8" fill="#07110A" fill-opacity=".88" stroke="#7A8B80" stroke-opacity=".5"/>
+    <path d="M850 430H1150" stroke="#7A8B80" stroke-opacity=".3"/>
+    <text x="872" y="383" fill="#D8FFE7" font-size="19" font-weight="700">REGION N</text>
+    <text x="872" y="408" fill="#39FF88" font-size="10" font-weight="700" letter-spacing="1.6">TARGET: ENTROPIC ORDERING</text>
+    <g text-anchor="middle">
+      <g transform="translate(867 452)">
+        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z1</text>
+        <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
+      </g>
+      <g transform="translate(934 452)">
+        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z2</text>
+        <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
+      </g>
+      <g transform="translate(1001 452)">
+        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z3</text>
+        <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
+      </g>
+      <g transform="translate(1068 452)">
+        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z4</text>
+        <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
+      </g>
+    </g>
+    <text x="1000" y="563" text-anchor="middle" fill="#B7FF3C" font-size="10" font-weight="700" letter-spacing="1.4">DAGKNIGHT TARGET</text>
+  </g>
+
+  <!-- Shared zone consensus -->
+  <g>
+    <rect x="50" y="610" width="1100" height="48" rx="6" fill="#020403" stroke="#39FF88" stroke-opacity=".5"/>
+    <rect x="50" y="610" width="5" height="48" rx="2.5" fill="#B7FF3C"/>
+    <text x="75" y="639" fill="#7A8B80" font-size="10" font-weight="700" letter-spacing="1.5">TARGET CONSENSUS PLANE</text>
+    <text x="345" y="639" fill="#D8FFE7" font-size="12" font-weight="700">PROPOSED PER-ZONE <tspan fill="#B7FF3C">DAGKNIGHT</tspan></text>
+    <text x="1125" y="639" text-anchor="end" fill="#39FF88" font-size="11">PARALLEL PRODUCTION DESIGN</text>
+  </g>
+
+  <!-- Zone algorithms -->
+  <g>
+    <text x="50" y="690" fill="#7A8B80" font-size="10" font-weight="700" letter-spacing="2">03 / PROPOSED ZONE HASH LANES</text>
+    <text x="1150" y="690" text-anchor="end" fill="#7A8B80" font-size="9" letter-spacing="1">TARGET MAPPING REPEATS BY REGION</text>
+
+    <g transform="translate(50 708)">
+      <rect width="263" height="76" rx="7" fill="#07110A" stroke="#7A8B80" stroke-opacity=".45"/>
+      <rect width="4" height="76" rx="2" fill="#39FF88"/>
+      <text x="24" y="29" fill="#B7FF3C" font-size="10" font-weight="700" letter-spacing="1.4">Z1</text>
+      <text x="24" y="55" fill="#D8FFE7" font-size="17" font-weight="700">SHA-256</text>
+    </g>
+    <g transform="translate(329 708)">
+      <rect width="263" height="76" rx="7" fill="#07110A" stroke="#7A8B80" stroke-opacity=".45"/>
+      <rect width="4" height="76" rx="2" fill="#39FF88"/>
+      <text x="24" y="29" fill="#B7FF3C" font-size="10" font-weight="700" letter-spacing="1.4">Z2</text>
+      <text x="24" y="55" fill="#D8FFE7" font-size="17" font-weight="700">ProgPoW</text>
+    </g>
+    <g transform="translate(608 708)">
+      <rect width="263" height="76" rx="7" fill="#07110A" stroke="#7A8B80" stroke-opacity=".45"/>
+      <rect width="4" height="76" rx="2" fill="#39FF88"/>
+      <text x="24" y="29" fill="#B7FF3C" font-size="10" font-weight="700" letter-spacing="1.4">Z3</text>
+      <text x="24" y="55" fill="#D8FFE7" font-size="17" font-weight="700">RandomX-S</text>
+    </g>
+    <g transform="translate(887 708)">
+      <rect width="263" height="76" rx="7" fill="#07110A" stroke="#7A8B80" stroke-opacity=".45"/>
+      <rect width="4" height="76" rx="2" fill="#39FF88"/>
+      <text x="24" y="29" fill="#B7FF3C" font-size="10" font-weight="700" letter-spacing="1.4">Z4</text>
+      <text x="24" y="55" fill="#D8FFE7" font-size="17" font-weight="700">Panthera</text>
+    </g>
+  </g>
+
+  <!-- Integrated perpetuals core -->
+  <g>
+    <rect x="50" y="818" width="1100" height="164" rx="9" fill="#07110A" fill-opacity=".9" stroke="#39FF88" stroke-width="1.25"/>
+    <path d="M50 867H1150" stroke="#7A8B80" stroke-opacity=".32"/>
+    <text x="74" y="849" fill="#B7FF3C" font-size="11" font-weight="700" letter-spacing="2">TARGET PERPS ARCHITECTURE</text>
+    <text x="1126" y="849" text-anchor="end" fill="#7A8B80" font-size="9" letter-spacing="1.2">PLANNED COMPONENTS</text>
+
+    <g font-size="13" font-weight="700">
+      <circle cx="78" cy="899" r="3" fill="#39FF88"/>
+      <text x="92" y="904" fill="#D8FFE7">Order-book execution</text>
+      <circle cx="430" cy="899" r="3" fill="#39FF88"/>
+      <text x="444" y="904" fill="#D8FFE7">Matching engine</text>
+      <circle cx="782" cy="899" r="3" fill="#39FF88"/>
+      <text x="796" y="904" fill="#D8FFE7">Cross-margin</text>
+
+      <circle cx="78" cy="946" r="3" fill="#B7FF3C"/>
+      <text x="92" y="951" fill="#D8FFE7">Liquidation engine</text>
+      <circle cx="430" cy="946" r="3" fill="#B7FF3C"/>
+      <text x="444" y="951" fill="#D8FFE7">Funding-rate oracle</text>
+      <circle cx="782" cy="946" r="3" fill="#B7FF3C"/>
+      <text x="796" y="951" fill="#D8FFE7">Multi-collateral</text>
+    </g>
+  </g>
+
+  <text x="50" y="1003" fill="#7A8B80" font-size="9" letter-spacing="1.2">GHOST MESH / CONCEPT MAP</text>
+  <text x="1150" y="1003" text-anchor="end" fill="#7A8B80" font-size="9">DESIGN TARGETS / NOT DEPLOYMENT STATUS</text>
+</svg>

@@ -2,9 +2,9 @@
 
 
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:1a1b27&height=160&section=header" width="100%"/>
-<a href="https://github.com/0xcircuitbreaker"><img src="https://readme-typing-svg.demolab.com?font=VT323&weight=400&size=50&duration=4000&pause=2000&color=58A6FF&center=true&vCenter=true&repeat=true&width=650&height=65&lines=0xcircuitbreaker" alt="0xcircuitbreaker"/></a><br/>
-<a href="https://github.com/0xcircuitbreaker"><img src="https://readme-typing-svg.demolab.com?font=VT323&weight=400&size=28&duration=2500&pause=800&color=58A6FF&center=true&vCenter=true&repeat=true&width=820&height=65&lines=Founder+%7C+Lead+Engineer" alt="Typing SVG"/></a>
+<a href="https://github.com/0xcircuitbreaker">
+  <img src="./assets/readme/profile-hero-ghost-mesh.svg" width="100%" alt="0xcircuitbreaker - Founder and Lead Engineer; signal locked and systems online"/>
+</a>
 
 <br/>
 

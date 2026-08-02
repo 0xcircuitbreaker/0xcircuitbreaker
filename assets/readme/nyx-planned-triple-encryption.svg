@@ -27,6 +27,91 @@
     <marker id="nyx-plan-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0 0L10 5L0 10Z" fill="#B7FF3C"/>
     </marker>
+    <style>
+      .nyx-plan-header-trace {
+        stroke-dasharray: 12 8;
+        animation: nyx-plan-trace-flow 3.2s linear infinite;
+      }
+      .nyx-plan-header-node,
+      .nyx-plan-status-dot,
+      .nyx-plan-layer-node,
+      .nyx-plan-capability-node {
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      .nyx-plan-header-node { animation: nyx-plan-header-pulse 4.8s ease-in-out infinite; }
+      .nyx-plan-header-node-end { animation-delay: -2.4s; }
+      .nyx-plan-badge {
+        animation: nyx-plan-badge-flow 3.6s linear infinite,
+                   nyx-plan-badge-breathe 5.4s ease-in-out infinite;
+      }
+      .nyx-plan-status-dot { animation: nyx-plan-status-breathe 3.8s ease-in-out infinite; }
+      .nyx-plan-flow {
+        stroke-dasharray: 7 6;
+        animation: nyx-plan-layer-flow 2.4s linear infinite;
+      }
+      .nyx-plan-flow-2 { animation-delay: -1.2s; }
+      .nyx-plan-card { animation: nyx-plan-card-pulse 7.2s ease-in-out infinite; }
+      .nyx-plan-rail { animation: nyx-plan-rail-pulse 7.2s ease-in-out infinite; }
+      .nyx-plan-layer-node { animation: nyx-plan-layer-pulse 7.2s ease-in-out infinite; }
+      .nyx-plan-layer-2 { animation-delay: 2.4s; }
+      .nyx-plan-layer-3 { animation-delay: 4.8s; }
+      .nyx-plan-capability-node { animation: nyx-plan-capability-pulse 6.6s ease-in-out infinite; }
+      .nyx-plan-capability-2 { animation-delay: 2.2s; }
+      .nyx-plan-capability-3 { animation-delay: 4.4s; }
+
+      @keyframes nyx-plan-trace-flow {
+        to { stroke-dashoffset: -40; }
+      }
+      @keyframes nyx-plan-header-pulse {
+        0%, 22%, 100% { opacity: 0.55; transform: scale(1); }
+        10% { opacity: 1; transform: scale(1.5); }
+      }
+      @keyframes nyx-plan-badge-flow {
+        to { stroke-dashoffset: -18; }
+      }
+      @keyframes nyx-plan-badge-breathe {
+        0%, 100% { fill-opacity: 0.05; stroke-opacity: 0.62; }
+        50% { fill-opacity: 0.11; stroke-opacity: 1; }
+      }
+      @keyframes nyx-plan-status-breathe {
+        0%, 100% { opacity: 0.62; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.17); }
+      }
+      @keyframes nyx-plan-layer-flow {
+        to { stroke-dashoffset: -26; }
+      }
+      @keyframes nyx-plan-card-pulse {
+        0%, 20%, 100% { stroke-opacity: 0.35; }
+        9% { stroke-opacity: 0.72; }
+      }
+      @keyframes nyx-plan-rail-pulse {
+        0%, 20%, 100% { opacity: 0.58; }
+        9% { opacity: 1; }
+      }
+      @keyframes nyx-plan-layer-pulse {
+        0%, 20%, 100% { opacity: 0.72; transform: scale(1); }
+        9% { opacity: 1; transform: scale(1.12); }
+      }
+      @keyframes nyx-plan-capability-pulse {
+        0%, 22%, 100% { opacity: 0.58; transform: scale(1); }
+        10% { opacity: 1; transform: scale(1.35); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .nyx-plan-header-trace,
+        .nyx-plan-header-node,
+        .nyx-plan-badge,
+        .nyx-plan-status-dot,
+        .nyx-plan-flow,
+        .nyx-plan-card,
+        .nyx-plan-rail,
+        .nyx-plan-layer-node,
+        .nyx-plan-capability-node { animation: none; }
+        .nyx-plan-header-trace,
+        .nyx-plan-flow { stroke-dasharray: none; stroke-dashoffset: 0; }
+      }
+    </style>
   </defs>
 
   <rect width="1200" height="860" rx="18" fill="url(#nyx-plan-bg)"/>
@@ -35,49 +120,49 @@
   <rect x="1" y="1" width="1198" height="858" rx="17" fill="none" stroke="#7A8B80" stroke-opacity="0.5"/>
 
   <g transform="translate(42 30)">
-    <path d="M0 20h118l16 16h128" fill="none" stroke="#39FF88" stroke-opacity="0.5"/>
-    <circle cx="0" cy="20" r="3" fill="#39FF88"/>
-    <circle cx="262" cy="36" r="3" fill="#39FF88"/>
+    <path class="nyx-plan-header-trace" d="M0 20h118l16 16h128" fill="none" stroke="#39FF88" stroke-opacity="0.5"/>
+    <circle class="nyx-plan-header-node nyx-plan-header-node-start" cx="0" cy="20" r="3" fill="#39FF88"/>
+    <circle class="nyx-plan-header-node nyx-plan-header-node-end" cx="262" cy="36" r="3" fill="#39FF88"/>
     <text x="0" y="72" fill="#D8FFE7" font-size="31" font-weight="700" letter-spacing="1.4">NYX // TRIPLE ENCRYPTION</text>
     <text x="0" y="98" fill="#7A8B80" font-size="15" letter-spacing="1.5">POST-QUANTUM MESSAGING ROADMAP</text>
   </g>
 
   <g transform="translate(922 38)">
-    <rect width="230" height="48" rx="24" fill="#B7FF3C" fill-opacity="0.08" stroke="#B7FF3C" stroke-width="1.5" stroke-dasharray="5 4"/>
-    <circle cx="28" cy="24" r="6" fill="#B7FF3C" filter="url(#nyx-plan-glow)"/>
+    <rect class="nyx-plan-badge" width="230" height="48" rx="24" fill="#B7FF3C" fill-opacity="0.08" stroke="#B7FF3C" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <circle class="nyx-plan-status-dot" cx="28" cy="24" r="6" fill="#B7FF3C" filter="url(#nyx-plan-glow)"/>
     <text x="130" y="31" text-anchor="middle" fill="#B7FF3C" font-size="17" font-weight="700" letter-spacing="2.2">PLANNED</text>
   </g>
 
   <line x1="48" y1="138" x2="1152" y2="138" stroke="#7A8B80" stroke-opacity="0.45"/>
 
   <g transform="translate(48 164)">
-    <rect width="1104" height="142" rx="10" fill="#020403" fill-opacity="0.8" stroke="#39FF88" stroke-opacity="0.35"/>
-    <rect width="7" height="142" rx="3.5" fill="url(#nyx-plan-signal)"/>
-    <circle cx="68" cy="71" r="30" fill="#07110A" stroke="#39FF88" stroke-width="2"/>
+    <rect class="nyx-plan-card nyx-plan-layer-1" width="1104" height="142" rx="10" fill="#020403" fill-opacity="0.8" stroke="#39FF88" stroke-opacity="0.35"/>
+    <rect class="nyx-plan-rail nyx-plan-layer-1" width="7" height="142" rx="3.5" fill="url(#nyx-plan-signal)"/>
+    <circle class="nyx-plan-layer-node nyx-plan-layer-1" cx="68" cy="71" r="30" fill="#07110A" stroke="#39FF88" stroke-width="2"/>
     <text x="68" y="80" text-anchor="middle" fill="#39FF88" font-size="26" font-weight="700">01</text>
     <text x="124" y="51" fill="#39FF88" font-size="17" font-weight="700" letter-spacing="2">LAYER 1 // POST-QUANTUM KEM</text>
     <text x="124" y="87" fill="#D8FFE7" font-size="29" font-weight="700">ML-KEM-1024 <tspan fill="#7A8B80" font-size="21" font-weight="400">(FIPS 203)</tspan></text>
     <text x="124" y="117" fill="#B7FF3C" font-size="21">Post-quantum key encapsulation &#8594; 256-bit shared secret</text>
   </g>
 
-  <path d="M600 306V334" stroke="#B7FF3C" stroke-width="2" marker-end="url(#nyx-plan-arrow)"/>
+  <path class="nyx-plan-flow nyx-plan-flow-1" d="M600 306V334" stroke="#B7FF3C" stroke-width="2" marker-end="url(#nyx-plan-arrow)"/>
 
   <g transform="translate(48 344)">
-    <rect width="1104" height="142" rx="10" fill="#020403" fill-opacity="0.8" stroke="#39FF88" stroke-opacity="0.35"/>
-    <rect width="7" height="142" rx="3.5" fill="url(#nyx-plan-signal)"/>
-    <circle cx="68" cy="71" r="30" fill="#07110A" stroke="#39FF88" stroke-width="2"/>
+    <rect class="nyx-plan-card nyx-plan-layer-2" width="1104" height="142" rx="10" fill="#020403" fill-opacity="0.8" stroke="#39FF88" stroke-opacity="0.35"/>
+    <rect class="nyx-plan-rail nyx-plan-layer-2" width="7" height="142" rx="3.5" fill="url(#nyx-plan-signal)"/>
+    <circle class="nyx-plan-layer-node nyx-plan-layer-2" cx="68" cy="71" r="30" fill="#07110A" stroke="#39FF88" stroke-width="2"/>
     <text x="68" y="80" text-anchor="middle" fill="#39FF88" font-size="26" font-weight="700">02</text>
     <text x="124" y="51" fill="#39FF88" font-size="17" font-weight="700" letter-spacing="2">LAYER 2 // AEAD</text>
     <text x="124" y="88" fill="#D8FFE7" font-size="29" font-weight="700">XChaCha20-Poly1305</text>
     <text x="124" y="118" fill="#B7FF3C" font-size="21">24-byte nonce // 128-bit auth tags</text>
   </g>
 
-  <path d="M600 486V514" stroke="#B7FF3C" stroke-width="2" marker-end="url(#nyx-plan-arrow)"/>
+  <path class="nyx-plan-flow nyx-plan-flow-2" d="M600 486V514" stroke="#B7FF3C" stroke-width="2" marker-end="url(#nyx-plan-arrow)"/>
 
   <g transform="translate(48 524)">
-    <rect width="1104" height="142" rx="10" fill="#020403" fill-opacity="0.8" stroke="#39FF88" stroke-opacity="0.35"/>
-    <rect width="7" height="142" rx="3.5" fill="url(#nyx-plan-signal)"/>
-    <circle cx="68" cy="71" r="30" fill="#07110A" stroke="#39FF88" stroke-width="2"/>
+    <rect class="nyx-plan-card nyx-plan-layer-3" width="1104" height="142" rx="10" fill="#020403" fill-opacity="0.8" stroke="#39FF88" stroke-opacity="0.35"/>
+    <rect class="nyx-plan-rail nyx-plan-layer-3" width="7" height="142" rx="3.5" fill="url(#nyx-plan-signal)"/>
+    <circle class="nyx-plan-layer-node nyx-plan-layer-3" cx="68" cy="71" r="30" fill="#07110A" stroke="#39FF88" stroke-width="2"/>
     <text x="68" y="80" text-anchor="middle" fill="#39FF88" font-size="26" font-weight="700">03</text>
     <text x="124" y="51" fill="#39FF88" font-size="17" font-weight="700" letter-spacing="2">LAYER 3 // AEAD</text>
     <text x="124" y="88" fill="#D8FFE7" font-size="29" font-weight="700">AES-256-GCM</text>
@@ -88,11 +173,11 @@
   <text x="48" y="730" fill="#7A8B80" font-size="14" font-weight="700" letter-spacing="2">PLANNED CAPABILITIES</text>
 
   <g font-size="19">
-    <circle cx="58" cy="762" r="4" fill="#39FF88"/>
+    <circle class="nyx-plan-capability-node nyx-plan-capability-1" cx="58" cy="762" r="4" fill="#39FF88"/>
     <text x="78" y="769" fill="#D8FFE7"><tspan fill="#39FF88" font-weight="700">GROUP CHATS</tspan><tspan fill="#7A8B80"> // </tspan>tree-based key agreement (up to 16 participants)</text>
-    <circle cx="58" cy="798" r="4" fill="#39FF88"/>
+    <circle class="nyx-plan-capability-node nyx-plan-capability-2" cx="58" cy="798" r="4" fill="#39FF88"/>
     <text x="78" y="805" fill="#D8FFE7"><tspan fill="#39FF88" font-weight="700">FILE TRANSFERS</tspan><tspan fill="#7A8B80"> // </tspan>up to 10 TB via encrypted Hyperfile/IPFS chunks</text>
-    <circle cx="58" cy="834" r="4" fill="#39FF88"/>
+    <circle class="nyx-plan-capability-node nyx-plan-capability-3" cx="58" cy="834" r="4" fill="#39FF88"/>
     <text x="78" y="841" fill="#D8FFE7"><tspan fill="#39FF88" font-weight="700">KEY ROTATION</tspan><tspan fill="#7A8B80"> // </tspan>automatic per session</text>
   </g>
 </svg>

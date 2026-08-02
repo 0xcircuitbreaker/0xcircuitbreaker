@@ -30,6 +30,36 @@
       .ips-protocol { fill: #D8FFE7; font-size: 22px; font-weight: 700; }
       .ips-copy { fill: #D8FFE7; font-size: 17px; }
       .ips-muted { fill: #7A8B80; font-size: 14px; }
+      .ips-surface-node,
+      .ips-proof-node {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: ips-node-pulse 5.6s ease-in-out infinite;
+      }
+      .ips-node-2 { animation-delay: -4.2s; }
+      .ips-node-3 { animation-delay: -2.8s; }
+      .ips-node-4 { animation-delay: -1.4s; }
+      .ips-proof-branch {
+        stroke-dasharray: 12 10;
+        animation: ips-proof-flow 3.8s linear infinite;
+      }
+      .ips-proof-a { animation-delay: -2.1s; }
+      .ips-proof-b { animation-delay: -0.7s; }
+
+      @keyframes ips-proof-flow {
+        to { stroke-dashoffset: -44; }
+      }
+      @keyframes ips-node-pulse {
+        0%, 18%, 100% { opacity: 0.72; transform: scale(1); }
+        8% { opacity: 1; transform: scale(1.16); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ips-surface-node,
+        .ips-proof-node,
+        .ips-proof-branch { animation: none; }
+        .ips-proof-branch { stroke-dasharray: none; stroke-dashoffset: 0; }
+      }
     </style>
   </defs>
 
@@ -39,18 +69,18 @@
   <rect x="1" y="1" width="1198" height="658" rx="21" fill="none" stroke="#7A8B80" stroke-opacity="0.45" stroke-width="2"/>
 
   <g class="ips-mono">
-    <text x="48" y="50" fill="#39FF88" font-size="13" font-weight="700" letter-spacing="2.4">INNOVA // PRIVACY ARCHITECTURE</text>
+    <text x="48" y="50" fill="#39FF88" font-size="15" font-weight="700" letter-spacing="2.4">INNOVA // PRIVACY ARCHITECTURE</text>
     <text x="48" y="84" fill="#D8FFE7" font-size="27" font-weight="700" letter-spacing="0.8">PRIVACY SURFACES &amp; PROOF PATHS</text>
     <g transform="translate(970 42)">
       <rect width="182" height="42" rx="8" fill="#020403" stroke="#B7FF3C" stroke-opacity="0.75"/>
-      <text x="91" y="27" text-anchor="middle" fill="#B7FF3C" font-size="12" font-weight="700" letter-spacing="1.2">COMPOSABLE // PATHS</text>
+      <text x="91" y="28" text-anchor="middle" fill="#B7FF3C" font-size="14" font-weight="700" letter-spacing="1.2">COMPOSABLE // PATHS</text>
     </g>
 
     <g transform="translate(48 116)">
       <rect class="ips-row" width="1104" height="82" rx="12"/>
       <rect width="5" height="82" rx="2.5" fill="#B7FF3C"/>
-      <circle cx="36" cy="41" r="9" fill="#020403" stroke="#B7FF3C" stroke-width="2" filter="url(#ips-glow)"/>
-      <text x="70" y="29" fill="#B7FF3C" font-size="12" font-weight="700" letter-spacing="1.5">NETWORK SURFACE</text>
+      <circle class="ips-surface-node ips-node-1" cx="36" cy="41" r="9" fill="#020403" stroke="#B7FF3C" stroke-width="2" filter="url(#ips-glow)"/>
+      <text x="70" y="29" fill="#B7FF3C" font-size="14" font-weight="700" letter-spacing="1.5">NETWORK SURFACE</text>
       <text class="ips-protocol" x="70" y="58">Dandelion++</text>
       <text class="ips-copy" x="372" y="35">Network-origin obfuscation</text>
       <text class="ips-muted" x="372" y="61">30s stem · 10% fluff · 10 hops</text>
@@ -59,22 +89,22 @@
     <g transform="translate(48 210)">
       <rect class="ips-row" width="1104" height="72" rx="12"/>
       <rect width="5" height="72" rx="2.5" fill="#39FF88"/>
-      <circle cx="36" cy="36" r="9" fill="#020403" stroke="#39FF88" stroke-width="2"/>
-      <text x="70" y="27" fill="#39FF88" font-size="12" font-weight="700" letter-spacing="1.5">RECEIVING SURFACE</text>
+      <circle class="ips-surface-node ips-node-2" cx="36" cy="36" r="9" fill="#020403" stroke="#39FF88" stroke-width="2"/>
+      <text x="70" y="27" fill="#39FF88" font-size="14" font-weight="700" letter-spacing="1.5">RECEIVING SURFACE</text>
       <text class="ips-protocol" x="70" y="55">Silent Shielding</text>
       <text class="ips-copy" x="372" y="45">Silent Payments + value shielding¹</text>
     </g>
 
     <g>
       <rect x="48" y="294" width="1104" height="176" rx="12" fill="#07110A" fill-opacity="0.58" stroke="#7A8B80" stroke-opacity="0.3"/>
-      <text x="72" y="321" fill="#39FF88" font-size="12" font-weight="700" letter-spacing="1.5">MEMBERSHIP SURFACE // ALTERNATIVE PROOF PATHS</text>
-      <path d="M600 325V339M600 339H330V348M600 339H870V348" fill="none" stroke="url(#ips-edge)" stroke-width="1.5"/>
+      <text x="72" y="321" fill="#39FF88" font-size="14" font-weight="700" letter-spacing="1.5">MEMBERSHIP SURFACE // ALTERNATIVE PROOF PATHS</text>
+      <path class="ips-proof-branch" d="M600 325V339M600 339H330V348M600 339H870V348" fill="none" stroke="url(#ips-edge)" stroke-width="1.5"/>
 
       <g transform="translate(72 344)">
         <rect class="ips-path" width="516" height="106" rx="10"/>
-        <circle cx="28" cy="53" r="13" fill="#020403" stroke="#B7FF3C" stroke-width="2" filter="url(#ips-glow)"/>
-        <text x="28" y="58" text-anchor="middle" fill="#B7FF3C" font-size="13" font-weight="700">A</text>
-        <text x="58" y="31" fill="#B7FF3C" font-size="11" font-weight="700" letter-spacing="1.4">PATH A</text>
+        <circle class="ips-proof-node ips-proof-a" cx="28" cy="53" r="13" fill="#020403" stroke="#B7FF3C" stroke-width="2" filter="url(#ips-glow)"/>
+        <text x="28" y="58" text-anchor="middle" fill="#B7FF3C" font-size="15" font-weight="700">A</text>
+        <text x="58" y="31" fill="#B7FF3C" font-size="13" font-weight="700" letter-spacing="1.4">PATH A</text>
         <text class="ips-protocol" x="58" y="54">FCMP++</text>
         <text class="ips-copy" x="58" y="76">Full-Chain Membership Proofs</text>
         <text class="ips-muted" x="58" y="96">entire shielded UTXO set</text>
@@ -82,9 +112,9 @@
 
       <g transform="translate(612 344)">
         <rect class="ips-path" width="516" height="106" rx="10"/>
-        <circle cx="28" cy="53" r="13" fill="#020403" stroke="#39FF88" stroke-width="2"/>
-        <text x="28" y="58" text-anchor="middle" fill="#39FF88" font-size="13" font-weight="700">B</text>
-        <text x="58" y="31" fill="#39FF88" font-size="11" font-weight="700" letter-spacing="1.4">PATH B</text>
+        <circle class="ips-proof-node ips-proof-b" cx="28" cy="53" r="13" fill="#020403" stroke="#39FF88" stroke-width="2"/>
+        <text x="28" y="58" text-anchor="middle" fill="#39FF88" font-size="15" font-weight="700">B</text>
+        <text x="58" y="31" fill="#39FF88" font-size="13" font-weight="700" letter-spacing="1.4">PATH B</text>
         <text class="ips-protocol" x="58" y="54">Lelantus</text>
         <text class="ips-copy" x="58" y="76">One-out-of-many proofs (set=64)</text>
         <text class="ips-muted" x="58" y="96">sender ambiguity</text>
@@ -94,13 +124,13 @@
     <g transform="translate(48 482)">
       <rect class="ips-row" width="1104" height="76" rx="12"/>
       <rect width="5" height="76" rx="2.5" fill="#39FF88"/>
-      <circle cx="36" cy="38" r="9" fill="#020403" stroke="#39FF88" stroke-width="2"/>
-      <text x="70" y="29" fill="#39FF88" font-size="12" font-weight="700" letter-spacing="1.5">VALUE SURFACE</text>
+      <circle class="ips-surface-node ips-node-4" cx="36" cy="38" r="9" fill="#020403" stroke="#39FF88" stroke-width="2"/>
+      <text x="70" y="29" fill="#39FF88" font-size="14" font-weight="700" letter-spacing="1.5">VALUE SURFACE</text>
       <text class="ips-protocol" x="70" y="56">Pedersen + Bulletproofs</text>
       <text class="ips-copy" x="510" y="47">Confidential transaction values</text>
     </g>
 
-    <text x="48" y="624" fill="#7A8B80" font-size="12" letter-spacing="1.2">COMPOSABLE PRIVACY SURFACES // MEMBERSHIP PATHS ARE ALTERNATIVES</text>
-    <text x="1152" y="624" text-anchor="end" fill="#39FF88" font-size="12" letter-spacing="1.6">GHOST MESH // PRIVACY</text>
+    <text x="48" y="624" fill="#7A8B80" font-size="14" letter-spacing="1.2">COMPOSABLE PRIVACY SURFACES // MEMBERSHIP PATHS ARE ALTERNATIVES</text>
+    <text x="1152" y="624" text-anchor="end" fill="#39FF88" font-size="14" letter-spacing="1.6">GHOST MESH // PRIVACY</text>
   </g>
 </svg>

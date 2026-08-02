@@ -24,6 +24,60 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <style>
+      .nyx-live-header-trace {
+        stroke-dasharray: 12 8;
+        animation: nyx-live-trace-flow 3.2s linear infinite;
+      }
+      .nyx-live-header-node,
+      .nyx-live-status-dot {
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      .nyx-live-header-node { animation: nyx-live-node-pulse 4.8s ease-in-out infinite; }
+      .nyx-live-header-node-end { animation-delay: -2.4s; }
+      .nyx-live-badge { animation: nyx-live-badge-breathe 4.2s ease-in-out infinite; }
+      .nyx-live-status-dot { animation: nyx-live-status-pulse 2.8s ease-in-out infinite; }
+      .nyx-live-card { animation: nyx-live-card-pulse 8s ease-in-out infinite; }
+      .nyx-live-rail { animation: nyx-live-rail-pulse 8s ease-in-out infinite; }
+      .nyx-live-stage-2 { animation-delay: 2s; }
+      .nyx-live-stage-3 { animation-delay: 4s; }
+      .nyx-live-stage-4 { animation-delay: 6s; }
+
+      @keyframes nyx-live-trace-flow {
+        to { stroke-dashoffset: -40; }
+      }
+      @keyframes nyx-live-node-pulse {
+        0%, 22%, 100% { opacity: 0.55; transform: scale(1); }
+        10% { opacity: 1; transform: scale(1.5); }
+      }
+      @keyframes nyx-live-badge-breathe {
+        0%, 100% { fill-opacity: 0.07; stroke-opacity: 0.68; }
+        50% { fill-opacity: 0.14; stroke-opacity: 1; }
+      }
+      @keyframes nyx-live-status-pulse {
+        0%, 100% { opacity: 0.72; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+      @keyframes nyx-live-card-pulse {
+        0%, 18%, 100% { stroke-opacity: 0.3; }
+        8% { stroke-opacity: 0.68; }
+      }
+      @keyframes nyx-live-rail-pulse {
+        0%, 18%, 100% { opacity: 0.58; }
+        8% { opacity: 1; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .nyx-live-header-trace,
+        .nyx-live-header-node,
+        .nyx-live-badge,
+        .nyx-live-status-dot,
+        .nyx-live-card,
+        .nyx-live-rail { animation: none; }
+        .nyx-live-header-trace { stroke-dasharray: none; stroke-dashoffset: 0; }
+      }
+    </style>
   </defs>
 
   <rect width="1200" height="600" rx="18" fill="url(#nyx-live-bg)"/>
@@ -32,24 +86,24 @@
   <rect x="1" y="1" width="1198" height="598" rx="17" fill="none" stroke="#7A8B80" stroke-opacity="0.5"/>
 
   <g transform="translate(42 30)">
-    <path d="M0 20h118l16 16h128" fill="none" stroke="#39FF88" stroke-opacity="0.5"/>
-    <circle cx="0" cy="20" r="3" fill="#39FF88"/>
-    <circle cx="262" cy="36" r="3" fill="#39FF88"/>
+    <path class="nyx-live-header-trace" d="M0 20h118l16 16h128" fill="none" stroke="#39FF88" stroke-opacity="0.5"/>
+    <circle class="nyx-live-header-node nyx-live-header-node-start" cx="0" cy="20" r="3" fill="#39FF88"/>
+    <circle class="nyx-live-header-node nyx-live-header-node-end" cx="262" cy="36" r="3" fill="#39FF88"/>
     <text x="0" y="72" fill="#D8FFE7" font-size="31" font-weight="700" letter-spacing="1.4">NYX // CURRENT</text>
     <text x="0" y="98" fill="#7A8B80" font-size="15" letter-spacing="1.5">SECURE MESSAGING STACK</text>
   </g>
 
   <g transform="translate(954 38)">
-    <rect width="198" height="48" rx="24" fill="#39FF88" fill-opacity="0.1" stroke="#39FF88" stroke-width="1.5"/>
-    <circle cx="28" cy="24" r="6" fill="#39FF88" filter="url(#nyx-live-glow)"/>
+    <rect class="nyx-live-badge" width="198" height="48" rx="24" fill="#39FF88" fill-opacity="0.1" stroke="#39FF88" stroke-width="1.5"/>
+    <circle class="nyx-live-status-dot" cx="28" cy="24" r="6" fill="#39FF88" filter="url(#nyx-live-glow)"/>
     <text x="116" y="31" text-anchor="middle" fill="#39FF88" font-size="18" font-weight="700" letter-spacing="2.4">LIVE</text>
   </g>
 
   <line x1="48" y1="138" x2="1152" y2="138" stroke="#7A8B80" stroke-opacity="0.45"/>
 
   <g transform="translate(48 160)">
-    <rect width="1104" height="92" rx="9" fill="#020403" fill-opacity="0.76" stroke="#39FF88" stroke-opacity="0.3"/>
-    <rect width="5" height="92" rx="2.5" fill="url(#nyx-live-signal)"/>
+    <rect class="nyx-live-card nyx-live-stage-1" width="1104" height="92" rx="9" fill="#020403" fill-opacity="0.76" stroke="#39FF88" stroke-opacity="0.3"/>
+    <rect class="nyx-live-rail nyx-live-stage-1" width="5" height="92" rx="2.5" fill="url(#nyx-live-signal)"/>
     <text x="34" y="38" fill="#39FF88" font-size="16" font-weight="700" letter-spacing="2">01 // ENCRYPTION</text>
     <text x="34" y="68" fill="#7A8B80" font-size="14">payload confidentiality + integrity</text>
     <line x1="302" y1="18" x2="302" y2="74" stroke="#7A8B80" stroke-opacity="0.38"/>
@@ -57,8 +111,8 @@
   </g>
 
   <g transform="translate(48 264)">
-    <rect width="1104" height="92" rx="9" fill="#020403" fill-opacity="0.76" stroke="#39FF88" stroke-opacity="0.3"/>
-    <rect width="5" height="92" rx="2.5" fill="url(#nyx-live-signal)"/>
+    <rect class="nyx-live-card nyx-live-stage-2" width="1104" height="92" rx="9" fill="#020403" fill-opacity="0.76" stroke="#39FF88" stroke-opacity="0.3"/>
+    <rect class="nyx-live-rail nyx-live-stage-2" width="5" height="92" rx="2.5" fill="url(#nyx-live-signal)"/>
     <text x="34" y="38" fill="#39FF88" font-size="16" font-weight="700" letter-spacing="2">02 // KEY EXCHANGE</text>
     <text x="34" y="68" fill="#7A8B80" font-size="14">session key agreement</text>
     <line x1="302" y1="18" x2="302" y2="74" stroke="#7A8B80" stroke-opacity="0.38"/>
@@ -66,8 +120,8 @@
   </g>
 
   <g transform="translate(48 368)">
-    <rect width="1104" height="92" rx="9" fill="#020403" fill-opacity="0.76" stroke="#39FF88" stroke-opacity="0.3"/>
-    <rect width="5" height="92" rx="2.5" fill="url(#nyx-live-signal)"/>
+    <rect class="nyx-live-card nyx-live-stage-3" width="1104" height="92" rx="9" fill="#020403" fill-opacity="0.76" stroke="#39FF88" stroke-opacity="0.3"/>
+    <rect class="nyx-live-rail nyx-live-stage-3" width="5" height="92" rx="2.5" fill="url(#nyx-live-signal)"/>
     <text x="34" y="38" fill="#39FF88" font-size="16" font-weight="700" letter-spacing="2">03 // RELAY</text>
     <text x="34" y="68" fill="#7A8B80" font-size="14">network-layer obfuscation</text>
     <line x1="302" y1="18" x2="302" y2="74" stroke="#7A8B80" stroke-opacity="0.38"/>
@@ -76,8 +130,8 @@
   </g>
 
   <g transform="translate(48 472)">
-    <rect width="1104" height="92" rx="9" fill="#020403" fill-opacity="0.76" stroke="#39FF88" stroke-opacity="0.3"/>
-    <rect width="5" height="92" rx="2.5" fill="url(#nyx-live-signal)"/>
+    <rect class="nyx-live-card nyx-live-stage-4" width="1104" height="92" rx="9" fill="#020403" fill-opacity="0.76" stroke="#39FF88" stroke-opacity="0.3"/>
+    <rect class="nyx-live-rail nyx-live-stage-4" width="5" height="92" rx="2.5" fill="url(#nyx-live-signal)"/>
     <text x="34" y="38" fill="#39FF88" font-size="16" font-weight="700" letter-spacing="2">04 // VERIFICATION</text>
     <text x="34" y="68" fill="#7A8B80" font-size="14">membership proof</text>
     <line x1="302" y1="18" x2="302" y2="74" stroke="#7A8B80" stroke-opacity="0.38"/>
@@ -85,5 +139,5 @@
     <text x="336" y="72" fill="#B7FF3C" font-size="22">dual curve tree // &#8804;4096 bytes</text>
   </g>
 
-  <text x="1152" y="588" text-anchor="end" fill="#7A8B80" font-size="11" letter-spacing="1.4">NYX::SMSG // CHANNEL ACTIVE</text>
+  <text x="1152" y="588" text-anchor="end" fill="#7A8B80" font-size="13" letter-spacing="1.4">NYX::SMSG // CHANNEL ACTIVE</text>
 </svg>

@@ -677,7 +677,7 @@ Pinned Repositories
 <!-- ADDITIONAL ECOSYSTEM                                               -->
 <!-- ═══════════════════════════════════════════════════════════════════ -->
 
-<details align="center">
+<details align="center" open>
 <summary><h3>Additional Research</h3></summary>
 
 <br/>

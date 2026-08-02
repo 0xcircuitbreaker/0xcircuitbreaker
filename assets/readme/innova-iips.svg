@@ -28,6 +28,44 @@
       .iips-id { fill: #39FF88; font-size: 16px; font-weight: 700; letter-spacing: 0.4px; }
       .iips-name { fill: #D8FFE7; font-size: 15.5px; }
       .iips-rule { stroke: #7A8B80; stroke-opacity: 0.2; }
+      .iips-progress-rail {
+        stroke-dasharray: 12 9;
+        animation: iips-rail-flow 4s linear infinite;
+      }
+      .iips-active-node,
+      .iips-proposed-node {
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      .iips-active-node { animation: iips-active-pulse 6s ease-in-out infinite; }
+      .iips-node-2 { animation-delay: -0.6s; }
+      .iips-node-3 { animation-delay: -1.2s; }
+      .iips-node-4 { animation-delay: -1.8s; }
+      .iips-node-5 { animation-delay: -2.4s; }
+      .iips-node-6 { animation-delay: -3s; }
+      .iips-node-7 { animation-delay: -3.6s; }
+      .iips-node-8 { animation-delay: -4.2s; }
+      .iips-node-9 { animation-delay: -4.8s; }
+      .iips-proposed-node { animation: iips-proposed-breathe 3.6s ease-in-out infinite; }
+
+      @keyframes iips-rail-flow {
+        to { stroke-dashoffset: -42; }
+      }
+      @keyframes iips-active-pulse {
+        0%, 13%, 100% { opacity: 0.66; transform: scale(1); }
+        6% { opacity: 1; transform: scale(1.35); }
+      }
+      @keyframes iips-proposed-breathe {
+        0%, 100% { opacity: 0.62; transform: scale(0.96); stroke-opacity: 0.72; }
+        50% { opacity: 1; transform: scale(1.13); stroke-opacity: 1; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .iips-progress-rail,
+        .iips-active-node,
+        .iips-proposed-node { animation: none; }
+        .iips-progress-rail { stroke-dasharray: none; stroke-dashoffset: 0; }
+      }
     </style>
   </defs>
 
@@ -37,41 +75,41 @@
   <rect x="1" y="1" width="1198" height="428" rx="21" fill="none" stroke="#7A8B80" stroke-opacity="0.45" stroke-width="2"/>
 
   <g class="iips-mono">
-    <text x="48" y="48" fill="#39FF88" font-size="13" font-weight="700" letter-spacing="2.4">INNOVA // PROTOCOL CATALOG</text>
+    <text x="48" y="48" fill="#39FF88" font-size="15" font-weight="700" letter-spacing="2.4">INNOVA // PROTOCOL CATALOG</text>
     <text x="48" y="82" fill="#D8FFE7" font-size="27" font-weight="700" letter-spacing="0.8">INNOVA IMPROVEMENT PROPOSALS</text>
     <g transform="translate(1010 42)">
       <rect width="142" height="42" rx="8" fill="#020403" stroke="#B7FF3C" stroke-opacity="0.75"/>
-      <text x="71" y="27" text-anchor="middle" fill="#B7FF3C" font-size="13" font-weight="700" letter-spacing="1.2">IIP-0001—0010</text>
+      <text x="71" y="28" text-anchor="middle" fill="#B7FF3C" font-size="15" font-weight="700" letter-spacing="1.2">IIP-0001—0010</text>
     </g>
 
     <g transform="translate(48 116)">
       <rect class="iips-panel" width="540" height="262" rx="14"/>
       <rect x="0" y="0" width="5" height="262" rx="2.5" fill="url(#iips-rail)"/>
-      <text x="24" y="30" fill="#7A8B80" font-size="11" font-weight="700" letter-spacing="1.8">ACTIVE // IIP-0001—0005</text>
+      <text x="24" y="30" fill="#7A8B80" font-size="13" font-weight="700" letter-spacing="1.8">ACTIVE // IIP-0001—0005</text>
       <line class="iips-rule" x1="24" y1="45" x2="516" y2="45"/>
-      <line x1="42" y1="66" x2="42" y2="230" stroke="url(#iips-rail)" stroke-width="1.5"/>
+      <line class="iips-progress-rail" x1="42" y1="66" x2="42" y2="230" stroke="url(#iips-rail)" stroke-width="1.5"/>
 
-      <circle cx="42" cy="72" r="4" fill="#B7FF3C" filter="url(#iips-glow)"/>
+      <circle class="iips-active-node iips-node-1" cx="42" cy="72" r="4" fill="#B7FF3C" filter="url(#iips-glow)"/>
       <text class="iips-id" x="62" y="78">IIP-0001</text>
       <text class="iips-name" x="188" y="78">Cold Staking</text>
       <line class="iips-rule" x1="62" y1="91" x2="516" y2="91"/>
 
-      <circle cx="42" cy="112" r="4" fill="#39FF88"/>
+      <circle class="iips-active-node iips-node-2" cx="42" cy="112" r="4" fill="#39FF88"/>
       <text class="iips-id" x="62" y="118">IIP-0002</text>
       <text class="iips-name" x="188" y="118">Shielded Transactions</text>
       <line class="iips-rule" x1="62" y1="131" x2="516" y2="131"/>
 
-      <circle cx="42" cy="152" r="4" fill="#39FF88"/>
+      <circle class="iips-active-node iips-node-3" cx="42" cy="152" r="4" fill="#39FF88"/>
       <text class="iips-id" x="62" y="158">IIP-0003</text>
       <text class="iips-name" x="188" y="158">Ring Signature Deprecation</text>
       <line class="iips-rule" x1="62" y1="171" x2="516" y2="171"/>
 
-      <circle cx="42" cy="192" r="4" fill="#39FF88"/>
+      <circle class="iips-active-node iips-node-4" cx="42" cy="192" r="4" fill="#39FF88"/>
       <text class="iips-id" x="62" y="198">IIP-0004</text>
       <text class="iips-name" x="188" y="198">Dynamic Selective Privacy</text>
       <line class="iips-rule" x1="62" y1="211" x2="516" y2="211"/>
 
-      <circle cx="42" cy="232" r="4" fill="#39FF88"/>
+      <circle class="iips-active-node iips-node-5" cx="42" cy="232" r="4" fill="#39FF88"/>
       <text class="iips-id" x="62" y="238">IIP-0005</text>
       <text class="iips-name" x="188" y="238">Confidential CoinJoin</text>
     </g>
@@ -79,37 +117,37 @@
     <g transform="translate(612 116)">
       <rect class="iips-panel" width="540" height="262" rx="14"/>
       <rect x="0" y="0" width="5" height="262" rx="2.5" fill="url(#iips-rail)"/>
-      <text x="24" y="30" fill="#7A8B80" font-size="11" font-weight="700" letter-spacing="1.35">ACTIVE 0006—0009 // PROPOSED 0010</text>
+      <text x="24" y="30" fill="#7A8B80" font-size="13" font-weight="700" letter-spacing="1.35">ACTIVE 0006—0009 // PROPOSED 0010</text>
       <line class="iips-rule" x1="24" y1="45" x2="516" y2="45"/>
-      <line x1="42" y1="66" x2="42" y2="230" stroke="url(#iips-rail)" stroke-width="1.5"/>
+      <line class="iips-progress-rail" x1="42" y1="66" x2="42" y2="230" stroke="url(#iips-rail)" stroke-width="1.5"/>
 
-      <circle cx="42" cy="72" r="4" fill="#B7FF3C" filter="url(#iips-glow)"/>
+      <circle class="iips-active-node iips-node-6" cx="42" cy="72" r="4" fill="#B7FF3C" filter="url(#iips-glow)"/>
       <text class="iips-id" x="62" y="78">IIP-0006</text>
       <text class="iips-name" x="188" y="78">FCMP++ Integration</text>
       <line class="iips-rule" x1="62" y1="91" x2="516" y2="91"/>
 
-      <circle cx="42" cy="112" r="4" fill="#39FF88"/>
+      <circle class="iips-active-node iips-node-7" cx="42" cy="112" r="4" fill="#39FF88"/>
       <text class="iips-id" x="62" y="118">IIP-0007</text>
       <text class="iips-name" x="188" y="118">Silent Payments + Silent Shielding</text>
       <line class="iips-rule" x1="62" y1="131" x2="516" y2="131"/>
 
-      <circle cx="42" cy="152" r="4" fill="#39FF88"/>
+      <circle class="iips-active-node iips-node-8" cx="42" cy="152" r="4" fill="#39FF88"/>
       <text class="iips-id" x="62" y="158">IIP-0008</text>
       <text class="iips-name" x="188" y="158">Dandelion++ Network Privacy</text>
       <line class="iips-rule" x1="62" y1="171" x2="516" y2="171"/>
 
-      <circle cx="42" cy="192" r="4" fill="#39FF88"/>
+      <circle class="iips-active-node iips-node-9" cx="42" cy="192" r="4" fill="#39FF88"/>
       <text class="iips-id" x="62" y="198">IIP-0009</text>
       <text class="iips-name" x="188" y="198">NullStake V1</text>
       <line class="iips-rule" x1="62" y1="211" x2="516" y2="211"/>
 
-      <circle cx="42" cy="232" r="5" fill="#020403" stroke="#B7FF3C" stroke-width="2"/>
+      <circle class="iips-proposed-node" cx="42" cy="232" r="5" fill="#020403" stroke="#B7FF3C" stroke-width="2"/>
       <text class="iips-id" x="62" y="238">IIP-0010</text>
       <text class="iips-name" x="188" y="238">NullStake V2 (Poseidon2)</text>
-      <text x="516" y="238" text-anchor="end" fill="#B7FF3C" font-size="10" font-weight="700" letter-spacing="1.1">PROPOSED</text>
+      <text x="516" y="238" text-anchor="end" fill="#B7FF3C" font-size="12" font-weight="700" letter-spacing="1.1">PROPOSED</text>
     </g>
 
-    <text x="48" y="406" fill="#7A8B80" font-size="12" letter-spacing="1.2">STATUS // IIP-0001—0009 ACTIVE</text>
-    <text x="1152" y="406" text-anchor="end" fill="#B7FF3C" font-size="12" letter-spacing="1.4">IIP-0010 PROPOSED</text>
+    <text x="48" y="406" fill="#7A8B80" font-size="14" letter-spacing="1.2">STATUS // IIP-0001—0009 ACTIVE</text>
+    <text x="1152" y="406" text-anchor="end" fill="#B7FF3C" font-size="14" letter-spacing="1.4">IIP-0010 PROPOSED</text>
   </g>
 </svg>

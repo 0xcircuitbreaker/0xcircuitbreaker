@@ -3,6 +3,95 @@
   <desc id="snt-desc">Ghost Mesh concept diagram of the Solidus active-development target architecture: a prime coordination layer, proposed entropic regions and DAGKNIGHT zone consensus, a proposed proof-of-work hash-lane mapping, and planned perpetuals components. It does not represent independently verified deployed behavior.</desc>
 
   <defs>
+    <style>
+      .snt-flow-trace {
+        fill: none;
+        stroke: #B7FF3C;
+        stroke-width: 2.25;
+        stroke-linecap: round;
+        stroke-dasharray: 2 18;
+        opacity: .76;
+        animation: snt-flow 3.4s linear infinite;
+      }
+      .snt-flow-b { animation-delay: -1.15s; }
+      .snt-flow-c { animation-delay: -2.3s; }
+      .snt-consensus-trace {
+        fill: none;
+        stroke: #B7FF3C;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-dasharray: 14 38;
+        opacity: .58;
+        animation: snt-consensus-flow 5.8s linear infinite;
+      }
+      .snt-node-core {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: snt-core-breathe 3.8s ease-in-out infinite;
+      }
+      .snt-node-ring {
+        fill: none;
+        stroke: #B7FF3C;
+        stroke-width: 1.2;
+        stroke-opacity: .46;
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: snt-node-pulse 3.8s ease-out infinite;
+      }
+      .snt-zone-node {
+        animation: snt-zone-pulse 6.4s ease-in-out infinite;
+      }
+      .snt-zone-b { animation-delay: -1.6s; }
+      .snt-zone-c { animation-delay: -3.2s; }
+      .snt-zone-d { animation-delay: -4.8s; }
+      .snt-status {
+        animation: snt-status-breathe 4.8s ease-in-out infinite;
+      }
+      text[font-size="8"] { font-size: 10px; }
+      text[font-size="9"] { font-size: 11px; }
+      text[font-size="10"] { font-size: 12px; }
+      text[font-size="11"] { font-size: 13px; }
+      text[font-size="12"] { font-size: 14px; }
+      text[font-size="13"],
+      g[font-size="13"] { font-size: 14px; }
+      @keyframes snt-flow {
+        to { stroke-dashoffset: -80; }
+      }
+      @keyframes snt-consensus-flow {
+        to { stroke-dashoffset: -104; }
+      }
+      @keyframes snt-core-breathe {
+        0%, 100% { opacity: .78; transform: scale(.92); }
+        50% { opacity: 1; transform: scale(1.12); }
+      }
+      @keyframes snt-node-pulse {
+        0% { opacity: .58; transform: scale(.72); }
+        58%, 100% { opacity: 0; transform: scale(1.75); }
+      }
+      @keyframes snt-zone-pulse {
+        0%, 100% { stroke-opacity: .54; }
+        50% { stroke-opacity: .88; }
+      }
+      @keyframes snt-status-breathe {
+        0%, 100% { opacity: .72; }
+        50% { opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .snt-flow-trace,
+        .snt-consensus-trace,
+        .snt-node-core,
+        .snt-node-ring,
+        .snt-zone-node,
+        .snt-status {
+          animation: none !important;
+        }
+        .snt-flow-trace { opacity: .38; stroke-dashoffset: 0; }
+        .snt-consensus-trace { opacity: .28; stroke-dashoffset: 0; }
+        .snt-node-core, .snt-status { opacity: 1; transform: none; }
+        .snt-node-ring { opacity: .34; transform: none; }
+        .snt-zone-node { stroke-opacity: .7; }
+      }
+    </style>
     <linearGradient id="snt-bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#07110A"/>
       <stop offset="1" stop-color="#020403"/>
@@ -40,7 +129,7 @@
     <text x="50" y="51" fill="#B7FF3C" font-size="11" font-weight="700" letter-spacing="2.5">SOLIDUS</text>
     <text x="50" y="82" fill="#D8FFE7" font-size="28" font-weight="700" letter-spacing=".7">NETWORK TOPOLOGY</text>
     <text x="1150" y="51" text-anchor="end" fill="#7A8B80" font-size="10" letter-spacing="1.6">TARGET ARCHITECTURE</text>
-    <text x="1150" y="78" text-anchor="end" fill="#39FF88" font-size="11" font-weight="700" letter-spacing="1.2">[ ACTIVE DEVELOPMENT ]</text>
+    <text class="snt-status" x="1150" y="78" text-anchor="end" fill="#39FF88" font-size="11" font-weight="700" letter-spacing="1.2">[ ACTIVE DEVELOPMENT ]</text>
     <path d="M50 106H1150" stroke="#7A8B80" stroke-opacity=".38"/>
     <path d="M50 106H250" stroke="url(#snt-signal)" stroke-width="2"/>
   </g>
@@ -51,7 +140,8 @@
 
     <rect x="240" y="154" width="450" height="126" rx="8" fill="#07110A" stroke="#39FF88" stroke-width="1.5"/>
     <rect x="240" y="154" width="5" height="126" rx="2.5" fill="url(#snt-signal)"/>
-    <circle cx="655" cy="179" r="4" fill="#B7FF3C" filter="url(#snt-glow)"/>
+    <circle class="snt-node-ring" cx="655" cy="179" r="8" aria-hidden="true"/>
+    <circle class="snt-node-core" cx="655" cy="179" r="4" fill="#B7FF3C" filter="url(#snt-glow)"/>
     <text x="275" y="188" fill="#B7FF3C" font-size="11" font-weight="700" letter-spacing="2">PRIME CHAIN</text>
     <text x="275" y="224" fill="#D8FFE7" font-size="24" font-weight="700">Target coordination</text>
     <text x="275" y="253" fill="#D8FFE7" font-size="24" font-weight="700">+ finality layer</text>
@@ -65,9 +155,14 @@
 
   <!-- Region fan-out -->
   <g fill="none" stroke="#39FF88" stroke-width="1.5" stroke-opacity=".82">
-    <path d="M465 280V318H200V345" marker-end="url(#snt-arrow)"/>
+    <path d="M465 280V318H330V345" marker-end="url(#snt-arrow)"/>
     <path d="M465 318H600V345" marker-end="url(#snt-arrow)"/>
     <path d="M600 318H1000V345" marker-end="url(#snt-arrow)"/>
+  </g>
+  <g aria-hidden="true">
+    <path class="snt-flow-trace" d="M465 280V318H330V345"/>
+    <path class="snt-flow-trace snt-flow-b" d="M465 318H600V345"/>
+    <path class="snt-flow-trace snt-flow-c" d="M600 318H1000V345"/>
   </g>
   <text x="50" y="333" fill="#7A8B80" font-size="10" font-weight="700" letter-spacing="2">02 / EXECUTION REGIONS</text>
 
@@ -79,22 +174,22 @@
     <text x="72" y="408" fill="#39FF88" font-size="10" font-weight="700" letter-spacing="1.6">TARGET: ENTROPIC ORDERING</text>
     <g text-anchor="middle">
       <g transform="translate(67 452)">
-        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <rect class="snt-zone-node" width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
         <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z1</text>
         <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
       </g>
       <g transform="translate(134 452)">
-        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <rect class="snt-zone-node snt-zone-b" width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
         <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z2</text>
         <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
       </g>
       <g transform="translate(201 452)">
-        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <rect class="snt-zone-node snt-zone-c" width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
         <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z3</text>
         <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
       </g>
       <g transform="translate(268 452)">
-        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <rect class="snt-zone-node snt-zone-d" width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
         <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z4</text>
         <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
       </g>
@@ -110,22 +205,22 @@
     <text x="472" y="408" fill="#39FF88" font-size="10" font-weight="700" letter-spacing="1.6">TARGET: ENTROPIC ORDERING</text>
     <g text-anchor="middle">
       <g transform="translate(467 452)">
-        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <rect class="snt-zone-node" width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
         <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z1</text>
         <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
       </g>
       <g transform="translate(534 452)">
-        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <rect class="snt-zone-node snt-zone-b" width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
         <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z2</text>
         <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
       </g>
       <g transform="translate(601 452)">
-        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <rect class="snt-zone-node snt-zone-c" width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
         <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z3</text>
         <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
       </g>
       <g transform="translate(668 452)">
-        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <rect class="snt-zone-node snt-zone-d" width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
         <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z4</text>
         <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
       </g>
@@ -141,22 +236,22 @@
     <text x="872" y="408" fill="#39FF88" font-size="10" font-weight="700" letter-spacing="1.6">TARGET: ENTROPIC ORDERING</text>
     <g text-anchor="middle">
       <g transform="translate(867 452)">
-        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <rect class="snt-zone-node" width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
         <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z1</text>
         <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
       </g>
       <g transform="translate(934 452)">
-        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <rect class="snt-zone-node snt-zone-b" width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
         <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z2</text>
         <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
       </g>
       <g transform="translate(1001 452)">
-        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <rect class="snt-zone-node snt-zone-c" width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
         <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z3</text>
         <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
       </g>
       <g transform="translate(1068 452)">
-        <rect width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
+        <rect class="snt-zone-node snt-zone-d" width="55" height="78" rx="5" fill="#020403" stroke="#39FF88" stroke-opacity=".7"/>
         <text x="27.5" y="31" fill="#D8FFE7" font-size="16" font-weight="700">Z4</text>
         <text x="27.5" y="55" fill="#7A8B80" font-size="8">ZONE</text>
       </g>
@@ -167,6 +262,7 @@
   <!-- Shared zone consensus -->
   <g>
     <rect x="50" y="610" width="1100" height="48" rx="6" fill="#020403" stroke="#39FF88" stroke-opacity=".5"/>
+    <rect class="snt-consensus-trace" x="50" y="610" width="1100" height="48" rx="6" aria-hidden="true"/>
     <rect x="50" y="610" width="5" height="48" rx="2.5" fill="#B7FF3C"/>
     <text x="75" y="639" fill="#7A8B80" font-size="10" font-weight="700" letter-spacing="1.5">TARGET CONSENSUS PLANE</text>
     <text x="345" y="639" fill="#D8FFE7" font-size="12" font-weight="700">PROPOSED PER-ZONE <tspan fill="#B7FF3C">DAGKNIGHT</tspan></text>

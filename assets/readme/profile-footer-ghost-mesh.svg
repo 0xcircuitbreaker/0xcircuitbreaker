@@ -22,6 +22,65 @@
       <feGaussianBlur stdDeviation="2.2" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <style>
+      .gmf-flow {
+        stroke-dasharray: 12 64;
+        animation: gmf-signal-travel 7.2s linear infinite;
+      }
+      .gmf-route-flow {
+        animation: gmf-route-travel 7s linear infinite;
+      }
+      .gmf-node {
+        animation: gmf-node-pulse 4.8s ease-in-out infinite;
+      }
+      .gmf-node-2 { animation-delay: 1.2s; }
+      .gmf-node-3 { animation-delay: 2.4s; }
+      .gmf-node-4 { animation-delay: 3.6s; }
+      .gmf-node-ring {
+        animation: gmf-node-ring-expand 3.6s ease-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      .gmf-node-ring-2 { animation-delay: 0.9s; }
+      .gmf-node-ring-3 { animation-delay: 1.8s; }
+      .gmf-node-ring-4 { animation-delay: 2.7s; }
+      .gmf-cursor {
+        animation: gmf-cursor-blink 1.3s steps(1, end) infinite;
+      }
+      @keyframes gmf-signal-travel {
+        to { stroke-dashoffset: -304; }
+      }
+      @keyframes gmf-route-travel {
+        to { stroke-dashoffset: -112; }
+      }
+      @keyframes gmf-node-pulse {
+        0%, 20%, 100% { opacity: 0.58; }
+        8% { opacity: 1; }
+      }
+      @keyframes gmf-node-ring-expand {
+        0%, 20% { opacity: 0; transform: scale(0.55); }
+        48% { opacity: 0.38; }
+        82%, 100% { opacity: 0; transform: scale(2.15); }
+      }
+      @keyframes gmf-cursor-blink {
+        0%, 46% { opacity: 0.8; }
+        47%, 100% { opacity: 0.18; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .gmf-flow,
+        .gmf-route-flow,
+        .gmf-node,
+        .gmf-node-ring,
+        .gmf-cursor {
+          animation: none !important;
+        }
+        .gmf-flow { stroke-dashoffset: 0; }
+        .gmf-route-flow { stroke-dashoffset: 0; }
+        .gmf-node { opacity: 0.82; }
+        .gmf-node-ring { display: none; }
+        .gmf-cursor { opacity: 0.68; }
+      }
+    </style>
   </defs>
 
   <rect width="1200" height="118" fill="url(#gmf-bg)"/>
@@ -30,20 +89,32 @@
 
   <path d="M0 34C124 72 236 10 358 39S584 78 704 37s222-18 318 4 128 13 178-4v81H0Z" fill="#39FF88" opacity="0.06"/>
   <path d="M0 34C124 72 236 10 358 39S584 78 704 37s222-18 318 4 128 13 178-4" fill="none" stroke="url(#gmf-signal)" stroke-width="2.5" filter="url(#gmf-glow)"/>
+  <path class="gmf-flow" d="M0 34C124 72 236 10 358 39S584 78 704 37s222-18 318 4 128 13 178-4" fill="none" stroke="#B7FF3C" stroke-opacity="0.38" stroke-width="1.25"/>
 
   <g fill="none" stroke="#39FF88" stroke-width="1" opacity="0.42">
     <path d="M38 88h132l16-16h116"/>
     <path d="M898 72h116l16 16h132"/>
   </g>
+  <g class="gmf-route-flow" fill="none" stroke="#B7FF3C" stroke-width="1.2" stroke-dasharray="12 16" stroke-linecap="round" opacity="0.38" aria-hidden="true">
+    <path d="M38 88h132l16-16h116"/>
+    <path d="M898 72h116l16 16h132"/>
+  </g>
   <g fill="#39FF88">
-    <circle cx="38" cy="88" r="3"/>
-    <circle cx="302" cy="72" r="3"/>
-    <circle cx="898" cy="72" r="3"/>
-    <circle cx="1162" cy="88" r="3"/>
+    <circle class="gmf-node gmf-node-1" cx="38" cy="88" r="3"/>
+    <circle class="gmf-node gmf-node-2" cx="302" cy="72" r="3"/>
+    <circle class="gmf-node gmf-node-3" cx="898" cy="72" r="3"/>
+    <circle class="gmf-node gmf-node-4" cx="1162" cy="88" r="3"/>
+  </g>
+  <g fill="none" stroke="#B7FF3C" stroke-width="1" aria-hidden="true">
+    <circle class="gmf-node-ring gmf-node-ring-1" cx="38" cy="88" r="5"/>
+    <circle class="gmf-node-ring gmf-node-ring-2" cx="302" cy="72" r="5"/>
+    <circle class="gmf-node-ring gmf-node-ring-3" cx="898" cy="72" r="5"/>
+    <circle class="gmf-node-ring gmf-node-ring-4" cx="1162" cy="88" r="5"/>
   </g>
 
-  <rect x="426" y="63" width="348" height="38" rx="7" fill="#020403" fill-opacity="0.9" stroke="#39FF88" stroke-opacity="0.24"/>
-  <text x="600" y="87" text-anchor="middle" fill="#39FF88" font-family="monospace" font-size="12" letter-spacing="1.5">root@circuitbreaker:~$ exit 0</text>
-  <text x="42" y="106" fill="#7A8B80" font-family="monospace" font-size="9">signal::persisted</text>
-  <text x="1158" y="106" text-anchor="end" fill="#7A8B80" font-family="monospace" font-size="9">mesh::standby</text>
+  <rect x="426" y="74" width="348" height="38" rx="7" fill="#020403" fill-opacity="0.9" stroke="#39FF88" stroke-opacity="0.24"/>
+  <text x="600" y="99" text-anchor="middle" fill="#39FF88" font-family="monospace" font-size="14" letter-spacing="1.5">root@circuitbreaker:~$ exit 0</text>
+  <rect class="gmf-cursor" x="733" y="87" width="6" height="13" rx="1" fill="#B7FF3C" opacity="0.8" aria-hidden="true"/>
+  <text x="42" y="106" fill="#7A8B80" font-family="monospace" font-size="11">signal::persisted</text>
+  <text x="1158" y="106" text-anchor="end" fill="#7A8B80" font-family="monospace" font-size="11">mesh::standby</text>
 </svg>

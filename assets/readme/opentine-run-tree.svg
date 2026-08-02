@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="otr-title otr-desc" font-family="monospace">
   <title id="otr-title">OpenTine agent run tree</title>
-  <desc id="otr-desc">A Ghost Mesh-colored execution timeline with a mint primary run and a lime forked branch.</desc>
+  <desc id="otr-desc">A Ghost Mesh-colored execution timeline with a mint primary run and a lime forked branch, enhanced with restrained signal-flow and node-pulse motion.</desc>
   <defs>
     <linearGradient id="otr-bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#07110A"/>
@@ -14,6 +14,54 @@
       <feGaussianBlur stdDeviation="3" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <style>
+      .otr-main-flow {
+        stroke-dasharray: 10 20;
+        animation: otr-main-travel 5.6s linear infinite;
+      }
+      .otr-fork-flow {
+        stroke-dasharray: 8 18;
+        animation: otr-fork-travel 4.8s linear infinite;
+      }
+      .otr-pulse-ring {
+        animation: otr-node-pulse 4.2s ease-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      .otr-pulse-ring-fork { animation-delay: 1.6s; }
+      .otr-status { animation: otr-status-breathe 4.8s ease-in-out infinite; }
+      text[font-size="9"] { font-size: 11px; }
+      text[font-size="10"] { font-size: 12px; }
+      text[font-size="11"] { font-size: 13px; }
+      text[font-size="12"] { font-size: 14px; }
+      text[font-size="13"] { font-size: 14px; }
+      g[font-size="11"] { font-size: 13px; }
+      @keyframes otr-main-travel {
+        to { stroke-dashoffset: -120; }
+      }
+      @keyframes otr-fork-travel {
+        to { stroke-dashoffset: -104; }
+      }
+      @keyframes otr-node-pulse {
+        0%, 22% { opacity: 0; transform: scale(0.72); }
+        50% { opacity: 0.5; }
+        84%, 100% { opacity: 0; transform: scale(2.1); }
+      }
+      @keyframes otr-status-breathe {
+        0%, 100% { opacity: 0.78; }
+        50% { opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .otr-main-flow,
+        .otr-fork-flow,
+        .otr-pulse-ring,
+        .otr-status {
+          animation: none !important;
+        }
+        .otr-pulse-ring { display: none; }
+        .otr-status { opacity: 1; }
+      }
+    </style>
   </defs>
 
   <rect width="1200" height="560" fill="url(#otr-bg)"/>
@@ -21,7 +69,7 @@
 
   <text x="40" y="48" fill="#D8FFE7" font-size="22" font-weight="600" letter-spacing="0.5">opentine</text>
   <text x="40" y="72" fill="#7A8B80" font-size="13">git for agent runs — content-addressed, forkable, replayable</text>
-  <text x="1160" y="48" fill="#B7FF3C" font-size="12" text-anchor="end" letter-spacing="2">RUN TREE</text>
+  <text class="otr-status" x="1160" y="48" fill="#B7FF3C" font-size="12" text-anchor="end" letter-spacing="2">RUN TREE</text>
 
   <line x1="40" y1="94" x2="1160" y2="94" stroke="#7A8B80" stroke-opacity="0.35" stroke-width="1"/>
 
@@ -40,36 +88,45 @@
   <path d="M 546 150 L 662 150" stroke="#39FF88" stroke-width="2" fill="none"/>
   <path d="M 690 150 L 806 150" stroke="#39FF88" stroke-width="2" fill="none"/>
   <path d="M 834 150 L 950 150" stroke="#39FF88" stroke-width="2" fill="none"/>
+  <g class="otr-main-flow" fill="none" stroke="#B7FF3C" stroke-width="1.35" stroke-linecap="round" opacity="0.72">
+    <path d="M 114 150 L 230 150"/>
+    <path d="M 258 150 L 374 150"/>
+    <path d="M 402 150 L 518 150"/>
+    <path d="M 546 150 L 662 150"/>
+    <path d="M 690 150 L 806 150"/>
+    <path d="M 834 150 L 950 150"/>
+  </g>
+  <circle class="otr-pulse-ring" cx="100" cy="150" r="18" fill="none" stroke="#39FF88" stroke-width="1.2"/>
 
   <!-- Main steps -->
   <g font-size="11" fill="#D8FFE7">
     <g transform="translate(244,150)">
-      <rect x="-28" y="-16" width="56" height="32" rx="4" fill="#07110A" stroke="#7A8B80" stroke-opacity="0.38"/>
+      <rect x="-31" y="-16" width="62" height="32" rx="4" fill="#07110A" stroke="#7A8B80" stroke-opacity="0.38"/>
       <text y="-22" text-anchor="middle" fill="#7A8B80" font-size="9">step 1</text>
       <text y="4" text-anchor="middle" fill="#39FF88">think</text>
     </g>
     <g transform="translate(388,150)">
-      <rect x="-28" y="-16" width="56" height="32" rx="4" fill="#07110A" stroke="#7A8B80" stroke-opacity="0.38"/>
+      <rect x="-31" y="-16" width="62" height="32" rx="4" fill="#07110A" stroke="#7A8B80" stroke-opacity="0.38"/>
       <text y="-22" text-anchor="middle" fill="#7A8B80" font-size="9">step 2</text>
       <text y="4" text-anchor="middle" fill="#D8FFE7">search</text>
     </g>
     <g transform="translate(532,150)">
-      <rect x="-28" y="-16" width="56" height="32" rx="4" fill="#07110A" stroke="#7A8B80" stroke-opacity="0.38"/>
+      <rect x="-31" y="-16" width="62" height="32" rx="4" fill="#07110A" stroke="#7A8B80" stroke-opacity="0.38"/>
       <text y="-22" text-anchor="middle" fill="#7A8B80" font-size="9">step 3</text>
       <text y="4" text-anchor="middle" fill="#39FF88">think</text>
     </g>
     <g transform="translate(676,150)">
-      <rect x="-28" y="-16" width="56" height="32" rx="4" fill="#07110A" stroke="#7A8B80" stroke-opacity="0.38"/>
+      <rect x="-31" y="-16" width="62" height="32" rx="4" fill="#07110A" stroke="#7A8B80" stroke-opacity="0.38"/>
       <text y="-22" text-anchor="middle" fill="#7A8B80" font-size="9">step 4</text>
       <text y="4" text-anchor="middle" fill="#D8FFE7">fetch</text>
     </g>
     <g transform="translate(820,150)">
-      <rect x="-28" y="-16" width="56" height="32" rx="4" fill="#07110A" stroke="#7A8B80" stroke-opacity="0.38"/>
+      <rect x="-31" y="-16" width="62" height="32" rx="4" fill="#07110A" stroke="#7A8B80" stroke-opacity="0.38"/>
       <text y="-22" text-anchor="middle" fill="#7A8B80" font-size="9">step 5</text>
       <text y="4" text-anchor="middle" fill="#39FF88">think</text>
     </g>
     <g transform="translate(964,150)">
-      <rect x="-28" y="-16" width="56" height="32" rx="4" fill="#39FF88" stroke="#39FF88"/>
+      <rect x="-31" y="-16" width="62" height="32" rx="4" fill="#39FF88" stroke="#39FF88"/>
       <text y="-22" text-anchor="middle" fill="#7A8B80" font-size="9">step 6</text>
       <text y="4" text-anchor="middle" fill="#020403" font-weight="700">done</text>
     </g>
@@ -78,7 +135,8 @@
   <text x="964" y="200" text-anchor="middle" fill="#7A8B80" font-size="10" font-style="italic">completed</text>
 
   <!-- Fork arrow from step 2 -->
-  <path d="M 388 166 Q 388 240 460 280 L 560 320" stroke="#B7FF3C" stroke-width="2" fill="none" stroke-dasharray="0" marker-end="url(#otr-arrow)"/>
+  <path d="M 388 166 Q 388 240 460 280 L 568 336" stroke="#B7FF3C" stroke-width="2" fill="none" stroke-dasharray="0" marker-end="url(#otr-arrow)"/>
+  <path class="otr-fork-flow" d="M 388 166 Q 388 240 460 280 L 568 336" stroke="#39FF88" stroke-width="1.35" stroke-linecap="round" fill="none" opacity="0.78"/>
   <defs>
     <marker id="otr-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="#B7FF3C"/>
@@ -98,20 +156,26 @@
   <path d="M 592 340 L 692 340" stroke="#B7FF3C" stroke-width="2" fill="none"/>
   <path d="M 720 340 L 820 340" stroke="#B7FF3C" stroke-width="2" fill="none"/>
   <path d="M 848 340 L 948 340" stroke="#B7FF3C" stroke-width="2" fill="none"/>
+  <g class="otr-fork-flow" fill="none" stroke="#39FF88" stroke-width="1.35" stroke-linecap="round" opacity="0.72">
+    <path d="M 592 340 L 692 340"/>
+    <path d="M 720 340 L 820 340"/>
+    <path d="M 848 340 L 948 340"/>
+  </g>
+  <circle class="otr-pulse-ring otr-pulse-ring-fork" cx="580" cy="340" r="16" fill="none" stroke="#B7FF3C" stroke-width="1.2"/>
 
   <g font-size="11">
     <g transform="translate(706,340)">
-      <rect x="-26" y="-15" width="52" height="30" rx="4" fill="#07110A" stroke="#B7FF3C" stroke-width="1.2"/>
+      <rect x="-31" y="-15" width="62" height="30" rx="4" fill="#07110A" stroke="#B7FF3C" stroke-width="1.2"/>
       <text y="-21" text-anchor="middle" fill="#7A8B80" font-size="9">step 2'</text>
       <text y="4" text-anchor="middle" fill="#B7FF3C">search*</text>
     </g>
     <g transform="translate(834,340)">
-      <rect x="-26" y="-15" width="52" height="30" rx="4" fill="#07110A" stroke="#B7FF3C" stroke-width="1.2"/>
+      <rect x="-31" y="-15" width="62" height="30" rx="4" fill="#07110A" stroke="#B7FF3C" stroke-width="1.2"/>
       <text y="-21" text-anchor="middle" fill="#7A8B80" font-size="9">step 3</text>
       <text y="4" text-anchor="middle" fill="#B7FF3C">think</text>
     </g>
     <g transform="translate(962,340)">
-      <rect x="-26" y="-15" width="52" height="30" rx="4" fill="#B7FF3C" stroke="#B7FF3C"/>
+      <rect x="-31" y="-15" width="62" height="30" rx="4" fill="#B7FF3C" stroke="#B7FF3C"/>
       <text y="-21" text-anchor="middle" fill="#7A8B80" font-size="9">step 4</text>
       <text y="4" text-anchor="middle" fill="#020403" font-weight="700">done</text>
     </g>

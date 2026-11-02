@@ -622,7 +622,7 @@ GitHub Analytics
 
 <br/><br/>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=0xcircuitbreaker&amp;theme=github_dark&amp;name=CB%20Contributions" width="98%" alt="CB contribution history — GitHub contributions over the past year"/>
+<img src="./assets/readme/contribution-snake.svg" width="98%" alt="Animated snake moving through 0xcircuitbreaker's GitHub contribution grid"/>
 
 </div>
 

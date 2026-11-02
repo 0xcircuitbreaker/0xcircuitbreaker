@@ -622,7 +622,7 @@ GitHub Analytics
 
 <br/><br/>
 
-<img src="./assets/readme/contribution-snake.svg" width="98%" alt="Animated snake moving through 0xcircuitbreaker's GitHub contribution grid"/>
+<img src="./assets/readme/contribution-snake.svg?v=summary-1" width="98%" alt="Annual contributions, active days, busiest day, and animated contribution snake for 0xcircuitbreaker"/>
 
 </div>
 

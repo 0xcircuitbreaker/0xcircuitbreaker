@@ -16,10 +16,10 @@
 
 <br/>
 
-<a href="#-solidus-network--high-performance-multi-chain-perps-exchange"><img src="https://img.shields.io/badge/01-SOLIDUS%20NETWORK-020403?style=for-the-badge&labelColor=39ff88" alt="01"/></a>
-<a href="#-innova-inn--privacy-first-blockchain-protocol"><img src="https://img.shields.io/badge/02-INNOVA%20%2F%20IDAG-020403?style=for-the-badge&labelColor=39ff88" alt="02"/></a>
-<a href="#-project-lavalamp--hardware-level-side-channel-mitigation"><img src="https://img.shields.io/badge/03-PROJECT%20LAVALAMP-0d1117?style=for-the-badge&labelColor=ff6b2b" alt="03"/></a>
-<a href="#-opentine--git-for-agent-runs"><img src="https://img.shields.io/badge/04-OPENTINE-020403?style=for-the-badge&labelColor=b7ff3c" alt="04"/></a>
+<a href="#solidus-network--high-performance-multi-chain-perps-exchange"><img src="https://img.shields.io/badge/01-SOLIDUS%20NETWORK-020403?style=for-the-badge&labelColor=39ff88" alt="01"/></a>
+<a href="#innova-inn--privacy-first-blockchain-protocol"><img src="https://img.shields.io/badge/02-INNOVA%20%2F%20IDAG-020403?style=for-the-badge&labelColor=39ff88" alt="02"/></a>
+<a href="#project-lavalamp--hardware-level-side-channel-mitigation"><img src="https://img.shields.io/badge/03-PROJECT%20LAVALAMP-0d1117?style=for-the-badge&labelColor=ff6b2b" alt="03"/></a>
+<a href="#opentine--git-shaped-provenance-for-agent-runs"><img src="https://img.shields.io/badge/04-OPENTINE-020403?style=for-the-badge&labelColor=b7ff3c" alt="04"/></a>
 
 </div>
 
@@ -622,7 +622,7 @@ GitHub Analytics
 
 <br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=0xcircuitbreaker&bg_color=020403&color=7a8b80&line=39ff88&point=b7ff3c&area_color=39ff88&area=true&hide_border=true" width="98%" alt="Contribution graph"/>
+<a href="https://github.com/0xcircuitbreaker?tab=overview">View contribution history on GitHub →</a>
 
 </div>
 
@@ -650,7 +650,7 @@ Pinned Repositories
 <h3><a href="https://github.com/innova-foundation/innova">innova-foundation/innova</a></h3>
 <p>Privacy-first hybrid PoW/PoS blockchain with collateral nodes, native Tor, selective privacy, and IDAG research.</p>
 <p>
-<a href="https://github.com/innova-foundation/innova/stargazers"><img src="https://img.shields.io/github/stars/innova-foundation/innova?style=flat-square&amp;color=39ff88&amp;labelColor=020403" alt="Innova stars"/></a>
+<a href="https://github.com/innova-foundation/innova"><img src="https://img.shields.io/github/stars/innova-foundation/innova?style=flat-square&amp;color=39ff88&amp;labelColor=020403" alt="Innova stars"/></a>
 <a href="https://github.com/innova-foundation/innova/forks"><img src="https://img.shields.io/github/forks/innova-foundation/innova?style=flat-square&amp;color=39ff88&amp;labelColor=020403" alt="Innova forks"/></a>
 <a href="https://github.com/innova-foundation/innova/commits"><img src="https://img.shields.io/github/last-commit/innova-foundation/innova?style=flat-square&amp;color=39ff88&amp;labelColor=020403" alt="Innova last commit"/></a>
 </p>
@@ -660,7 +660,7 @@ Pinned Repositories
 <p>Git for agent runs: content-addressed execution trees that can be forked, replayed, diffed, paused, and resumed.</p>
 <p>
 <a href="https://pypi.org/project/opentine/"><img src="https://img.shields.io/pypi/v/opentine?style=flat-square&amp;color=b7ff3c&amp;labelColor=020403" alt="OpenTine on PyPI"/></a>
-<a href="https://github.com/0xcircuitbreaker/opentine/stargazers"><img src="https://img.shields.io/github/stars/0xcircuitbreaker/opentine?style=flat-square&amp;color=b7ff3c&amp;labelColor=020403" alt="OpenTine stars"/></a>
+<a href="https://github.com/0xcircuitbreaker/opentine"><img src="https://img.shields.io/github/stars/0xcircuitbreaker/opentine?style=flat-square&amp;color=b7ff3c&amp;labelColor=020403" alt="OpenTine stars"/></a>
 <a href="https://github.com/0xcircuitbreaker/opentine/commits"><img src="https://img.shields.io/github/last-commit/0xcircuitbreaker/opentine?style=flat-square&amp;color=b7ff3c&amp;labelColor=020403" alt="OpenTine last commit"/></a>
 </p>
 </td>
@@ -703,10 +703,6 @@ Pinned Repositories
 <br/>
 
 <sub>Building autonomous AI infrastructure, high-performance DeFi, and privacy-first blockchain protocols.</sub>
-
-<br/><br/>
-
-<img src="https://komarev.com/ghpvc/?username=0xcircuitbreaker&style=for-the-badge&color=39ff88&labelColor=020403&label=PROFILE+VIEWS" alt="Profile views"/>
 
 <br/><br/>
 

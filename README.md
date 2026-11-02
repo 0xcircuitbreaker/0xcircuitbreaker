@@ -622,7 +622,7 @@ GitHub Analytics
 
 <br/><br/>
 
-<a href="https://github.com/0xcircuitbreaker?tab=overview">View contribution history on GitHub →</a>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=0xcircuitbreaker&amp;theme=github_dark&amp;name=CB%20Contribution%20History" width="98%" alt="CB contribution history — GitHub contributions over the past year"/>
 
 </div>
 
